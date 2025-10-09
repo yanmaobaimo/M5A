@@ -1,0 +1,405 @@
+{
+    "任务奖励_任务": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "任务.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_登录分享"
+        ]
+    },
+    "任务奖励_登录分享": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "登录分享"
+                ],
+                "roi": [
+                    0,
+                    520,
+                    213,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_点击领取",
+            "任务奖励_点击分享",
+            "任务奖励_前往领取"
+        ]
+    },
+    "任务奖励_点击领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点击领取"
+                ],
+                "roi": [
+                    216,
+                    313,
+                    580,
+                    266
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_确认登录记录"
+        ]
+    },
+    "任务奖励_点击分享": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点击分享"
+                ],
+                "roi": [
+                    894,
+                    506,
+                    258,
+                    199
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_分享"
+        ]
+    },
+    "任务奖励_确认登录记录": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认记录"
+                ],
+                "roi": [
+                    532,
+                    568,
+                    223,
+                    145
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_点击领取",
+            "任务奖励_点击分享"
+        ]
+    },
+    "任务奖励_分享": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "分享"
+                ],
+                "roi": [
+                    0,
+                    623,
+                    148,
+                    97
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    39,
+                    632,
+                    45,
+                    27
+                ]
+            }
+        },
+        "next": [
+            "任务奖励_小红书"
+        ]
+    },
+    "任务奖励_小红书": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "小红书"
+                ],
+                "roi": [
+                    563,
+                    633,
+                    171,
+                    87
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_关闭小红书"
+        ]
+    },
+    "任务奖励_关闭小红书": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "StopApp",
+            "param": {
+                "package": "com.xingin.xhs"
+            }
+        },
+        "pre_delay": 1000,
+        "post_delay": 1000,
+        "next": [
+            "任务奖励_完成分享"
+        ]
+    },
+    "任务奖励_完成分享": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "分享"
+                ],
+                "roi": [
+                    0,
+                    655,
+                    200,
+                    120
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    39,
+                    27,
+                    48,
+                    54
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "任务奖励_完成分享",
+            "任务奖励_前往领取"
+        ]
+    },
+    "任务奖励_前往领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "前往领取"
+                ],
+                "roi": [
+                    894,
+                    506,
+                    258,
+                    199
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_一键领取邮件"
+        ]
+    },
+    "任务奖励_一键领取邮件": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "键领取"
+                ],
+                "roi": [
+                    393,
+                    516,
+                    220,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_确认邮件记录"
+        ]
+    },
+    "任务奖励_确认邮件记录": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认记录"
+                ],
+                "roi": [
+                    532,
+                    568,
+                    223,
+                    145
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_一键已读"
+        ]
+    },
+    "任务奖励_一键已读": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "键已读"
+                ],
+                "roi": [
+                    393,
+                    516,
+                    220,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    26,
+                    13,
+                    45,
+                    61
+                ]
+            }
+        },
+        "next": [
+            "任务奖励_对战统计"
+        ]
+    },
+    "任务奖励_对战统计": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "对战统计"
+                ],
+                "roi": [
+                    0,
+                    439,
+                    205,
+                    145
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 1000,
+        "next": [
+            "任务奖励_一键领取",
+            "任务奖励_退出任务"
+        ]
+    },
+    "任务奖励_一键领取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "键领取"
+                ],
+                "roi": [
+                    580,
+                    534,
+                    244,
+                    172
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "任务奖励_确认对战记录"
+        ]
+    },
+    "任务奖励_确认对战记录": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认记录"
+                ],
+                "roi": [
+                    532,
+                    568,
+                    223,
+                    145
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 1000,
+        "next": [
+            "任务奖励_退出任务"
+        ]
+    },
+    "任务奖励_退出任务": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    36,
+                    22,
+                    34,
+                    45
+                ]
+            }
+        }
+    }
+}

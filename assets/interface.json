@@ -19,13 +19,6 @@
             "path": [
                 "{PROJECT_DIR}/resource"
             ]
-        },
-        {
-            "name": "B 服",
-            "path": [
-                "{PROJECT_DIR}/resource",
-                "{PROJECT_DIR}/resource_bilibili"
-            ]
         }
     ],
     "agent_demo": {
@@ -36,49 +29,36 @@
     },
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
+            "name": "启动游戏",
+            "entry": "启动游戏_启动游戏"
         },
         {
-            "name": "选项任务",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
+            "name": "孩邦黑杰克",
+            "entry": "黑杰克_开始"
         },
         {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "pipeline_override": {}
+            "name": "歌剧排位",
+            "entry": "歌剧排位"
         },
         {
-            "name": "带Custom的任务",
-            "entry": "MyTask4"
+            "name": "大厅归宿",
+            "entry": "大厅归宿_开始"
+        },
+        {
+            "name": "每日免费礼包",
+            "entry": "每日免费礼包_商城"
+        },
+        {
+            "name": "协会签到",
+            "entry": "协会签到_协会"
+        },
+        {
+            "name": "任务奖励",
+            "entry": "任务奖励_任务"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "关闭游戏"
         }
-    ],
-    "option": {
-        "任务选项1": {
-            "cases": [
-                {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
-    }
+    ]
 }

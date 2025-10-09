@@ -1,0 +1,792 @@
+{
+    "歌剧排位": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "退出歌声1",
+            "排位模式选择",
+            "排位",
+            "传统排位",
+            "监管者",
+            "开始案件还原",
+            "领取奖励",
+            "确认",
+            "确认记录",
+            "返回",
+            "稍后聆听",
+            "确定",
+            "大厅游戏模式"
+        ]
+    },
+    "退出歌声1": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "稍后查看"
+                ],
+                "roi": [
+                    366,
+                    343,
+                    231,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "排位模式选择": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "辑大"
+                ],
+                "roi": [
+                    1080,
+                    364,
+                    145,
+                    127
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1107,
+                    483,
+                    99,
+                    54
+                ]
+            }
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "排位": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "传统排位赛开启中"
+                ],
+                "roi": [
+                    386,
+                    163,
+                    280,
+                    134
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "监管者": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "监管者"
+                ],
+                "roi": [
+                    860,
+                    74,
+                    186,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "传统排位": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "传统排位"
+                ],
+                "roi": [
+                    290,
+                    272,
+                    171,
+                    48
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "开始案件还原": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始案件还原"
+                ],
+                "roi": [
+                    511,
+                    589,
+                    272,
+                    131
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "准备案件还原",
+            "匹配"
+        ]
+    },
+    "准备案件还原": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "准备案件还原"
+                ],
+                "roi": [
+                    514,
+                    523,
+                    248,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "准备开始",
+            "匹配"
+        ]
+    },
+    "继续": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "继续"
+                ],
+                "roi": [
+                    553,
+                    595,
+                    175,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 50,
+        "next": [
+            "返回大厅",
+            "继续"
+        ]
+    },
+    "返回大厅": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "返回大厅"
+                ],
+                "roi": [
+                    531,
+                    595,
+                    224,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "暗影之跃": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "暗影之跃.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1032,
+                    410,
+                    120,
+                    111
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 10,
+        "next": [
+            "影之回溯",
+            "影袭",
+            "庄园"
+        ]
+    },
+    "影之回溯": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "影之回溯.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1152,
+                    386,
+                    117,
+                    113
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 10,
+        "next": [
+            "暗影之跃",
+            "影袭",
+            "庄园"
+        ]
+    },
+    "影袭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "影袭.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    828,
+                    491,
+                    127,
+                    105
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 10,
+        "next": [
+            "暗影之跃",
+            "影之回溯",
+            "庄园"
+        ]
+    },
+    "庄园": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "影袭",
+            "暗影之跃",
+            "影之回溯",
+            "得分已达最高",
+            "继续",
+            "普通攻击",
+            "传送"
+        ]
+    },
+    "匹配": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消匹配"
+                ],
+                "roi": [
+                    73,
+                    302,
+                    193,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 3000,
+        "next": [
+            "准备案件还原",
+            "匹配"
+        ]
+    },
+    "准备开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "准备开始"
+                ],
+                "roi": [
+                    953,
+                    580,
+                    224,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 10000,
+        "pre_delay": 1000,
+        "next": [
+            "取消准备",
+            "存在感"
+        ]
+    },
+    "得分已达最高": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "得分已达最高"
+                ],
+                "roi": [
+                    48,
+                    398,
+                    250,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    10,
+                    10,
+                    28,
+                    28
+                ]
+            }
+        },
+        "next": [
+            "倒计时",
+            "投降"
+        ]
+    },
+    "投降": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "投降"
+                ],
+                "roi": [
+                    1019,
+                    519,
+                    182,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "确定投降"
+        ]
+    },
+    "确定投降": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ],
+                "roi": [
+                    701,
+                    346,
+                    182,
+                    134
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "继续"
+        ]
+    },
+    "传送": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "传送.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 10,
+        "next": [
+            "庄园"
+        ]
+    },
+    "普通攻击": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "a.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ],
+                "roi": [
+                    1081,
+                    532,
+                    125,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 10,
+        "next": [
+            "移动视角"
+        ]
+    },
+    "倒计时": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "秒"
+                ],
+                "roi": [
+                    1019,
+                    519,
+                    182,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    15,
+                    13,
+                    69,
+                    71
+                ]
+            }
+        },
+        "post_delay": 5000,
+        "next": [
+            "庄园"
+        ]
+    },
+    "领取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领取奖励"
+                ],
+                "roi": [
+                    536,
+                    527,
+                    212,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "确认记录": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认记录"
+                ],
+                "roi": [
+                    539,
+                    575,
+                    205,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "返回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "返回"
+                ],
+                "roi": [
+                    400,
+                    522,
+                    170,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认"
+                ],
+                "roi": [
+                    394,
+                    572,
+                    175,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "取消准备": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消准备"
+                ],
+                "roi": [
+                    953,
+                    580,
+                    224,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 5000,
+        "timeout": 90000,
+        "next": [
+            "取消准备",
+            "存在感"
+        ]
+    },
+    "确定": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ],
+                "roi": [
+                    701,
+                    346,
+                    182,
+                    134
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    },
+    "稍后聆听": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "稍后聆听"
+                ],
+                "roi": [
+                    341,
+                    527,
+                    221,
+                    158
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "确定",
+            "歌剧排位"
+        ]
+    },
+    "存在感": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "存在感"
+                ],
+                "roi": [
+                    777,
+                    98,
+                    161,
+                    130
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "庄园"
+        ]
+    },
+    "移动视角": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    800,
+                    300,
+                    30,
+                    30
+                ],
+                "end": [
+                    [
+                        600,
+                        300,
+                        40,
+                        40
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "传送",
+            "庄园"
+        ]
+    },
+    "大厅游戏模式": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "游戏.png"
+                ],
+                "roi": [
+                    1146,
+                    470,
+                    118,
+                    75
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "歌剧排位"
+        ]
+    }
+}
