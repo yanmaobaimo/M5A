@@ -75,7 +75,7 @@
             "type": "OCR",
             "param": {
                 "expected": [
-                    "黑杰克手搓"
+                    "黑杰克"
                 ],
                 "roi": [
                     348,
