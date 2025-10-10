@@ -1,0 +1,869 @@
+{
+    "黑杰克pc_开始": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_归宿游戏模式",
+            "黑杰克pc_混沌纷争",
+            "黑杰克pc_进入",
+            "黑杰克pc_开始案件还原",
+            "黑杰克pc_大厅游戏模式",
+            "黑杰克pc_退出歌声"
+        ]
+    },
+    "黑杰克pc_归宿游戏模式": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "辑大"
+                ],
+                "roi": [
+                    1080,
+                    364,
+                    145,
+                    127
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1107,
+                    483,
+                    99,
+                    54
+                ]
+            }
+        },
+        "next": [
+            "黑杰克pc_开始"
+        ]
+    },
+    "黑杰克pc_混沌纷争": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开启中"
+                ],
+                "roi": [
+                    584,
+                    275,
+                    306,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_开始"
+        ]
+    },
+    "黑杰克pc_进入": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "黑杰克"
+                ],
+                "roi": [
+                    348,
+                    118,
+                    217,
+                    148
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_开始"
+        ]
+    },
+    "黑杰克pc_开始案件还原": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始案件还原"
+                ],
+                "roi": [
+                    508,
+                    593,
+                    272,
+                    127
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_准备案件还原",
+            "黑杰克pc_匹配"
+        ]
+    },
+    "黑杰克pc_匹配": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消匹配"
+                ],
+                "roi": [
+                    73,
+                    302,
+                    193,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 3000,
+        "next": [
+            "黑杰克pc_匹配",
+            "黑杰克pc_准备案件还原"
+        ]
+    },
+    "黑杰克pc_准备案件还原": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "准备案件还原"
+                ],
+                "roi": [
+                    514,
+                    523,
+                    248,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_准备案件还原",
+            "黑杰克pc_准备开始"
+        ]
+    },
+    "黑杰克pc_准备开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "准备开始"
+                ],
+                "roi": [
+                    953,
+                    580,
+                    224,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "pre_delay": 1000,
+        "next": [
+            "黑杰克pc_取消准备",
+            "黑杰克pc_总点数"
+        ]
+    },
+    "黑杰克pc_取消准备": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消准备"
+                ],
+                "roi": [
+                    953,
+                    580,
+                    224,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "timeout": 90000,
+        "post_delay": 5000,
+        "next": [
+            "黑杰克pc_取消准备",
+            "黑杰克pc_总点数"
+        ]
+    },
+    "黑杰克pc_退出歌声": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "稍后查看"
+                ],
+                "roi": [
+                    366,
+                    343,
+                    231,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_开始"
+        ]
+    },
+    "黑杰克pc_大厅游戏模式": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "游戏.png"
+                ],
+                "roi": [
+                    1146,
+                    470,
+                    118,
+                    75
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_开始"
+        ]
+    },
+    "黑杰克pc_总点数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "总点数"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_庄园": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_修机",
+            "黑杰克pc_倒地",
+            "黑杰克pc_怜悯",
+            "黑杰克pc_传送",
+            "黑杰克pc_炸弹",
+            "黑杰克pc_交互",
+            "黑杰克pc_再抽一张",
+            "黑杰克pc_确定",
+            "黑杰克pc_破译密码",
+            "黑杰克pc_结算",
+            "黑杰克pc_旋转视角"
+        ]
+    },
+    "黑杰克pc_再抽一张": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "再抽一张"
+                ],
+                "roi": [
+                    426,
+                    611,
+                    138,
+                    37
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_确定": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ],
+                "roi": [
+                    606,
+                    612,
+                    68,
+                    35
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_自愈": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "交互.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1101,
+                    518,
+                    120,
+                    168
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "target": [
+                    1101,
+                    518,
+                    120,
+                    168
+                ],
+                "duration": 23000
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_修机": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    433,
+                    135,
+                    529,
+                    454
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_交互": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "交互.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1124,
+                    541,
+                    65,
+                    89
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_怜悯": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "怜悯.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1096,
+                    317,
+                    43,
+                    58
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "end_offset": [
+                    [
+                        -100,
+                        -30,
+                        0,
+                        0
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "post_delay": 6000,
+        "next": [
+            "黑杰克pc_怜悯修机",
+            "黑杰克pc_前行"
+        ]
+    },
+    "黑杰克pc_传送": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "传送.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1175,
+                    299,
+                    61,
+                    61
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "end_offset": [
+                    [
+                        -100,
+                        -100,
+                        0,
+                        0
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_炸弹": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "炸弹.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "post_delay": 1000,
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_点赞": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_点赞1",
+            "黑杰克pc_点赞2",
+            "黑杰克pc_点赞3",
+            "黑杰克pc_点赞4",
+            "黑杰克pc_点赞5",
+            "黑杰克pc_继续_副本3"
+        ]
+    },
+    "黑杰克pc_返回大厅": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "返回大厅"
+                ],
+                "roi": [
+                    539,
+                    595,
+                    213,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        }
+    },
+    "黑杰克pc_破译密码": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "破译密码"
+                ],
+                "roi": [
+                    563,
+                    495,
+                    161,
+                    225
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 1000,
+        "next": [
+            "黑杰克pc_破译密码",
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_旋转视角": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    800,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        700,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_怜悯修机": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    433,
+                    135,
+                    529,
+                    454
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_前行": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    150,
+                    600,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        150,
+                        500,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "next": [
+            "黑杰克pc_庄园"
+        ]
+    },
+    "黑杰克pc_继续_副本3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "继续"
+                ],
+                "roi": [
+                    563,
+                    595,
+                    161,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_返回大厅"
+        ]
+    },
+    "黑杰克pc_点赞1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞1.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_点赞"
+        ]
+    },
+    "黑杰克pc_点赞2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞2.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_点赞"
+        ]
+    },
+    "黑杰克pc_点赞3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞3.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_点赞"
+        ]
+    },
+    "黑杰克pc_点赞4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞4.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_点赞"
+        ]
+    },
+    "黑杰克pc_点赞5": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞5.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_点赞"
+        ]
+    },
+    "黑杰克pc_结算": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "继续"
+                ],
+                "roi": [
+                    563,
+                    595,
+                    161,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "黑杰克pc_点赞"
+        ]
+    },
+    "黑杰克pc_倒地": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "倒地.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    615,
+                    506,
+                    53,
+                    65
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克pc_自愈"
+        ]
+    }
+}
