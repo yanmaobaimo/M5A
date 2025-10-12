@@ -846,24 +846,42 @@
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "倒地.png"
+                    "pc倒地.png"
                 ],
                 "green_mask": true,
                 "roi": [
-                    615,
-                    506,
-                    53,
-                    65
+                    620,
+                    572,
+                    42,
+                    51
                 ]
             }
         },
         "action": {
-            "type": "DoNothing",
-            "param": {}
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    1
+                ]
+            }
         },
         "rate_limit": 100,
         "next": [
             "黑杰克pc_自愈"
         ]
+    },
+    "新建节点2": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    k
+                ]
+            }
+        }
     }
 }
