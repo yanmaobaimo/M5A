@@ -292,14 +292,15 @@
         },
         "next": [
             "黑杰克_修机",
+            "黑杰克_修不到机",
+            "黑杰克_耳鸣",
             "黑杰克_倒地",
-            "黑杰克_怜悯",
             "黑杰克_传送",
-            "黑杰克_炸弹",
+            "黑杰克_破译密码",
+            "黑杰克_怜悯",
             "黑杰克_交互",
             "黑杰克_再抽一张",
             "黑杰克_确定",
-            "黑杰克_破译密码",
             "黑杰克_结算",
             "黑杰克_旋转视角"
         ]
@@ -395,22 +396,17 @@
                 "template": [
                     "修机.png"
                 ],
-                "green_mask": true,
-                "roi": [
-                    433,
-                    135,
-                    529,
-                    454
-                ]
+                "green_mask": true
             }
         },
         "action": {
-            "type": "Click",
+            "type": "DoNothing",
             "param": {}
         },
         "rate_limit": 100,
         "next": [
-            "黑杰克_庄园"
+            "黑杰克_点击修机",
+            "黑杰克_旋转修机视角"
         ]
     },
     "黑杰克_交互": {
@@ -473,8 +469,7 @@
         "rate_limit": 100,
         "post_delay": 6000,
         "next": [
-            "黑杰克_怜悯修机",
-            "黑杰克_前行"
+            "黑杰克_庄园"
         ]
     },
     "黑杰克_传送": {
@@ -511,7 +506,7 @@
             "黑杰克_庄园"
         ]
     },
-    "黑杰克_炸弹": {
+    "黑杰克_定时炸弹": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -528,6 +523,7 @@
         "rate_limit": 100,
         "post_delay": 1000,
         "next": [
+            "黑杰克_耳鸣",
             "黑杰克_庄园"
         ]
     },
@@ -546,7 +542,7 @@
             "黑杰克_点赞3",
             "黑杰克_点赞4",
             "黑杰克_点赞5",
-            "黑杰克_继续_副本3"
+            "黑杰克_继续"
         ]
     },
     "黑杰克_返回大厅": {
@@ -577,10 +573,10 @@
                     "破译密码"
                 ],
                 "roi": [
-                    563,
-                    495,
-                    161,
-                    225
+                    500,
+                    470,
+                    260,
+                    60
                 ]
             }
         },
@@ -596,8 +592,12 @@
     },
     "黑杰克_旋转视角": {
         "recognition": {
-            "type": "DirectHit",
-            "param": {}
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "回忆碎片.png"
+                ]
+            }
         },
         "action": {
             "type": "Swipe",
@@ -622,60 +622,7 @@
             "黑杰克_庄园"
         ]
     },
-    "黑杰克_怜悯修机": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "修机.png"
-                ],
-                "green_mask": true,
-                "roi": [
-                    433,
-                    135,
-                    529,
-                    454
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "rate_limit": 100,
-        "next": [
-            "黑杰克_庄园"
-        ]
-    },
-    "黑杰克_前行": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    150,
-                    600,
-                    50,
-                    50
-                ],
-                "end": [
-                    [
-                        150,
-                        500,
-                        50,
-                        50
-                    ]
-                ]
-            }
-        },
-        "next": [
-            "黑杰克_庄园"
-        ]
-    },
-    "黑杰克_继续_副本3": {
+    "黑杰克_继续": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -864,6 +811,288 @@
         "rate_limit": 100,
         "next": [
             "黑杰克_自愈"
+        ]
+    },
+    "黑杰克_点击修机": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    450,
+                    300,
+                    830,
+                    420
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_旋转修机视角": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    0,
+                    300,
+                    550,
+                    420
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    800,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        700,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_修机"
+        ]
+    },
+    "黑杰克_修不到机": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修不到机.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    886,
+                    624,
+                    58,
+                    55
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_修不到机中",
+            "黑杰克_修不到机左",
+            "黑杰克_修不到机右",
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_修不到机中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修不到机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    400,
+                    200,
+                    480,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    150,
+                    600,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        150,
+                        500,
+                        50,
+                        50
+                    ]
+                ],
+                "end_hold": [
+                    200
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_修不到机",
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_修不到机左": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修不到机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    0,
+                    200,
+                    450,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    800,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        700,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_修不到机"
+        ]
+    },
+    "黑杰克_修不到机右": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修不到机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    830,
+                    200,
+                    450,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    700,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        800,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_修不到机"
+        ]
+    },
+    "黑杰克_遥控炸弹": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "遥控炸弹.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_引爆"
+        ]
+    },
+    "黑杰克_引爆": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "引爆.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_耳鸣"
+        ]
+    },
+    "黑杰克_耳鸣": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "耳鸣.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    200,
+                    15,
+                    250,
+                    45
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_遥控炸弹",
+            "黑杰克_定时炸弹"
         ]
     }
 }
