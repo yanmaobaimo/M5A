@@ -420,7 +420,9 @@
         },
         "rate_limit": 100,
         "next": [
-            "黑杰克_修机"
+            "黑杰克_修机",
+            "黑杰克_静步",
+            "黑杰克_庄园"
         ]
     },
     "黑杰克_修不到机": {
@@ -534,7 +536,9 @@
         },
         "rate_limit": 100,
         "next": [
-            "黑杰克_修不到机"
+            "黑杰克_修不到机",
+            "黑杰克_静步",
+            "黑杰克_庄园"
         ]
     },
     "黑杰克_修不到机右": {
@@ -598,10 +602,10 @@
             "type": "DoNothing",
             "param": {}
         },
-        "post_delay": 1000,
+        "post_delay": 2000,
         "next": [
             "黑杰克_破译密码",
-            "黑杰克_静步",
+            "黑杰克_修机",
             "黑杰克_庄园"
         ]
     },
@@ -655,8 +659,8 @@
             "param": {
                 "end_offset": [
                     [
-                        -100,
-                        -30,
+                        -200,
+                        0,
                         0,
                         0
                     ]
@@ -715,7 +719,7 @@
                 ],
                 "end": [
                     [
-                        700,
+                        600,
                         300,
                         50,
                         50
@@ -725,6 +729,7 @@
         },
         "next": [
             "黑杰克_静步",
+            "黑杰克_耳鸣",
             "黑杰克_庄园"
         ]
     },
@@ -753,6 +758,8 @@
             "黑杰克_踩板",
             "黑杰克_遥控炸弹",
             "黑杰克_定时炸弹",
+            "黑杰克_引爆",
+            "黑杰克_传送",
             "黑杰克_攻击",
             "黑杰克_庄园"
         ]
@@ -802,8 +809,35 @@
         },
         "rate_limit": 100,
         "next": [
-            "黑杰克_引爆",
-            "黑杰克_庄园"
+            "黑杰克_旋转视角"
+        ]
+    },
+    "黑杰克_定时炸弹": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "定时炸弹.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1056,
+                    428,
+                    80,
+                    79
+                ],
+                "threshold": [
+                    0.88
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_旋转视角"
         ]
     },
     "黑杰克_引爆": {
@@ -832,33 +866,38 @@
             "黑杰克_庄园"
         ]
     },
-    "黑杰克_定时炸弹": {
+    "黑杰克_传送": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "定时炸弹.png"
+                    "传送.png"
                 ],
                 "green_mask": true,
                 "roi": [
-                    1056,
-                    428,
-                    80,
-                    79
-                ],
-                "threshold": [
-                    0.88
+                    1175,
+                    299,
+                    61,
+                    61
                 ]
             }
         },
         "action": {
-            "type": "Click",
-            "param": {}
+            "type": "Swipe",
+            "param": {
+                "end_offset": [
+                    [
+                        -250,
+                        0,
+                        0,
+                        0
+                    ]
+                ]
+            }
         },
         "rate_limit": 100,
-        "post_delay": 1000,
         "next": [
-            "黑杰克_耳鸣",
+            "黑杰克_传送",
             "黑杰克_庄园"
         ]
     },
@@ -892,38 +931,194 @@
             "黑杰克_庄园"
         ]
     },
-    "黑杰克_传送": {
+    "黑杰克_300": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "300"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "黑杰克_牵人",
+            "黑杰克_牵不到人",
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_牵人": {
         "recognition": {
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "传送.png"
+                    "牵人.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_牵不到人": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "牵不到人.png"
                 ],
                 "green_mask": true,
                 "roi": [
-                    1175,
-                    299,
-                    61,
-                    61
+                    0,
+                    200,
+                    1280,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_牵不到人中",
+            "黑杰克_牵不到人左",
+            "黑杰克_牵不到人右",
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_牵不到人中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "牵不到人.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    400,
+                    200,
+                    480,
+                    250
                 ]
             }
         },
         "action": {
             "type": "Swipe",
             "param": {
-                "end_offset": [
+                "begin": [
+                    150,
+                    600,
+                    50,
+                    50
+                ],
+                "end": [
                     [
-                        -200,
-                        0,
-                        0,
-                        0
+                        150,
+                        500,
+                        50,
+                        50
+                    ]
+                ],
+                "end_hold": [
+                    200
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_牵不到人",
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_牵不到人左": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "牵不到人.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    0,
+                    200,
+                    450,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    800,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        700,
+                        300,
+                        50,
+                        50
                     ]
                 ]
             }
         },
         "rate_limit": 100,
         "next": [
-            "黑杰克_传送",
+            "黑杰克_牵不到人",
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_牵不到人右": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "牵不到人.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    830,
+                    200,
+                    450,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    700,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        800,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "黑杰克_牵不到人",
             "黑杰克_庄园"
         ]
     },
@@ -949,7 +1144,8 @@
         },
         "rate_limit": 100,
         "next": [
-            "黑杰克_自愈"
+            "黑杰克_自愈",
+            "黑杰克_庄园"
         ]
     },
     "黑杰克_自愈": {
@@ -967,7 +1163,7 @@
                     168
                 ],
                 "threshold": [
-                    0.9
+                    0.85
                 ]
             }
         },
@@ -1214,197 +1410,9 @@
         "action": {
             "type": "Click",
             "param": {}
-        }
-    },
-    "黑杰克_300": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "300"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
         },
         "next": [
-            "黑杰克_牵人",
-            "黑杰克_牵不到人",
-            "黑杰克_庄园"
-        ]
-    },
-    "黑杰克_牵人": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "牵人.png"
-                ],
-                "green_mask": true
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "next": [
-            "黑杰克_庄园"
-        ]
-    },
-    "黑杰克_牵不到人": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "牵不到人.png"
-                ],
-                "green_mask": true,
-                "roi": [
-                    0,
-                    200,
-                    1280,
-                    250
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "rate_limit": 100,
-        "next": [
-            "黑杰克_牵不到人中",
-            "黑杰克_牵不到人左",
-            "黑杰克_牵不到人右",
-            "黑杰克_庄园"
-        ]
-    },
-    "黑杰克_牵不到人中": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "牵不到人.png"
-                ],
-                "green_mask": true,
-                "roi": [
-                    400,
-                    200,
-                    480,
-                    250
-                ]
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    150,
-                    600,
-                    50,
-                    50
-                ],
-                "end": [
-                    [
-                        150,
-                        500,
-                        50,
-                        50
-                    ]
-                ],
-                "end_hold": [
-                    200
-                ]
-            }
-        },
-        "rate_limit": 100,
-        "next": [
-            "黑杰克_牵不到人",
-            "黑杰克_庄园"
-        ]
-    },
-    "黑杰克_牵不到人左": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "牵不到人.png"
-                ],
-                "green_mask": true,
-                "roi": [
-                    0,
-                    200,
-                    450,
-                    250
-                ]
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    800,
-                    300,
-                    50,
-                    50
-                ],
-                "end": [
-                    [
-                        700,
-                        300,
-                        50,
-                        50
-                    ]
-                ]
-            }
-        },
-        "rate_limit": 100,
-        "next": [
-            "黑杰克_牵不到人",
-            "黑杰克_庄园"
-        ]
-    },
-    "黑杰克_牵不到人右": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "牵不到人.png"
-                ],
-                "green_mask": true,
-                "roi": [
-                    830,
-                    200,
-                    450,
-                    250
-                ]
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    700,
-                    300,
-                    50,
-                    50
-                ],
-                "end": [
-                    [
-                        800,
-                        300,
-                        50,
-                        50
-                    ]
-                ]
-            }
-        },
-        "rate_limit": 100,
-        "next": [
-            "黑杰克_牵不到人",
-            "黑杰克_庄园"
+            "黑杰克_开始"
         ]
     }
 }
