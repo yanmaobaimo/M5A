@@ -165,7 +165,8 @@
                     61
                 ]
             }
-        }
+        },
+        "pre_wait_freezes": 1000
     },
     "每日免费礼包_确认": {
         "recognition": {
