@@ -203,7 +203,10 @@
         "action": {
             "type": "Click",
             "param": {}
-        }
+        },
+        "next": [
+            "随笔浮想_精选推荐"
+        ]
     },
     "随笔浮想_确认人格倾向_副本1": {
         "recognition": {
@@ -1129,5 +1132,185 @@
         "next": [
             "随笔浮想_开始"
         ]
+    },
+    "随笔浮想_精选推荐": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "精选推荐"
+                ],
+                "roi": [
+                    28,
+                    59,
+                    209,
+                    133
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "随笔浮想_每周任务"
+        ]
+    },
+    "随笔浮想_每周任务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "每周任务"
+                ],
+                "roi": [
+                    759,
+                    11,
+                    172,
+                    121
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "随笔浮想_50",
+            "随笔浮想_对号"
+        ]
+    },
+    "随笔浮想_50": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "50"
+                ],
+                "roi": [
+                    1077,
+                    476,
+                    30,
+                    26
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "随笔浮想_确认记录"
+        ]
+    },
+    "随笔浮想_确认记录": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认记录"
+                ],
+                "roi": [
+                    539,
+                    575,
+                    202,
+                    133
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "随笔浮想_对号"
+        ]
+    },
+    "随笔浮想_对号": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "Y"
+                ],
+                "roi": [
+                    1015,
+                    392,
+                    152,
+                    151
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    40,
+                    20,
+                    45,
+                    45
+                ]
+            }
+        },
+        "next": [
+            "随笔浮想_退出随笔浮想"
+        ]
+    },
+    "随笔浮想_退出随笔浮想": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "随笔浮想"
+                ],
+                "roi": [
+                    25,
+                    0,
+                    231,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    30,
+                    25,
+                    40,
+                    45
+                ]
+            }
+        },
+        "next": [
+            "随笔浮想_自制玩法"
+        ]
+    },
+    "随笔浮想_自制玩法": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "自制玩法"
+                ],
+                "roi": [
+                    674,
+                    416,
+                    182,
+                    130
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    40,
+                    25,
+                    40,
+                    50
+                ]
+            }
+        }
     }
 }
