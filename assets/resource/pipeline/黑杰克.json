@@ -14,6 +14,7 @@
             "黑杰克_归宿游戏模式",
             "黑杰克_大厅游戏模式",
             "黑杰克_混沌纷争",
+            "黑杰克_排位模式",
             "黑杰克_进入黑杰克",
             "黑杰克_开始案件还原",
             "黑杰克_退出歌声",
@@ -99,6 +100,33 @@
         "next": [
             "黑杰克_开始"
         ]
+    },
+    "黑杰克_排位模式": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开启"
+                ],
+                "roi": [
+                    479,
+                    171,
+                    193,
+                    130
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    35,
+                    25,
+                    45,
+                    55
+                ]
+            }
+        }
     },
     "黑杰克_进入黑杰克": {
         "recognition": {
@@ -974,6 +1002,24 @@
             "黑杰克_庄园"
         ]
     },
+    "黑杰克_牵": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "牵人.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "黑杰克_庄园"
+        ]
+    },
     "黑杰克_倒地": {
         "recognition": {
             "type": "TemplateMatch",
@@ -1497,24 +1543,6 @@
         "pre_wait_freezes": 1000,
         "next": [
             "黑杰克_开始"
-        ]
-    },
-    "黑杰克_牵": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "牵人.png"
-                ],
-                "green_mask": true
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "next": [
-            "黑杰克_庄园"
         ]
     }
 }
