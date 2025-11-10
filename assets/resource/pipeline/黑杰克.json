@@ -106,7 +106,7 @@
             "type": "OCR",
             "param": {
                 "expected": [
-                    "开启"
+                    "开启中"
                 ],
                 "roi": [
                     479,
