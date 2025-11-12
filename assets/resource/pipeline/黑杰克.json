@@ -8,6 +8,7 @@
             "type": "DoNothing",
             "param": {}
         },
+        "post_wait_freezes": 1000,
         "next": [
             "黑杰克_准备案件还原",
             "黑杰克_匹配",
