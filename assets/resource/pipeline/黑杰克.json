@@ -1323,7 +1323,7 @@
             "type": "DoNothing",
             "param": {}
         },
-        "post_wait_freezes": 1000,
+        "post_wait_freezes": 3000,
         "next": [
             "黑杰克_大厅归宿_领取奖励",
             "黑杰克_大厅归宿_确认",

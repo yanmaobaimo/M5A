@@ -23,7 +23,7 @@
             "type": "DoNothing",
             "param": {}
         },
-        "timeout": 60000,
+        "timeout": 300000,
         "next": [
             "启动游戏_加载",
             "启动游戏_退出系统公告",
