@@ -24,6 +24,7 @@
             "param": {}
         },
         "timeout": 300000,
+        "post_wait_freezes": 1000,
         "next": [
             "启动游戏_加载",
             "启动游戏_退出系统公告",
@@ -244,8 +245,7 @@
         "action": {
             "type": "DoNothing",
             "param": {}
-        },
-        "pre_wait_freezes": 1000
+        }
     },
     "启动游戏_大厅": {
         "recognition": {
@@ -266,7 +266,6 @@
         "action": {
             "type": "DoNothing",
             "param": {}
-        },
-        "pre_wait_freezes": 1000
+        }
     }
 }
