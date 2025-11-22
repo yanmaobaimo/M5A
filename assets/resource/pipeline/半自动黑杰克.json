@@ -1,0 +1,1553 @@
+{
+    "半自动黑杰克_开始": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "半自动黑杰克_准备案件还原",
+            "半自动黑杰克_匹配",
+            "半自动黑杰克_归宿游戏模式",
+            "半自动黑杰克_大厅游戏模式",
+            "半自动黑杰克_混沌纷争",
+            "半自动黑杰克_排位模式",
+            "半自动黑杰克_进入黑杰克",
+            "半自动黑杰克_开始案件还原",
+            "半自动黑杰克_退出歌声",
+            "半自动黑杰克_准备开始"
+        ]
+    },
+    "半自动黑杰克_归宿游戏模式": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "辑大"
+                ],
+                "roi": [
+                    1080,
+                    364,
+                    145,
+                    127
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1107,
+                    483,
+                    99,
+                    54
+                ]
+            }
+        },
+        "next": [
+            "半自动黑杰克_开始"
+        ]
+    },
+    "半自动黑杰克_大厅游戏模式": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "游戏.png"
+                ],
+                "roi": [
+                    1146,
+                    470,
+                    118,
+                    75
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_开始"
+        ]
+    },
+    "半自动黑杰克_混沌纷争": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开启"
+                ],
+                "roi": [
+                    584,
+                    275,
+                    306,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_开始"
+        ]
+    },
+    "半自动黑杰克_排位模式": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开启中"
+                ],
+                "roi": [
+                    479,
+                    171,
+                    193,
+                    130
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    35,
+                    25,
+                    45,
+                    55
+                ]
+            }
+        }
+    },
+    "半自动黑杰克_进入黑杰克": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "黑杰克"
+                ],
+                "roi": [
+                    266,
+                    129,
+                    206,
+                    151
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_开始"
+        ]
+    },
+    "半自动黑杰克_开始案件还原": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始案件还原"
+                ],
+                "roi": [
+                    508,
+                    593,
+                    272,
+                    127
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 3000,
+        "next": [
+            "半自动黑杰克_开始"
+        ]
+    },
+    "半自动黑杰克_退出歌声": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "稍后查看"
+                ],
+                "roi": [
+                    366,
+                    343,
+                    231,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_开始"
+        ]
+    },
+    "半自动黑杰克_匹配": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消匹配"
+                ],
+                "roi": [
+                    73,
+                    302,
+                    193,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 3000,
+        "next": [
+            "半自动黑杰克_匹配",
+            "半自动黑杰克_开始"
+        ]
+    },
+    "半自动黑杰克_准备案件还原": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "准备案件还原"
+                ],
+                "roi": [
+                    514,
+                    523,
+                    248,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_准备开始",
+            "半自动黑杰克_开始"
+        ]
+    },
+    "半自动黑杰克_准备开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "准备开始"
+                ],
+                "roi": [
+                    953,
+                    580,
+                    224,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "pre_delay": 1000,
+        "next": [
+            "半自动黑杰克_取消准备",
+            "半自动黑杰克_总点数"
+        ]
+    },
+    "半自动黑杰克_取消准备": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消准备"
+                ],
+                "roi": [
+                    953,
+                    580,
+                    224,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "timeout": 90000,
+        "post_delay": 5000,
+        "next": [
+            "半自动黑杰克_取消准备",
+            "半自动黑杰克_总点数"
+        ]
+    },
+    "半自动黑杰克_总点数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "总点数"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_庄园": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_静步",
+            "半自动黑杰克_牵人",
+            "半自动黑杰克_耳鸣",
+            "半自动黑杰克_倒地",
+            "半自动黑杰克_传送",
+            "半自动黑杰克_确定",
+            "半自动黑杰克_结算",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_静步": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "静步.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    994,
+                    521,
+                    39,
+                    62
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_修机",
+            "半自动黑杰克_修不到机",
+            "半自动黑杰克_破译密码",
+            "半自动黑杰克_回忆碎片",
+            "半自动黑杰克_旋转视角",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_修机": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    0,
+                    300,
+                    1280,
+                    420
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_点击修机",
+            "半自动黑杰克_旋转修机视角",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_点击修机": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    450,
+                    300,
+                    830,
+                    420
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_静步",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_旋转修机视角": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    0,
+                    300,
+                    550,
+                    420
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    800,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        700,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "enabled": false,
+        "next": [
+            "半自动黑杰克_修机",
+            "半自动黑杰克_静步",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_修不到机": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修不到机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    0,
+                    200,
+                    1280,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_修不到机中",
+            "半自动黑杰克_修不到机左",
+            "半自动黑杰克_修不到机右",
+            "半自动黑杰克_静步",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_修不到机中": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修不到机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    400,
+                    200,
+                    480,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    150,
+                    600,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        150,
+                        500,
+                        50,
+                        50
+                    ]
+                ],
+                "end_hold": [
+                    200
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_修不到机",
+            "半自动黑杰克_静步",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_修不到机左": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修不到机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    0,
+                    200,
+                    450,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    800,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        700,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_修不到机",
+            "半自动黑杰克_静步",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_修不到机右": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "修不到机.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    830,
+                    200,
+                    450,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    700,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        800,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_修不到机",
+            "半自动黑杰克_静步",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_破译密码": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "破译密码"
+                ],
+                "roi": [
+                    500,
+                    400,
+                    260,
+                    150
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 2000,
+        "next": [
+            "半自动黑杰克_破译密码",
+            "半自动黑杰克_修机",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_回忆碎片": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "回忆碎片.png"
+                ],
+                "roi": [
+                    1200,
+                    322,
+                    25,
+                    35
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "enabled": false,
+        "next": [
+            "半自动黑杰克_怜悯",
+            "半自动黑杰克_交互",
+            "半自动黑杰克_旋转视角",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_怜悯": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "怜悯.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1096,
+                    317,
+                    43,
+                    58
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "end_offset": [
+                    [
+                        -200,
+                        0,
+                        0,
+                        0
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "post_delay": 6000,
+        "next": [
+            "半自动黑杰克_静步",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_交互": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "交互.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1124,
+                    541,
+                    65,
+                    89
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_静步",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_旋转视角": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    800,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        600,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "enabled": false,
+        "next": [
+            "半自动黑杰克_静步",
+            "半自动黑杰克_耳鸣",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_耳鸣": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "耳鸣.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    200,
+                    15,
+                    250,
+                    45
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "enabled": false,
+        "next": [
+            "半自动黑杰克_踩板",
+            "半自动黑杰克_遥控炸弹",
+            "半自动黑杰克_引爆",
+            "半自动黑杰克_定时炸弹",
+            "半自动黑杰克_传送",
+            "半自动黑杰克_攻击",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_踩板": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "踩板.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_耳鸣",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_遥控炸弹": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "遥控炸弹.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1176,
+                    404,
+                    69,
+                    79
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_旋转视角"
+        ]
+    },
+    "半自动黑杰克_定时炸弹": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "定时炸弹.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1056,
+                    428,
+                    80,
+                    79
+                ],
+                "threshold": [
+                    0.88
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_旋转视角"
+        ]
+    },
+    "半自动黑杰克_引爆": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "引爆.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1179,
+                    413,
+                    63,
+                    68
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_耳鸣",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_传送": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "传送.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1175,
+                    299,
+                    61,
+                    61
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "end_offset": [
+                    [
+                        -250,
+                        0,
+                        0,
+                        0
+                    ]
+                ]
+            }
+        },
+        "rate_limit": 100,
+        "enabled": false,
+        "next": [
+            "半自动黑杰克_传送",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_攻击": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "26号攻击.png"
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.9
+                ],
+                "roi": [
+                    1080,
+                    519,
+                    146,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "post_delay": 3000,
+        "next": [
+            "半自动黑杰克_传送",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_牵人": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "牵人.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_300",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_300": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "300"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_牵",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_牵": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "牵人.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_倒地": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "倒地.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    615,
+                    506,
+                    53,
+                    65
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_自愈",
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_自愈": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "交互.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    1101,
+                    518,
+                    120,
+                    168
+                ],
+                "threshold": [
+                    0.85
+                ]
+            }
+        },
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "target": [
+                    1101,
+                    518,
+                    120,
+                    168
+                ],
+                "duration": 23000
+            }
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_确定": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ],
+                "roi": [
+                    606,
+                    612,
+                    300,
+                    35
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "半自动黑杰克_庄园"
+        ]
+    },
+    "半自动黑杰克_结算": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "继续"
+                ],
+                "roi": [
+                    563,
+                    595,
+                    161,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_点赞"
+        ]
+    },
+    "半自动黑杰克_点赞": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_点赞1",
+            "半自动黑杰克_点赞2",
+            "半自动黑杰克_点赞3",
+            "半自动黑杰克_点赞4",
+            "半自动黑杰克_点赞5",
+            "半自动黑杰克_继续"
+        ]
+    },
+    "半自动黑杰克_点赞1": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞1.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_点赞"
+        ]
+    },
+    "半自动黑杰克_点赞2": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞2.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_点赞"
+        ]
+    },
+    "半自动黑杰克_点赞3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞3.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_点赞"
+        ]
+    },
+    "半自动黑杰克_点赞4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞4.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_点赞"
+        ]
+    },
+    "半自动黑杰克_点赞5": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "点赞5.png"
+                ],
+                "green_mask": true,
+                "roi": [
+                    142,
+                    469,
+                    1054,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_点赞"
+        ]
+    },
+    "半自动黑杰克_继续": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "继续"
+                ],
+                "roi": [
+                    563,
+                    595,
+                    161,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_返回大厅"
+        ]
+    },
+    "半自动黑杰克_返回大厅": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "返回大厅"
+                ],
+                "roi": [
+                    539,
+                    595,
+                    213,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_大厅归宿_开始"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_开始": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_wait_freezes": 3000,
+        "next": [
+            "半自动黑杰克_大厅归宿_领取奖励",
+            "半自动黑杰克_大厅归宿_确认",
+            "半自动黑杰克_大厅归宿_确认记录",
+            "半自动黑杰克_大厅归宿_返回",
+            "半自动黑杰克_大厅归宿_稍后聆听",
+            "半自动黑杰克_大厅归宿_确定",
+            "半自动黑杰克_大厅归宿_退出歌声",
+            "半自动黑杰克_大厅归宿_大厅游戏模式",
+            "半自动黑杰克_大厅归宿_归宿游戏模式"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_领取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领取奖励"
+                ],
+                "roi": [
+                    536,
+                    527,
+                    212,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_大厅归宿_开始"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_确认记录": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认记录"
+                ],
+                "roi": [
+                    539,
+                    575,
+                    205,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_大厅归宿_开始"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_返回": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "返回"
+                ],
+                "roi": [
+                    400,
+                    522,
+                    170,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_大厅归宿_开始"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认"
+                ],
+                "roi": [
+                    394,
+                    572,
+                    175,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_大厅归宿_开始"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_确定": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ],
+                "roi": [
+                    560,
+                    346,
+                    320,
+                    250
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_大厅归宿_开始"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_稍后聆听": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "稍后聆听"
+                ],
+                "roi": [
+                    341,
+                    527,
+                    221,
+                    158
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_大厅归宿_确定",
+            "半自动黑杰克_大厅归宿_开始"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_退出歌声": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "稍后查看"
+                ],
+                "roi": [
+                    366,
+                    343,
+                    231,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_大厅归宿_开始"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_归宿游戏模式": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "辑大"
+                ],
+                "roi": [
+                    1080,
+                    364,
+                    145,
+                    127
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_开始"
+        ]
+    },
+    "半自动黑杰克_大厅归宿_大厅游戏模式": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "游戏.png"
+                ],
+                "roi": [
+                    1146,
+                    470,
+                    118,
+                    75
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "半自动黑杰克_开始"
+        ]
+    }
+}
