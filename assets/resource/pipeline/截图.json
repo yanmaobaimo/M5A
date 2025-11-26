@@ -1,0 +1,20 @@
+{
+    "1截图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "截图"
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "rate_limit": 100,
+        "next": [
+            "1截图"
+        ]
+    }
+}
