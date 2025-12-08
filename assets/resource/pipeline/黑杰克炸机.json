@@ -1,0 +1,1295 @@
+{
+    "黑杰克_炸机": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "炸机.png",
+                    "小手.png"
+                ],
+                "green_mask": true,
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "黑杰克_按下炸机传送"
+        ]
+    },
+    "黑杰克_按下炸机传送": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "传送.png"
+                ],
+                "threshold": [
+                    0.6
+                ],
+                "green_mask": true,
+                "roi": [
+                    1175,
+                    299,
+                    61,
+                    61
+                ]
+            }
+        },
+        "action": {
+            "type": "TouchDown",
+            "param": {}
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送"
+        ]
+    },
+    "黑杰克_抬起炸机传送": {
+        "recognition": {
+            "type": "NeuralNetworkDetect",
+            "param": {
+                "model": "炸机.onnx",
+                "expected": 0,
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "TouchUp",
+            "param": {}
+        },
+        "attach": {},
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10
+    },
+    "黑杰克_旋转炸机传送": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    1155,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本1"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本1": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    1135,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本2"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本2": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    1115,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本3"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本3": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    1095,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本4"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本4": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    1075,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本5"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本5": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    1055,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本6"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本6": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    1035,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本7"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本7": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    1015,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本8"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本8": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    995,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本9"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本9": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    975,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本10"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本10": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    955,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本11"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本11": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    935,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本12"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本12": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    915,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本13"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本13": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    895,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本14"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本14": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    875,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本15"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本15": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    855,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本16"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本16": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    835,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本17"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本17": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    815,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本18"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本18": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    795,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本19"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本19": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    775,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本20"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本20": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    755,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本21"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本21": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    735,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本22"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本22": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    715,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本23"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本23": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    695,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本24"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本24": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    675,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本25"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本25": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    655,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本26"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本26": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    635,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本27"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本27": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    615,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本28"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本28": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    595,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本29"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本29": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    575,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本30"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本30": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    555,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本31"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本31": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    535,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本32"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本32": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    515,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本33"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本33": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    495,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本34"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本34": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    475,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本35"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本35": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    455,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本36"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本36": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    435,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本37"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本37": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    415,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本38"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本38": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    395,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本39"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本39": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    375,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本40"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本40": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    355,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本41"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本41": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    335,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本42"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本42": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    315,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本43"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本43": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    295,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本44"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本44": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    275,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本45"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本45": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    255,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本46"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本46": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    235,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本47"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本47": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    215,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本48"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本48": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    195,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本49"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本49": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    175,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送",
+            "黑杰克_旋转炸机传送_副本50"
+        ]
+    },
+    "黑杰克_旋转炸机传送_副本50": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    155,
+                    299,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10,
+        "next": [
+            "黑杰克_抬起炸机传送"
+        ]
+    }
+}

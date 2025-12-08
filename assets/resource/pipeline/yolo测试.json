@@ -1,0 +1,18 @@
+{
+    "1机": {
+        "recognition": {
+            "type": "NeuralNetworkDetect",
+            "param": {
+                "model": "小地图炸机.onnx",
+                "expected": 0,
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        }
+    }
+}

@@ -1,0 +1,1329 @@
+{
+    "黑杰克_怜悯": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "怜悯.png"
+                ],
+                "roi": [
+                    1096,
+                    317,
+                    43,
+                    58
+                ],
+                "green_mask": true,
+                "threshold": [
+                    0.75
+                ]
+            }
+        },
+        "action": {
+            "type": "TouchDown",
+            "param": {}
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人"
+        ]
+    },
+    "黑杰克_有人": {
+        "recognition": {
+            "type": "NeuralNetworkDetect",
+            "param": {
+                "model": "怜悯.onnx",
+                "expected": 0,
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "TouchUp",
+            "param": {}
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 6000,
+        "next": [
+            "黑杰克_静步",
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_无法传送": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "无法进行传送"
+                ],
+                "roi": [
+                    493,
+                    185,
+                    296,
+                    28
+                ]
+            }
+        },
+        "action": {
+            "type": "TouchUp",
+            "param": {}
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_静步",
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_找人": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    1076,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人2"
+        ]
+    },
+    "黑杰克_找人2": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    1056,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人3"
+        ]
+    },
+    "黑杰克_找人3": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    1036,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人4"
+        ]
+    },
+    "黑杰克_找人4": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    1016,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人5"
+        ]
+    },
+    "黑杰克_找人5": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    996,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人6"
+        ]
+    },
+    "黑杰克_找人6": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    976,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人7"
+        ]
+    },
+    "黑杰克_找人7": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    956,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人8"
+        ]
+    },
+    "黑杰克_找人8": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    936,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人9"
+        ]
+    },
+    "黑杰克_找人9": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    916,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人10"
+        ]
+    },
+    "黑杰克_找人10": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    896,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人11"
+        ]
+    },
+    "黑杰克_找人11": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    876,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人12"
+        ]
+    },
+    "黑杰克_找人12": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    856,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人13"
+        ]
+    },
+    "黑杰克_找人13": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    836,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人14"
+        ]
+    },
+    "黑杰克_找人14": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    816,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人15"
+        ]
+    },
+    "黑杰克_找人15": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    796,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人16"
+        ]
+    },
+    "黑杰克_找人16": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    776,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人17"
+        ]
+    },
+    "黑杰克_找人17": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    756,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人18"
+        ]
+    },
+    "黑杰克_找人18": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    736,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人19"
+        ]
+    },
+    "黑杰克_找人19": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    716,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人20"
+        ]
+    },
+    "黑杰克_找人20": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    696,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人21"
+        ]
+    },
+    "黑杰克_找人21": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    676,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人22"
+        ]
+    },
+    "黑杰克_找人22": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    656,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人23"
+        ]
+    },
+    "黑杰克_找人23": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    636,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人24"
+        ]
+    },
+    "黑杰克_找人24": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    616,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人25"
+        ]
+    },
+    "黑杰克_找人25": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    596,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人26"
+        ]
+    },
+    "黑杰克_找人26": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    576,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人27"
+        ]
+    },
+    "黑杰克_找人27": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    556,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人28"
+        ]
+    },
+    "黑杰克_找人28": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    536,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人29"
+        ]
+    },
+    "黑杰克_找人29": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    516,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人30"
+        ]
+    },
+    "黑杰克_找人30": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    496,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人31"
+        ]
+    },
+    "黑杰克_找人31": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    476,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人32"
+        ]
+    },
+    "黑杰克_找人32": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    456,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人33"
+        ]
+    },
+    "黑杰克_找人33": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    106,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人34"
+        ]
+    },
+    "黑杰克_找人34": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    416,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人35"
+        ]
+    },
+    "黑杰克_找人35": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    396,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人36"
+        ]
+    },
+    "黑杰克_找人36": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    376,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人37"
+        ]
+    },
+    "黑杰克_找人37": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    356,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人38"
+        ]
+    },
+    "黑杰克_找人38": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    336,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人39"
+        ]
+    },
+    "黑杰克_找人39": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    316,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人40"
+        ]
+    },
+    "黑杰克_找人40": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    296,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人41"
+        ]
+    },
+    "黑杰克_找人41": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    276,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人42"
+        ]
+    },
+    "黑杰克_找人42": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    256,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人10"
+        ]
+    },
+    "黑杰克_找人43": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    236,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人44"
+        ]
+    },
+    "黑杰克_找人44": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    216,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人45"
+        ]
+    },
+    "黑杰克_找人45": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    196,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人46"
+        ]
+    },
+    "黑杰克_找人46": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    176,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人47"
+        ]
+    },
+    "黑杰克_找人47": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    156,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人48"
+        ]
+    },
+    "黑杰克_找人48": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    136,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人49"
+        ]
+    },
+    "黑杰克_找人49": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    116,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人50"
+        ]
+    },
+    "黑杰克_找人50": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target_offset": [
+                    96,
+                    317,
+                    10,
+                    5
+                ]
+            }
+        },
+        "next": [
+            "黑杰克_有人"
+        ]
+    }
+}

@@ -202,7 +202,9 @@
             "type": "DoNothing",
             "param": {}
         },
-        "pre_wait_freezes": 1000
+        "next": [
+            "黑杰克_开始"
+        ]
     },
     "大厅归宿_大厅游戏模式": {
         "recognition": {
@@ -224,6 +226,8 @@
             "type": "DoNothing",
             "param": {}
         },
-        "pre_wait_freezes": 1000
+        "next": [
+            "黑杰克_开始"
+        ]
     }
 }
