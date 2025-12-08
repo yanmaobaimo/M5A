@@ -1,0 +1,28 @@
+{
+    "截图": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "。"
+                ],
+                "roi": [
+                    0,
+                    700,
+                    10,
+                    10
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "rate_limit": 50,
+        "pre_delay": 50,
+        "post_delay": 50,
+        "next": [
+            "截图"
+        ]
+    }
+}
