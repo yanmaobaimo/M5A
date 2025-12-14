@@ -3,16 +3,25 @@
         "recognition": {
             "type": "NeuralNetworkDetect",
             "param": {
-                "model": "小地图炸机.onnx",
+                "model": "密码机.onnx",
                 "expected": 0,
                 "threshold": [
-                    0.8
+                    0.3
+                ],
+                "roi": [
+                    0,
+                    0,
+                    544,
+                    720
                 ]
             }
         },
         "action": {
-            "type": "DoNothing",
+            "type": "TouchDown",
             "param": {}
-        }
+        },
+        "rate_limit": 50,
+        "pre_delay": 10,
+        "post_delay": 10
     }
 }

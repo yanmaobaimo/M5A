@@ -18,57 +18,9 @@
         "pre_delay": 0,
         "post_delay": 0,
         "next": [
-            "黑杰克_有密码机中",
             "黑杰克_有密码机左",
             "黑杰克_有密码机右",
-            "黑杰克_静步",
-            "黑杰克_庄园"
-        ]
-    },
-    "黑杰克_有密码机中": {
-        "recognition": {
-            "type": "NeuralNetworkDetect",
-            "param": {
-                "model": "密码机.onnx",
-                "expected": 0,
-                "threshold": [
-                    0.6
-                ],
-                "roi": [
-                    400,
-                    0,
-                    480,
-                    720
-                ]
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin": [
-                    150,
-                    600,
-                    50,
-                    50
-                ],
-                "end": [
-                    [
-                        150,
-                        500,
-                        50,
-                        50
-                    ]
-                ],
-                "end_hold": [
-                    200
-                ]
-            }
-        },
-        "rate_limit": 50,
-        "pre_delay": 0,
-        "post_delay": 0,
-        "next": [
-            "黑杰克_有密码机",
+            "黑杰克_有密码机中",
             "黑杰克_静步",
             "黑杰克_庄园"
         ]
@@ -80,12 +32,12 @@
                 "model": "密码机.onnx",
                 "expected": 0,
                 "threshold": [
-                    0.6
+                    0.7
                 ],
                 "roi": [
                     0,
                     0,
-                    450,
+                    544,
                     720
                 ]
             }
@@ -125,12 +77,12 @@
                 "model": "密码机.onnx",
                 "expected": 0,
                 "threshold": [
-                    0.6
+                    0.7
                 ],
                 "roi": [
-                    830,
+                    736,
                     0,
-                    450,
+                    544,
                     720
                 ]
             }
@@ -151,6 +103,54 @@
                         50,
                         50
                     ]
+                ]
+            }
+        },
+        "rate_limit": 50,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "黑杰克_有密码机",
+            "黑杰克_静步",
+            "黑杰克_庄园"
+        ]
+    },
+    "黑杰克_有密码机中": {
+        "recognition": {
+            "type": "NeuralNetworkDetect",
+            "param": {
+                "model": "密码机.onnx",
+                "expected": 0,
+                "threshold": [
+                    0.6
+                ],
+                "roi": [
+                    448,
+                    0,
+                    384,
+                    720
+                ]
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    150,
+                    600,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        150,
+                        500,
+                        50,
+                        50
+                    ]
+                ],
+                "end_hold": [
+                    200
                 ]
             }
         },

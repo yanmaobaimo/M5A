@@ -14,7 +14,7 @@
                 ],
                 "green_mask": true,
                 "threshold": [
-                    0.75
+                    0.8
                 ]
             }
         },
@@ -38,7 +38,7 @@
                 "model": "怜悯.onnx",
                 "expected": 0,
                 "threshold": [
-                    0.6
+                    0.7
                 ]
             }
         },
@@ -59,13 +59,13 @@
             "type": "OCR",
             "param": {
                 "expected": [
-                    "无法进行传送"
+                    "传送"
                 ],
                 "roi": [
                     493,
                     185,
                     296,
-                    28
+                    30
                 ]
             }
         },
