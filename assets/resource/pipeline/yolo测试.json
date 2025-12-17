@@ -3,16 +3,10 @@
         "recognition": {
             "type": "NeuralNetworkDetect",
             "param": {
-                "model": "密码机.onnx",
+                "model": "傀儡侦察.onnx",
                 "expected": 0,
                 "threshold": [
                     0.3
-                ],
-                "roi": [
-                    0,
-                    0,
-                    544,
-                    720
                 ]
             }
         },
