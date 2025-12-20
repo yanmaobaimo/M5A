@@ -1,21 +1,19 @@
 {
-    "1机": {
-        "recognition": {
-            "type": "NeuralNetworkDetect",
-            "param": {
-                "model": "傀儡侦察.onnx",
-                "expected": 0,
-                "threshold": [
-                    0.3
-                ]
-            }
-        },
-        "action": {
-            "type": "TouchDown",
-            "param": {}
-        },
-        "rate_limit": 50,
-        "pre_delay": 10,
-        "post_delay": 10
-    }
+	"1机": {
+		"recognition": {
+			"type": "NeuralNetworkDetect",
+			"param": {
+				"model": "傀儡侦察.onnx",
+				"expected": 0,
+				"threshold": [0.3]
+			}
+		},
+		"action": {
+			"type": "TouchDown",
+			"param": {}
+		},
+		"rate_limit": 50,
+		"pre_delay": 10,
+		"post_delay": 10
+	}
 }

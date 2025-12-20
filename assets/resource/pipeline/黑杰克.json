@@ -1,358 +1,234 @@
 {
-    "黑杰克_开始": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "post_wait_freezes": 1000,
-        "next": [
-            {
-                "name": "黑杰克_准备案件还原",
-                "jump_back": true
-            },
-            {
-                "name": "黑杰克_匹配",
-                "jump_back": true
-            },
-            {
-                "name": "黑杰克_开始案件还原",
-                "jump_back": true
-            },
-            {
-                "name": "黑杰克_进入黑杰克",
-                "jump_back": true
-            },
-            {
-                "name": "黑杰克_混沌纷争",
-                "jump_back": true
-            },
-            {
-                "name": "黑杰克_大厅游戏模式",
-                "jump_back": true
-            },
-            {
-                "name": "黑杰克_归宿游戏模式",
-                "jump_back": true
-            },
-            {
-                "name": "黑杰克_退出歌声",
-                "jump_back": true
-            },
-            "黑杰克_准备开始",
-            "黑杰克_未开启"
-        ]
-    },
-    "黑杰克_归宿游戏模式": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "辑大"
-                ],
-                "roi": [
-                    1080,
-                    364,
-                    145,
-                    127
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    1107,
-                    483,
-                    99,
-                    54
-                ]
-            }
-        }
-    },
-    "黑杰克_大厅游戏模式": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "游戏.png"
-                ],
-                "roi": [
-                    1146,
-                    470,
-                    118,
-                    75
-                ],
-                "green_mask": true,
-                "threshold": [
-                    0.9
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        }
-    },
-    "黑杰克_混沌纷争": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "混沌纷争"
-                ],
-                "roi": [
-                    627,
-                    241,
-                    243,
-                    140
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "post_delay": 1000
-    },
-    "黑杰克_进入黑杰克": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "结束"
-                ],
-                "roi": [
-                    328,
-                    223,
-                    80,
-                    22
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        }
-    },
-    "黑杰克_开始案件还原": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "开始案件还原"
-                ],
-                "roi": [
-                    515,
-                    593,
-                    259,
-                    127
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        }
-    },
-    "黑杰克_退出歌声": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "稍后查看"
-                ],
-                "roi": [
-                    366,
-                    343,
-                    231,
-                    138
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        }
-    },
-    "黑杰克_未开启": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "开启"
-                ],
-                "roi": [
-                    321,
-                    173,
-                    140,
-                    126
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    35,
-                    30,
-                    50,
-                    55
-                ]
-            }
-        },
-        "post_wait_freezes": 2000,
-        "next": [
-            "黑杰克_结束"
-        ]
-    },
-    "黑杰克_结束": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "混沌纷争"
-                ],
-                "roi": [
-                    627,
-                    241,
-                    243,
-                    140
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    35,
-                    30,
-                    50,
-                    55
-                ]
-            }
-        },
-        "post_wait_freezes": 2000,
-        "next": [
-            "大厅归宿_开始"
-        ]
-    },
-    "黑杰克_匹配": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "取消匹配"
-                ],
-                "roi": [
-                    73,
-                    302,
-                    193,
-                    137
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "post_delay": 3000,
-        "next": [
-            "黑杰克_匹配",
-            "黑杰克_准备案件还原"
-        ]
-    },
-    "黑杰克_准备案件还原": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "准备案件还原"
-                ],
-                "roi": [
-                    514,
-                    523,
-                    248,
-                    141
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "next": [
-            "黑杰克_准备开始"
-        ]
-    },
-    "黑杰克_准备开始": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "准备开始"
-                ],
-                "roi": [
-                    953,
-                    580,
-                    224,
-                    138
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "next": [
-            "黑杰克_取消准备",
-            "黑杰克_总点数"
-        ]
-    },
-    "黑杰克_取消准备": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "取消准备"
-                ],
-                "roi": [
-                    953,
-                    580,
-                    224,
-                    138
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "timeout": 90000,
-        "post_delay": 5000,
-        "next": [
-            "黑杰克_取消准备",
-            "黑杰克_总点数"
-        ]
-    },
-    "黑杰克_总点数": {
-        "recognition": {
-            "type": "OCR",
-            "param": {
-                "expected": [
-                    "总点数"
-                ]
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "next": [
-            "黑杰克_庄园"
-        ]
-    }
+	"黑杰克_开始": {
+		"recognition": {
+			"type": "DirectHit",
+			"param": {}
+		},
+		"action": {
+			"type": "DoNothing",
+			"param": {}
+		},
+		"post_wait_freezes": 1000,
+		"next": [
+			{"name": "黑杰克_准备案件还原", "jump_back": true},
+			{"name": "黑杰克_匹配", "jump_back": true},
+			{"name": "黑杰克_开始案件还原", "jump_back": true},
+			{"name": "黑杰克_进入黑杰克", "jump_back": true},
+			{"name": "黑杰克_混沌纷争", "jump_back": true},
+			{"name": "黑杰克_大厅游戏模式", "jump_back": true},
+			{"name": "黑杰克_归宿游戏模式", "jump_back": true},
+			{"name": "黑杰克_退出歌声", "jump_back": true},
+			"黑杰克_准备开始",
+			"黑杰克_未开启"
+		]
+	},
+	"黑杰克_归宿游戏模式": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["辑大"],
+				"roi": [1080, 364, 145, 127]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {
+				"target": [1107, 483, 99, 54]
+			}
+		}
+	},
+	"黑杰克_大厅游戏模式": {
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": [
+					"游戏.png"
+				],
+				"roi": [1146, 470, 118, 75],
+				"green_mask": true,
+				"threshold": [0.9]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		}
+	},
+	"黑杰克_混沌纷争": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["混沌纷争"],
+				"roi": [627, 241, 243, 140]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		},
+		"post_delay": 1000
+	},
+	"黑杰克_进入黑杰克": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["结束"],
+				"roi": [328, 223, 80, 22]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		}
+	},
+	"黑杰克_开始案件还原": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["开始案件还原"],
+				"roi": [515, 593, 259, 127]
+			}
+		},
+		"post_wait_freezes": 1000,
+		"action": {
+			"type": "Click",
+			"param": {}
+		}
+	},
+	"黑杰克_退出歌声": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["稍后查看"],
+				"roi": [366, 343, 231, 138]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		}
+	},
+	"黑杰克_未开启": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["开启"],
+				"roi": [321, 173, 140, 126]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {
+				"target": [35, 30, 50, 55]
+			}
+		},
+		"post_wait_freezes": 2000,
+		"next": [
+			"黑杰克_结束"
+		]
+	},
+	"黑杰克_结束": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["混沌纷争"],
+				"roi": [627, 241, 243, 140]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {
+				"target": [35, 30, 50, 55]
+			}
+		},
+		"post_wait_freezes": 2000,
+		"next": [
+			"大厅归宿_开始"
+		]
+	},
+	"黑杰克_匹配": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["取消匹配"],
+				"roi": [73, 302, 193, 137]
+			}
+		},
+		"action": {
+			"type": "DoNothing",
+			"param": {}
+		},
+		"post_delay": 3000,
+		"next": [
+			"黑杰克_匹配",
+			"黑杰克_准备案件还原"
+		]
+	},
+	"黑杰克_准备案件还原": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["准备案件还原"],
+				"roi": [514, 523, 248, 141]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		},
+		"next": [
+			"黑杰克_准备开始"
+		]
+	},
+	"黑杰克_准备开始": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["准备开始"],
+				"roi": [953, 580, 224, 138]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		},
+		"next": [
+			"黑杰克_取消准备",
+			"黑杰克_总点数"
+		]
+	},
+	"黑杰克_取消准备": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["取消准备"],
+				"roi": [953, 580, 224, 138]
+			}
+		},
+		"action": {
+			"type": "DoNothing",
+			"param": {}
+		},
+		"timeout": 90000,
+		"post_delay": 5000,
+		"next": [
+			"黑杰克_取消准备",
+			"黑杰克_总点数"
+		]
+	},
+	"黑杰克_总点数": {
+		"recognition": {
+			"type": "OCR",
+			"param": {
+				"expected": ["总点数"]
+			}
+		},
+		"action": {
+			"type": "DoNothing",
+			"param": {}
+		},
+		"next": [
+			"黑杰克_庄园"
+		]
+	}
 }
