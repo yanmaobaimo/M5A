@@ -1,13 +1,10 @@
 {
 	"黑杰克_修不到机": {
 		"recognition": {
-			"type": "TemplateMatch",
+			"type": "NeuralNetworkDetect",
 			"param": {
-				"template": [
-					"修不到机.png"
-				],
-				"green_mask": true,
-				"roi": [0, 200, 1280, 250]
+				"model": "修不到机.onnx",
+				"expected": 0
 			}
 		},
 		"action": {
@@ -27,23 +24,38 @@
 	},
 	"黑杰克_修不到机中": {
 		"recognition": {
-			"type": "TemplateMatch",
+			"type": "NeuralNetworkDetect",
 			"param": {
-				"template": [
-					"修不到机.png"
+				"roi": [
+					400,
+					200,
+					480,
+					300
 				],
-				"green_mask": true,
-				"roi": [400, 200, 480, 250]
+				"model": "修不到机.onnx",
+				"expected": 0
 			}
 		},
 		"action": {
 			"type": "Swipe",
 			"param": {
-				"begin": [150, 600, 50, 50],
-				"end": [
-					[150, 500, 50, 50]
+				"begin": [
+					150,
+					600,
+					50,
+					50
 				],
-				"end_hold": [200]
+				"end": [
+					[
+						150,
+						500,
+						50,
+						50
+					]
+				],
+				"end_hold": [
+					200
+				]
 			}
 		},
 		"rate_limit": 50,
@@ -57,21 +69,34 @@
 	},
 	"黑杰克_修不到机左": {
 		"recognition": {
-			"type": "TemplateMatch",
+			"type": "NeuralNetworkDetect",
 			"param": {
-				"template": [
-					"修不到机.png"
+				"roi": [
+					0,
+					200,
+					450,
+					300
 				],
-				"green_mask": true,
-				"roi": [0, 200, 450, 250]
+				"model": "修不到机.onnx",
+				"expected": 0
 			}
 		},
 		"action": {
 			"type": "Swipe",
 			"param": {
-				"begin": [800, 300, 50, 50],
+				"begin": [
+					800,
+					300,
+					50,
+					50
+				],
 				"end": [
-					[700, 300, 50, 50]
+					[
+						700,
+						300,
+						50,
+						50
+					]
 				]
 			}
 		},
@@ -86,21 +111,34 @@
 	},
 	"黑杰克_修不到机右": {
 		"recognition": {
-			"type": "TemplateMatch",
+			"type": "NeuralNetworkDetect",
 			"param": {
-				"template": [
-					"修不到机.png"
+				"roi": [
+					830,
+					200,
+					450,
+					300
 				],
-				"green_mask": true,
-				"roi": [830, 200, 450, 250]
+				"model": "修不到机.onnx",
+				"expected": 0
 			}
 		},
 		"action": {
 			"type": "Swipe",
 			"param": {
-				"begin": [700, 300, 50, 50],
+				"begin": [
+					700,
+					300,
+					50,
+					50
+				],
 				"end": [
-					[800, 300, 50, 50]
+					[
+						800,
+						300,
+						50,
+						50
+					]
 				]
 			}
 		},

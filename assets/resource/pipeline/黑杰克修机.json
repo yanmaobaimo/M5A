@@ -1,78 +1,107 @@
 {
-	"黑杰克_修机": {
+	"黑杰克_点击修机": {
+		"action": {
+			"param": {},
+			"type": "Click"
+		},
+		"next": [
+			"黑杰克_庄园"
+		],
+		"post_delay": 0,
+		"pre_delay": 0,
+		"rate_limit": 50,
 		"recognition": {
-			"type": "TemplateMatch",
 			"param": {
+				"green_mask": true,
+				"roi": [400, 300, 480, 420],
 				"template": [
 					"修机.png"
-				],
-				"green_mask": true,
-				"roi": [0, 300, 1280, 420]
-			}
-		},
+				]
+			},
+			"type": "TemplateMatch"
+		}
+	},
+	"黑杰克_修机": {
 		"action": {
-			"type": "DoNothing",
-			"param": {}
+			"param": {},
+			"type": "DoNothing"
 		},
-		"rate_limit": 50,
-		"pre_delay": 0,
-		"post_delay": 0,
 		"next": [
 			"黑杰克_点击修机",
-			"黑杰克_旋转修机视角",
+			"黑杰克_修机左",
+			"黑杰克_修机右",
 			"黑杰克_庄园"
-		]
-	},
-	"黑杰克_点击修机": {
-		"recognition": {
-			"type": "TemplateMatch",
-			"param": {
-				"template": [
-					"修机.png"
-				],
-				"green_mask": true,
-				"roi": [450, 300, 830, 420]
-			}
-		},
-		"action": {
-			"type": "Click",
-			"param": {}
-		},
-		"rate_limit": 50,
-		"pre_delay": 0,
+		],
 		"post_delay": 0,
-		"next": [
-			"黑杰克_静步",
-			"黑杰克_庄园"
-		]
-	},
-	"黑杰克_旋转修机视角": {
+		"pre_delay": 0,
+		"rate_limit": 50,
 		"recognition": {
-			"type": "TemplateMatch",
 			"param": {
+				"green_mask": true,
+				"roi": [0, 300, 1280, 420],
+				"template": [
+					"修机.png"
+				]
+			},
+			"type": "TemplateMatch"
+		}
+	},
+	"黑杰克_修机右": {
+		"action": {
+			"param": {
+				"begin": [700, 300, 50, 50],
+				"end": [
+					[800, 300, 50, 50]
+				]
+			},
+			"type": "Swipe"
+		},
+		"next": [
+			"黑杰克_点击修机",
+			"黑杰克_修机",
+			"黑杰克_庄园"
+		],
+		"post_delay": 0,
+		"pre_delay": 0,
+		"rate_limit": 50,
+		"recognition": {
+			"param": {
+				"roi": [830, 300, 450, 420],
 				"template": [
 					"修机.png"
 				],
-				"green_mask": true,
-				"roi": [0, 300, 550, 420]
-			}
-		},
+				"threshold": [0.6]
+			},
+			"type": "TemplateMatch"
+		}
+	},
+	"黑杰克_修机左": {
 		"action": {
-			"type": "Swipe",
 			"param": {
 				"begin": [800, 300, 50, 50],
 				"end": [
 					[700, 300, 50, 50]
 				]
-			}
+			},
+			"type": "Swipe"
 		},
-		"rate_limit": 50,
-		"pre_delay": 0,
-		"post_delay": 0,
 		"next": [
+			"黑杰克_点击修机",
 			"黑杰克_修机",
-			"黑杰克_静步",
 			"黑杰克_庄园"
-		]
+		],
+		"post_delay": 0,
+		"pre_delay": 0,
+		"rate_limit": 50,
+		"recognition": {
+			"param": {
+				"roi": [0, 300, 450, 420],
+				"template": [
+					"修机.png"
+				],
+				"threshold": [0.6]
+			},
+			"type": "TemplateMatch"
+		}
 	}
 }

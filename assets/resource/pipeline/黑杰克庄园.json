@@ -14,11 +14,18 @@
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [1124, 541, 65, 89],
+				"roi": [
+					1124,
+					541,
+					65,
+					89
+				],
 				"template": [
 					"交互.png"
 				],
-				"threshold": [0.9]
+				"threshold": [
+					0.9
+				]
 			},
 			"type": "TemplateMatch"
 		}
@@ -39,11 +46,18 @@
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [1175, 299, 61, 61],
+				"roi": [
+					1175,
+					299,
+					61,
+					61
+				],
 				"template": [
 					"传送.png"
 				],
-				"threshold": [0.6]
+				"threshold": [
+					0.6
+				]
 			},
 			"type": "TemplateMatch"
 		}
@@ -63,7 +77,12 @@
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [615, 506, 53, 65],
+				"roi": [
+					615,
+					506,
+					53,
+					65
+				],
 				"template": [
 					"倒地.png"
 				]
@@ -87,11 +106,18 @@
 		"rate_limit": 50,
 		"recognition": {
 			"param": {
-				"roi": [1200, 322, 25, 35],
+				"roi": [
+					1200,
+					322,
+					25,
+					35
+				],
 				"template": [
 					"回忆碎片.png"
 				],
-				"threshold": [0.9]
+				"threshold": [
+					0.9
+				]
 			},
 			"type": "TemplateMatch"
 		}
@@ -102,7 +128,7 @@
 			"type": "Click"
 		},
 		"next": [
-			"黑杰克_旋转视角"
+			"黑杰克_庄园"
 		],
 		"post_delay": 1500,
 		"pre_delay": 0,
@@ -110,11 +136,18 @@
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [1056, 428, 80, 79],
+				"roi": [
+					1056,
+					428,
+					80,
+					79
+				],
 				"template": [
 					"定时炸弹.png"
 				],
-				"threshold": [0.88]
+				"threshold": [
+					0.88
+				]
 			},
 			"type": "TemplateMatch"
 		}
@@ -128,6 +161,7 @@
 			"黑杰克_静步",
 			"黑杰克_牵人",
 			"黑杰克_牵不到人",
+			"黑杰克_倒地求生",
 			"黑杰克_耳鸣",
 			"黑杰克_传送",
 			"黑杰克_倒地",
@@ -135,6 +169,9 @@
 			"黑杰克_结算",
 			"黑杰克_庄园"
 		],
+		"post_delay": 0,
+		"pre_delay": 0,
+		"rate_limit": 50,
 		"recognition": {
 			"param": {},
 			"type": "DirectHit"
@@ -155,7 +192,12 @@
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [1179, 413, 63, 68],
+				"roi": [
+					1179,
+					413,
+					63,
+					68
+				],
 				"template": [
 					"引爆.png"
 				]
@@ -178,11 +220,18 @@
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [1080, 519, 146, 137],
+				"roi": [
+					1080,
+					519,
+					146,
+					137
+				],
 				"template": [
 					"26号攻击.png"
 				],
-				"threshold": [0.9]
+				"threshold": [
+					0.9
+				]
 			},
 			"type": "TemplateMatch"
 		}
@@ -190,17 +239,29 @@
 	"黑杰克_旋转视角": {
 		"action": {
 			"param": {
-				"begin": [800, 300, 50, 50],
+				"begin": [
+					800,
+					300,
+					50,
+					50
+				],
 				"end": [
-					[600, 300, 50, 50]
+					[
+						600,
+						300,
+						50,
+						50
+					]
 				]
 			},
 			"type": "Swipe"
 		},
 		"next": [
-			"黑杰克_静步",
 			"黑杰克_庄园"
 		],
+		"post_delay": 0,
+		"pre_delay": 0,
+		"rate_limit": 50,
 		"recognition": {
 			"param": {},
 			"type": "DirectHit"
@@ -240,8 +301,15 @@
 		"post_delay": 2000,
 		"recognition": {
 			"param": {
-				"expected": ["破译密码"],
-				"roi": [500, 400, 260, 150]
+				"expected": [
+					"破译密码"
+				],
+				"roi": [
+					500,
+					400,
+					260,
+					150
+				]
 			},
 			"type": "OCR"
 		}
@@ -259,8 +327,15 @@
 		"rate_limit": 50,
 		"recognition": {
 			"param": {
-				"expected": ["确定"],
-				"roi": [606, 612, 300, 35]
+				"expected": [
+					"确定"
+				],
+				"roi": [
+					606,
+					612,
+					300,
+					35
+				]
 			},
 			"type": "OCR"
 		}
@@ -271,10 +346,8 @@
 			"type": "DoNothing"
 		},
 		"next": [
-			"黑杰克_踩板",
 			"黑杰克_遥控炸弹",
 			"黑杰克_引爆",
-			"黑杰克_传送",
 			"黑杰克_定时炸弹",
 			"黑杰克_攻击",
 			"黑杰克_庄园"
@@ -285,7 +358,12 @@
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [200, 15, 250, 45],
+				"roi": [
+					200,
+					15,
+					250,
+					45
+				],
 				"template": [
 					"耳鸣.png"
 				]
@@ -297,7 +375,12 @@
 		"action": {
 			"param": {
 				"duration": 23000,
-				"target": [1101, 518, 120, 168]
+				"target": [
+					1101,
+					518,
+					120,
+					168
+				]
 			},
 			"type": "LongPress"
 		},
@@ -310,32 +393,17 @@
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [1101, 518, 120, 168],
+				"roi": [
+					1101,
+					518,
+					120,
+					168
+				],
 				"template": [
 					"交互.png"
 				],
-				"threshold": [0.85]
-			},
-			"type": "TemplateMatch"
-		}
-	},
-	"黑杰克_踩板": {
-		"action": {
-			"param": {},
-			"type": "DoNothing"
-		},
-		"next": [
-			"黑杰克_耳鸣",
-			"黑杰克_庄园"
-		],
-		"post_delay": 0,
-		"pre_delay": 0,
-		"rate_limit": 50,
-		"recognition": {
-			"param": {
-				"green_mask": true,
-				"template": [
-					"踩板.png"
+				"threshold": [
+					0.85
 				]
 			},
 			"type": "TemplateMatch"
@@ -355,11 +423,18 @@
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [1176, 404, 69, 79],
+				"roi": [
+					1176,
+					404,
+					69,
+					79
+				],
 				"template": [
 					"遥控炸弹.png"
 				],
-				"threshold": [0.9]
+				"threshold": [
+					0.9
+				]
 			},
 			"type": "TemplateMatch"
 		}
@@ -378,10 +453,18 @@
 			"黑杰克_旋转视角",
 			"黑杰克_庄园"
 		],
+		"post_delay": 0,
+		"pre_delay": 0,
+		"rate_limit": 50,
 		"recognition": {
 			"param": {
 				"green_mask": true,
-				"roi": [994, 521, 39, 62],
+				"roi": [
+					994,
+					521,
+					39,
+					62
+				],
 				"template": [
 					"静步.png"
 				]

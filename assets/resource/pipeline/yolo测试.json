@@ -1,15 +1,17 @@
 {
-	"1机": {
+	"1yolo": {
 		"recognition": {
 			"type": "NeuralNetworkDetect",
 			"param": {
-				"model": "傀儡侦察.onnx",
+				"model": "修不到机.onnx",
 				"expected": 0,
-				"threshold": [0.3]
+				"threshold": [
+					0.3
+				]
 			}
 		},
 		"action": {
-			"type": "TouchDown",
+			"type": "Click",
 			"param": {}
 		},
 		"rate_limit": 50,
