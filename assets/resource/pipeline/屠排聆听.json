@@ -1,0 +1,159 @@
+{
+  "屠排_聆听": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "聆听.png"
+        ],
+        "green_mask": true,
+        "roi": [
+          1206,
+          287,
+          42,
+          58
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "post_delay": 2500,
+    "next": [
+      "屠排_旋转聆听"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_旋转聆听": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Swipe",
+      "param": {
+        "begin": [
+          1100,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            900,
+            300,
+            50,
+            50
+          ],
+          [
+            700,
+            300,
+            50,
+            50
+          ],
+          [
+            500,
+            300,
+            50,
+            50
+          ],
+          [
+            300,
+            300,
+            50,
+            50
+          ]
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "post_delay": 0,
+    "next": [
+      "屠排_旋转聆听_副本1"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_停止聆听": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          1206,
+          287,
+          42,
+          58
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "post_delay": 0,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_旋转聆听_副本1": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Swipe",
+      "param": {
+        "begin": [
+          1100,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            900,
+            300,
+            50,
+            50
+          ],
+          [
+            700,
+            300,
+            50,
+            50
+          ],
+          [
+            500,
+            300,
+            50,
+            50
+          ],
+          [
+            300,
+            300,
+            50,
+            50
+          ]
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "post_delay": 0,
+    "next": [
+      "屠排_停止聆听"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

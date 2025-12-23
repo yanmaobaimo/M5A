@@ -23,6 +23,9 @@
         ]
       },
       "type": "NeuralNetworkDetect"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_有密码机中": {
@@ -71,6 +74,9 @@
         ]
       },
       "type": "NeuralNetworkDetect"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_有密码机右": {
@@ -116,6 +122,9 @@
         ]
       },
       "type": "NeuralNetworkDetect"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_有密码机左": {
@@ -161,6 +170,9 @@
         ]
       },
       "type": "NeuralNetworkDetect"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     }
   }
 }
