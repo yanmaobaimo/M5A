@@ -183,10 +183,7 @@
       },
       "黑杰克_准备开始",
       "黑杰克_未开启"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_开始案件还原": {
     "recognition": {

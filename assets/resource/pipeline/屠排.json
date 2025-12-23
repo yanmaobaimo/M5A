@@ -70,10 +70,7 @@
         "jump_back": true
       },
       "屠排_准备开始"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "屠排_退出歌声": {
     "recognition": {

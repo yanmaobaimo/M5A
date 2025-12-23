@@ -70,10 +70,7 @@
         "name": "屠排_大娃",
         "jump_back": true
       }
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "屠排_得分已达最高": {
     "recognition": {

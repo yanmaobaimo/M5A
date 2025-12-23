@@ -190,9 +190,6 @@
     "recognition": {
       "param": {},
       "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_引爆": {
