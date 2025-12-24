@@ -54,7 +54,67 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
-      "屠排_放二火娃"
+      "屠排_庄园"
+    ],
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ],
+        "roi": [
+          909,
+          561,
+          12,
+          23
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "屠排_二娃有人": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_二娃有人有火",
+      "屠排_二娃上火",
+      "屠排_传送二娃"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "expected": [
+          1
+        ],
+        "model": "傀儡侦察.onnx",
+        "threshold": [
+          0.7
+        ]
+      },
+      "type": "NeuralNetworkDetect"
+    }
+  },
+  "屠排_二娃有人有火": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_聆听",
+      "屠排_庄园"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -62,11 +122,72 @@
     "recognition": {
       "param": {
         "green_mask": true,
+        "roi": [
+          1194,
+          465,
+          27,
+          33
+        ],
         "template": [
-          "火.png"
+          "有火.png"
+        ],
+        "threshold": [
+          0.6
         ]
       },
       "type": "TemplateMatch"
+    }
+  },
+  "屠排_传送二娃": {
+    "action": {
+      "param": {
+        "target": [
+          1164,
+          401,
+          84,
+          73
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "屠排_传送大娃": {
+    "action": {
+      "param": {
+        "target": [
+          1056,
+          423,
+          86,
+          73
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
     }
   },
   "屠排_倒计时": {
@@ -158,7 +279,66 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
-      "屠排_放大火娃"
+      "屠排_庄园"
+    ],
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ],
+        "roi": [
+          909,
+          561,
+          12,
+          23
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "屠排_大娃有人": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_大娃有人有火",
+      "屠排_大娃上火",
+      "屠排_传送大娃"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "expected": 0,
+        "model": "傀儡侦察.onnx",
+        "threshold": [
+          0.7
+        ]
+      },
+      "type": "NeuralNetworkDetect"
+    }
+  },
+  "屠排_大娃有人有火": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_二娃有人",
+      "屠排_聆听",
+      "屠排_庄园"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -166,8 +346,17 @@
     "recognition": {
       "param": {
         "green_mask": true,
+        "roi": [
+          1059,
+          436,
+          93,
+          103
+        ],
         "template": [
-          "火.png"
+          "有火.png"
+        ],
+        "threshold": [
+          0.6
         ]
       },
       "type": "TemplateMatch"
@@ -189,18 +378,12 @@
         "jump_back": true,
         "name": "屠排_放二火娃"
       },
-      {
-        "jump_back": true,
-        "name": "屠排_大娃"
-      },
-      {
-        "jump_back": true,
-        "name": "屠排_二娃"
-      },
-      {
-        "jump_back": true,
-        "name": "屠排_聆听"
-      }
+      "屠排_大娃",
+      "屠排_二娃",
+      "屠排_大娃有人",
+      "屠排_二娃有人",
+      "屠排_聆听",
+      "屠排_庄园"
     ],
     "recognition": {
       "param": {},
@@ -277,6 +460,10 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "next": [
+      "屠排_庄园"
+    ],
+    "post_delay": 0,
     "pre_delay": 0,
     "rate_limit": 50,
     "recognition": {
@@ -305,6 +492,7 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "post_delay": 0,
     "pre_delay": 0,
     "rate_limit": 50,
     "recognition": {
@@ -333,6 +521,10 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "next": [
+      "屠排_庄园"
+    ],
+    "post_delay": 0,
     "pre_delay": 0,
     "rate_limit": 50,
     "recognition": {
@@ -361,6 +553,7 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "post_delay": 0,
     "pre_delay": 0,
     "rate_limit": 50,
     "recognition": {

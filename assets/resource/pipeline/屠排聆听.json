@@ -100,6 +100,9 @@
     "rate_limit": 50,
     "pre_delay": 0,
     "post_delay": 0,
+    "next": [
+      "屠排_庄园"
+    ],
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     }
