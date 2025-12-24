@@ -125,10 +125,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本1"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本1": {
     "recognition": {
@@ -152,10 +149,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本2"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本2": {
     "recognition": {
@@ -179,10 +173,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本3"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本3": {
     "recognition": {
@@ -206,10 +197,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本4"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本4": {
     "recognition": {
@@ -233,10 +221,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本5"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本5": {
     "recognition": {
@@ -260,10 +245,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本6"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本6": {
     "recognition": {
@@ -287,10 +269,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本7"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本7": {
     "recognition": {
@@ -314,10 +293,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本8"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本8": {
     "recognition": {
@@ -341,10 +317,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本9"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本9": {
     "recognition": {
@@ -368,10 +341,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本10"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本10": {
     "recognition": {
@@ -395,10 +365,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本11"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本11": {
     "recognition": {
@@ -422,10 +389,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本12"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本12": {
     "recognition": {
@@ -449,10 +413,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本13"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本13": {
     "recognition": {
@@ -476,10 +437,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本14"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本14": {
     "recognition": {
@@ -503,10 +461,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本15"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本15": {
     "recognition": {
@@ -530,10 +485,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本16"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本16": {
     "recognition": {
@@ -557,10 +509,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本17"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本17": {
     "recognition": {
@@ -584,10 +533,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本18"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本18": {
     "recognition": {
@@ -611,10 +557,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本19"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本19": {
     "recognition": {
@@ -638,10 +581,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本20"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本20": {
     "recognition": {
@@ -665,10 +605,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本21"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本21": {
     "recognition": {
@@ -692,10 +629,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本22"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本22": {
     "recognition": {
@@ -719,10 +653,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本23"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本23": {
     "recognition": {
@@ -746,10 +677,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本24"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本24": {
     "recognition": {
@@ -773,10 +701,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本25"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本25": {
     "recognition": {
@@ -800,10 +725,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本26"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本26": {
     "recognition": {
@@ -827,10 +749,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本27"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本27": {
     "recognition": {
@@ -854,10 +773,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本28"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本28": {
     "recognition": {
@@ -881,10 +797,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本29"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本29": {
     "recognition": {
@@ -908,10 +821,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本30"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本30": {
     "recognition": {
@@ -935,10 +845,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本31"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本31": {
     "recognition": {
@@ -962,10 +869,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本32"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本32": {
     "recognition": {
@@ -989,10 +893,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本33"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本33": {
     "recognition": {
@@ -1016,10 +917,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本34"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本34": {
     "recognition": {
@@ -1043,10 +941,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本35"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本35": {
     "recognition": {
@@ -1070,10 +965,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本36"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本36": {
     "recognition": {
@@ -1097,10 +989,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本37"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本37": {
     "recognition": {
@@ -1124,10 +1013,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本38"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本38": {
     "recognition": {
@@ -1151,10 +1037,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本39"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本39": {
     "recognition": {
@@ -1178,10 +1061,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本40"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本40": {
     "recognition": {
@@ -1205,10 +1085,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本41"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本41": {
     "recognition": {
@@ -1232,10 +1109,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本42"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本42": {
     "recognition": {
@@ -1259,10 +1133,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本43"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本43": {
     "recognition": {
@@ -1286,10 +1157,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本44"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本44": {
     "recognition": {
@@ -1313,10 +1181,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本45"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本45": {
     "recognition": {
@@ -1340,10 +1205,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本46"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本46": {
     "recognition": {
@@ -1367,10 +1229,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本47"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本47": {
     "recognition": {
@@ -1394,10 +1253,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本48"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本48": {
     "recognition": {
@@ -1421,10 +1277,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本49"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本49": {
     "recognition": {
@@ -1448,10 +1301,7 @@
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本50"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机_副本50": {
     "recognition": {
@@ -1475,10 +1325,7 @@
     "timeout": 200,
     "next": [
       "黑杰克_抬起"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_抬起": {
     "recognition": {
