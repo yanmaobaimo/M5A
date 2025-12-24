@@ -19,10 +19,7 @@
       "大厅归宿_退出歌声",
       "大厅归宿_大厅游戏模式",
       "大厅归宿_归宿游戏模式"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "大厅归宿_领取奖励": {
     "recognition": {

@@ -44,10 +44,7 @@
       "黑杰克_点赞4",
       "黑杰克_点赞5",
       "黑杰克_继续"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_点赞1": {
     "recognition": {

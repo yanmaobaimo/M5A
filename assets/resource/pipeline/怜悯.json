@@ -1,1517 +1,1517 @@
 {
-  "黑杰克_怜悯": {
-    "action": {
-      "param": {},
-      "type": "TouchDown"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {
-        "green_mask": true,
-        "roi": [
-          1096,
-          317,
-          43,
-          58
+    "黑杰克_怜悯": {
+        "action": {
+            "param": {},
+            "type": "TouchDown"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人"
         ],
-        "template": [
-          "怜悯.png"
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {
+                "green_mask": true,
+                "roi": [
+                    1096,
+                    317,
+                    43,
+                    58
+                ],
+                "template": [
+                    "怜悯.png"
+                ],
+                "threshold": [
+                    0.8
+                ]
+            },
+            "type": "TemplateMatch"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人": {
+        "action": {
+            "param": {
+                "target": [
+                    1076,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本1"
         ],
-        "threshold": [
-          0.8
-        ]
-      },
-      "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人": {
-    "action": {
-      "param": {
-        "target": [
-          1076,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本1"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本1": {
-    "action": {
-      "param": {
-        "target": [
-          1056,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本2"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本10": {
-    "action": {
-      "param": {
-        "target": [
-          876,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本11"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本11": {
-    "action": {
-      "param": {
-        "target": [
-          856,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本12"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本12": {
-    "action": {
-      "param": {
-        "target": [
-          836,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本13"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本13": {
-    "action": {
-      "param": {
-        "target": [
-          816,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本14"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本14": {
-    "action": {
-      "param": {
-        "target": [
-          796,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本15"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本15": {
-    "action": {
-      "param": {
-        "target": [
-          776,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本16"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本16": {
-    "action": {
-      "param": {
-        "target": [
-          756,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本17"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本17": {
-    "action": {
-      "param": {
-        "target": [
-          736,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本18"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本18": {
-    "action": {
-      "param": {
-        "target": [
-          716,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本19"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本19": {
-    "action": {
-      "param": {
-        "target": [
-          696,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本20"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本2": {
-    "action": {
-      "param": {
-        "target": [
-          1036,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本3"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本20": {
-    "action": {
-      "param": {
-        "target": [
-          676,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本21"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本21": {
-    "action": {
-      "param": {
-        "target": [
-          656,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本22"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本22": {
-    "action": {
-      "param": {
-        "target": [
-          636,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本23"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本23": {
-    "action": {
-      "param": {
-        "target": [
-          616,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本24"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本24": {
-    "action": {
-      "param": {
-        "target": [
-          596,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本25"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本25": {
-    "action": {
-      "param": {
-        "target": [
-          576,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本26"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本26": {
-    "action": {
-      "param": {
-        "target": [
-          556,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本27"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本27": {
-    "action": {
-      "param": {
-        "target": [
-          536,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本28"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本28": {
-    "action": {
-      "param": {
-        "target": [
-          516,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本29"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本29": {
-    "action": {
-      "param": {
-        "target": [
-          496,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本30"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本3": {
-    "action": {
-      "param": {
-        "target": [
-          1016,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本4"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本30": {
-    "action": {
-      "param": {
-        "target": [
-          476,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本31"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本31": {
-    "action": {
-      "param": {
-        "target": [
-          456,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本32"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本32": {
-    "action": {
-      "param": {
-        "target": [
-          436,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本33"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本33": {
-    "action": {
-      "param": {
-        "target": [
-          416,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本34"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本34": {
-    "action": {
-      "param": {
-        "target": [
-          396,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本35"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本35": {
-    "action": {
-      "param": {
-        "target": [
-          376,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本36"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本36": {
-    "action": {
-      "param": {
-        "target": [
-          356,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本37"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本37": {
-    "action": {
-      "param": {
-        "target": [
-          336,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本38"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本38": {
-    "action": {
-      "param": {
-        "target": [
-          316,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本39"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本39": {
-    "action": {
-      "param": {
-        "target": [
-          296,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本40"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本4": {
-    "action": {
-      "param": {
-        "target": [
-          996,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本5"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本40": {
-    "action": {
-      "param": {
-        "target": [
-          276,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本41"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本41": {
-    "action": {
-      "param": {
-        "target": [
-          256,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本42"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本42": {
-    "action": {
-      "param": {
-        "target": [
-          236,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本43"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本43": {
-    "action": {
-      "param": {
-        "target": [
-          216,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本44"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本44": {
-    "action": {
-      "param": {
-        "target": [
-          196,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本45"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本45": {
-    "action": {
-      "param": {
-        "target": [
-          176,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本46"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本46": {
-    "action": {
-      "param": {
-        "target": [
-          156,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本47"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本47": {
-    "action": {
-      "param": {
-        "target": [
-          136,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本48"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本48": {
-    "action": {
-      "param": {
-        "target": [
-          116,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本49"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本49": {
-    "action": {
-      "param": {
-        "target": [
-          96,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本50"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本5": {
-    "action": {
-      "param": {
-        "target": [
-          976,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本6"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本50": {
-    "action": {
-      "param": {
-        "target": [
-          76,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人"
-    ],
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本6": {
-    "action": {
-      "param": {
-        "target": [
-          956,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本7"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本7": {
-    "action": {
-      "param": {
-        "target": [
-          936,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本8"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本8": {
-    "action": {
-      "param": {
-        "target": [
-          916,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本9"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_找人_副本9": {
-    "action": {
-      "param": {
-        "target": [
-          896,
-          317,
-          10,
-          5
-        ]
-      },
-      "type": "TouchMove"
-    },
-    "next": [
-      "黑杰克_有人",
-      "黑杰克_无法传送",
-      "黑杰克_找人_副本10"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "黑杰克_无法传送": {
-    "action": {
-      "param": {},
-      "type": "TouchUp"
-    },
-    "next": [
-      "黑杰克_静步",
-      "黑杰克_庄园"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {
-        "expected": [
-          "传送",
-          "目标"
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本1": {
+        "action": {
+            "param": {
+                "target": [
+                    1056,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本2"
         ],
-        "roi": [
-          493,
-          185,
-          296,
-          30
-        ]
-      },
-      "type": "OCR"
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
     },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
+    "黑杰克_找人_副本10": {
+        "action": {
+            "param": {
+                "target": [
+                    876,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本11"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本11": {
+        "action": {
+            "param": {
+                "target": [
+                    856,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本12"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本12": {
+        "action": {
+            "param": {
+                "target": [
+                    836,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本13"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本13": {
+        "action": {
+            "param": {
+                "target": [
+                    816,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本14"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本14": {
+        "action": {
+            "param": {
+                "target": [
+                    796,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本15"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本15": {
+        "action": {
+            "param": {
+                "target": [
+                    776,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本16"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本16": {
+        "action": {
+            "param": {
+                "target": [
+                    756,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本17"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本17": {
+        "action": {
+            "param": {
+                "target": [
+                    736,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本18"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本18": {
+        "action": {
+            "param": {
+                "target": [
+                    716,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本19"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本19": {
+        "action": {
+            "param": {
+                "target": [
+                    696,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本20"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本2": {
+        "action": {
+            "param": {
+                "target": [
+                    1036,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本3"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本20": {
+        "action": {
+            "param": {
+                "target": [
+                    676,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本21"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本21": {
+        "action": {
+            "param": {
+                "target": [
+                    656,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本22"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本22": {
+        "action": {
+            "param": {
+                "target": [
+                    636,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本23"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本23": {
+        "action": {
+            "param": {
+                "target": [
+                    616,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本24"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本24": {
+        "action": {
+            "param": {
+                "target": [
+                    596,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本25"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本25": {
+        "action": {
+            "param": {
+                "target": [
+                    576,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本26"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本26": {
+        "action": {
+            "param": {
+                "target": [
+                    556,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本27"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本27": {
+        "action": {
+            "param": {
+                "target": [
+                    536,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本28"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本28": {
+        "action": {
+            "param": {
+                "target": [
+                    516,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本29"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本29": {
+        "action": {
+            "param": {
+                "target": [
+                    496,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本30"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本3": {
+        "action": {
+            "param": {
+                "target": [
+                    1016,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本4"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本30": {
+        "action": {
+            "param": {
+                "target": [
+                    476,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本31"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本31": {
+        "action": {
+            "param": {
+                "target": [
+                    456,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本32"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本32": {
+        "action": {
+            "param": {
+                "target": [
+                    436,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本33"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本33": {
+        "action": {
+            "param": {
+                "target": [
+                    416,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本34"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本34": {
+        "action": {
+            "param": {
+                "target": [
+                    396,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本35"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本35": {
+        "action": {
+            "param": {
+                "target": [
+                    376,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本36"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本36": {
+        "action": {
+            "param": {
+                "target": [
+                    356,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本37"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本37": {
+        "action": {
+            "param": {
+                "target": [
+                    336,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本38"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本38": {
+        "action": {
+            "param": {
+                "target": [
+                    316,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本39"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本39": {
+        "action": {
+            "param": {
+                "target": [
+                    296,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本40"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本4": {
+        "action": {
+            "param": {
+                "target": [
+                    996,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本5"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本40": {
+        "action": {
+            "param": {
+                "target": [
+                    276,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本41"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本41": {
+        "action": {
+            "param": {
+                "target": [
+                    256,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本42"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本42": {
+        "action": {
+            "param": {
+                "target": [
+                    236,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本43"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本43": {
+        "action": {
+            "param": {
+                "target": [
+                    216,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本44"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本44": {
+        "action": {
+            "param": {
+                "target": [
+                    196,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本45"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本45": {
+        "action": {
+            "param": {
+                "target": [
+                    176,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本46"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本46": {
+        "action": {
+            "param": {
+                "target": [
+                    156,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本47"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本47": {
+        "action": {
+            "param": {
+                "target": [
+                    136,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本48"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本48": {
+        "action": {
+            "param": {
+                "target": [
+                    116,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本49"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本49": {
+        "action": {
+            "param": {
+                "target": [
+                    96,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本50"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本5": {
+        "action": {
+            "param": {
+                "target": [
+                    976,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本6"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本50": {
+        "action": {
+            "param": {
+                "target": [
+                    76,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人"
+        ],
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本6": {
+        "action": {
+            "param": {
+                "target": [
+                    956,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本7"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本7": {
+        "action": {
+            "param": {
+                "target": [
+                    936,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本8"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本8": {
+        "action": {
+            "param": {
+                "target": [
+                    916,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本9"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_找人_副本9": {
+        "action": {
+            "param": {
+                "target": [
+                    896,
+                    317,
+                    10,
+                    5
+                ]
+            },
+            "type": "TouchMove"
+        },
+        "next": [
+            "黑杰克_有人",
+            "黑杰克_无法传送",
+            "黑杰克_找人_副本10"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {},
+            "type": "DirectHit"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_无法传送": {
+        "action": {
+            "param": {},
+            "type": "TouchUp"
+        },
+        "next": [
+            "黑杰克_静步",
+            "黑杰克_庄园"
+        ],
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "传送",
+                    "目标"
+                ],
+                "roi": [
+                    493,
+                    185,
+                    296,
+                    30
+                ]
+            },
+            "type": "OCR"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "黑杰克_有人": {
+        "action": {
+            "param": {},
+            "type": "TouchUp"
+        },
+        "next": [
+            "黑杰克_静步",
+            "黑杰克_庄园"
+        ],
+        "post_delay": 6000,
+        "pre_delay": 10,
+        "rate_limit": 50,
+        "recognition": {
+            "param": {
+                "expected": 0,
+                "model": "怜悯.onnx",
+                "threshold": [
+                    0.6
+                ]
+            },
+            "type": "NeuralNetworkDetect"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
     }
-  },
-  "黑杰克_有人": {
-    "action": {
-      "param": {},
-      "type": "TouchUp"
-    },
-    "next": [
-      "黑杰克_静步",
-      "黑杰克_庄园"
-    ],
-    "post_delay": 6000,
-    "pre_delay": 10,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {
-        "expected": 0,
-        "model": "怜悯.onnx",
-        "threshold": [
-          0.6
-        ]
-      },
-      "type": "NeuralNetworkDetect"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  }
 }
