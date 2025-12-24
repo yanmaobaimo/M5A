@@ -1,166 +1,94 @@
 {
-  "屠排_继续": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": [
-          "继续"
-        ],
-        "roi": [
-          553,
-          595,
-          175,
-          125
-        ]
-      }
-    },
+  "屠排_二娃": {
     "action": {
-      "type": "Click",
-      "param": {}
+      "param": {},
+      "type": "DoNothing"
     },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_二娃上火",
+      "屠排_放二娃"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
     "rate_limit": 50,
-    "next": [
-      "屠排_返回大厅",
-      "屠排_继续"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "屠排_返回大厅": {
     "recognition": {
-      "type": "OCR",
       "param": {
-        "expected": [
-          "返回大厅"
-        ],
+        "green_mask": true,
         "roi": [
-          531,
-          595,
-          224,
-          125
+          1172,
+          407,
+          68,
+          73
+        ],
+        "template": [
+          "二娃.png"
         ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "屠排_庄园": {
-    "recognition": {
-      "type": "DirectHit",
-      "param": {}
-    },
-    "action": {
-      "type": "DoNothing",
-      "param": {}
-    },
-    "next": [
-      "屠排_得分已达最高",
-      "屠排_继续",
-      {
-        "name": "屠排_聆听",
-        "jump_back": true
       },
-      {
-        "name": "屠排_大娃",
-        "jump_back": true
-      }
-    ]
-  },
-  "屠排_得分已达最高": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": [
-          "得分已达最高"
-        ],
-        "roi": [
-          48,
-          398,
-          250,
-          137
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          10,
-          10,
-          28,
-          28
-        ]
-      }
-    },
-    "next": [
-      "屠排_倒计时",
-      "屠排_投降"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
+      "type": "TemplateMatch"
     }
   },
-  "屠排_投降": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": [
-          "投降"
-        ],
-        "roi": [
-          1019,
-          519,
-          182,
-          141
-        ]
-      }
-    },
+  "屠排_二娃上火": {
     "action": {
-      "type": "Click",
-      "param": {}
+      "param": {
+        "begin": [
+          875,
+          515,
+          40,
+          63
+        ],
+        "end": [
+          [
+            1172,
+            407,
+            68,
+            73
+          ]
+        ]
+      },
+      "type": "Swipe"
     },
-    "next": [
-      "屠排_确定投降"
-    ],
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "屠排_确定投降": {
-    "recognition": {
-      "type": "OCR",
-      "param": {
-        "expected": [
-          "确定"
-        ],
-        "roi": [
-          701,
-          346,
-          182,
-          134
-        ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {}
     },
     "next": [
-      "屠排_继续"
+      "屠排_放二火娃"
     ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "template": [
+          "火.png"
+        ]
+      },
+      "type": "TemplateMatch"
     }
   },
   "屠排_倒计时": {
+    "action": {
+      "param": {
+        "target": [
+          15,
+          13,
+          69,
+          71
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_庄园"
+    ],
+    "post_delay": 5000,
     "recognition": {
-      "type": "OCR",
       "param": {
         "expected": [
           "秒"
@@ -171,46 +99,361 @@
           182,
           141
         ]
-      }
-    },
-    "action": {
-      "type": "Click",
-      "param": {
-        "target": [
-          15,
-          13,
-          69,
-          71
-        ]
-      }
-    },
-    "post_delay": 5000,
-    "next": [
-      "屠排_庄园"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
+      },
+      "type": "OCR"
     }
   },
   "屠排_大娃": {
-    "recognition": {
-      "type": "TemplateMatch",
-      "param": {
-        "template": [
-          "大娃.png"
-        ],
-        "green_mask": true
-      }
-    },
     "action": {
-      "type": "DoNothing",
-      "param": {}
+      "param": {},
+      "type": "DoNothing"
     },
-    "rate_limit": 50,
-    "pre_delay": 0,
-    "post_delay": 0,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_大娃上火",
+      "屠排_放大娃"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1062,
+          427,
+          68,
+          74
+        ],
+        "template": [
+          "大娃.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_大娃上火": {
+    "action": {
+      "param": {
+        "begin": [
+          875,
+          515,
+          40,
+          63
+        ],
+        "end": [
+          [
+            1062,
+            427,
+            68,
+            74
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_放大火娃"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "template": [
+          "火.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_庄园": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "屠排_得分已达最高",
+      "屠排_继续",
+      {
+        "jump_back": true,
+        "name": "屠排_放大火娃"
+      },
+      {
+        "jump_back": true,
+        "name": "屠排_放二火娃"
+      },
+      {
+        "jump_back": true,
+        "name": "屠排_大娃"
+      },
+      {
+        "jump_back": true,
+        "name": "屠排_二娃"
+      },
+      {
+        "jump_back": true,
+        "name": "屠排_聆听"
+      }
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "屠排_得分已达最高": {
+    "action": {
+      "param": {
+        "target": [
+          10,
+          10,
+          28,
+          28
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_倒计时",
+      "屠排_投降"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "得分已达最高"
+        ],
+        "roi": [
+          48,
+          398,
+          250,
+          137
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "屠排_投降": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_确定投降"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "投降"
+        ],
+        "roi": [
+          1019,
+          519,
+          182,
+          141
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "屠排_放二娃": {
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1172,
+          407,
+          68,
+          73
+        ],
+        "template": [
+          "二娃.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_放二火娃": {
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1172,
+          406,
+          69,
+          93
+        ],
+        "template": [
+          "上火二娃.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_放大娃": {
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1062,
+          427,
+          68,
+          74
+        ],
+        "template": [
+          "大娃.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_放大火娃": {
+    "action": {
+      "param": {
+        "duration": 300
+      },
+      "type": "LongPress"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1062,
+          426,
+          68,
+          93
+        ],
+        "template": [
+          "上火大娃.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_确定投降": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_继续"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          701,
+          346,
+          182,
+          134
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "屠排_继续": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_返回大厅",
+      "屠排_继续"
+    ],
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "expected": [
+          "继续"
+        ],
+        "roi": [
+          553,
+          595,
+          175,
+          125
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "屠排_返回大厅": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "返回大厅"
+        ],
+        "roi": [
+          531,
+          595,
+          224,
+          125
+        ]
+      },
+      "type": "OCR"
     }
   }
 }

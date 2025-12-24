@@ -456,3 +456,4 @@ config
 debug
 .nicegui/*
 .trae/*
+.nicegui/storage-general.json
