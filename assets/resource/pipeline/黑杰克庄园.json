@@ -4,6 +4,9 @@
       "param": {},
       "type": "Click"
     },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
     "next": [
       "黑杰克_静步",
       "黑杰克_庄园"
@@ -28,15 +31,15 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_传送": {
     "action": {
       "param": {},
       "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_炸机",
@@ -63,15 +66,15 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_倒地": {
     "action": {
       "param": {},
       "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_自愈",
@@ -94,15 +97,15 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_回忆碎片": {
     "action": {
       "param": {},
       "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_怜悯",
@@ -129,15 +132,15 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_定时炸弹": {
     "action": {
       "param": {},
       "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_庄园"
@@ -162,9 +165,6 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_庄园": {
@@ -197,6 +197,9 @@
       "param": {},
       "type": "Click"
     },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
     "next": [
       "黑杰克_耳鸣",
       "黑杰克_庄园"
@@ -218,15 +221,15 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_攻击": {
     "action": {
       "param": {},
       "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_炸机",
@@ -252,9 +255,6 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_旋转视角": {
@@ -277,6 +277,9 @@
       },
       "type": "Swipe"
     },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
     "next": [
       "黑杰克_庄园"
     ],
@@ -286,15 +289,15 @@
     "recognition": {
       "param": {},
       "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_校准提示": {
     "action": {
       "param": {},
       "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_校准提示",
@@ -309,15 +312,15 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_破译密码": {
     "action": {
       "param": {},
       "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_破译密码",
@@ -339,15 +342,15 @@
         ]
       },
       "type": "OCR"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_确定": {
     "action": {
       "param": {},
       "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_庄园"
@@ -368,15 +371,15 @@
         ]
       },
       "type": "OCR"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_耳鸣": {
     "action": {
       "param": {},
       "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_遥控炸弹",
@@ -402,9 +405,6 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_自愈": {
@@ -419,6 +419,9 @@
         ]
       },
       "type": "LongPress"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_庄园"
@@ -443,15 +446,15 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_遥控炸弹": {
     "action": {
       "param": {},
       "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_旋转视角"
@@ -476,15 +479,15 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "黑杰克_静步": {
     "action": {
       "param": {},
       "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "黑杰克_修机",
@@ -512,9 +515,6 @@
         ]
       },
       "type": "TemplateMatch"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
     }
   }
 }
