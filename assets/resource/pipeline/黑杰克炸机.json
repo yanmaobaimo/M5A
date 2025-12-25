@@ -28,8 +28,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机"
@@ -60,8 +60,8 @@
       "param": {}
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_传送炸机"
     ],
@@ -93,7 +93,7 @@
       "param": {}
     },
     "rate_limit": 50,
-    "pre_delay": 10,
+    "pre_delay": 0,
     "post_delay": 2000,
     "next": [
       "黑杰克_耳鸣",
@@ -120,8 +120,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本1"
@@ -144,8 +144,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本2"
@@ -168,8 +168,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本3"
@@ -192,8 +192,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本4"
@@ -216,8 +216,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本5"
@@ -240,8 +240,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本6"
@@ -264,8 +264,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本7"
@@ -288,8 +288,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本8"
@@ -312,8 +312,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本9"
@@ -336,8 +336,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本10"
@@ -360,8 +360,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本11"
@@ -384,8 +384,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本12"
@@ -408,8 +408,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本13"
@@ -432,8 +432,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本14"
@@ -456,8 +456,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本15"
@@ -480,8 +480,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本16"
@@ -504,8 +504,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本17"
@@ -528,8 +528,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本18"
@@ -552,8 +552,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本19"
@@ -576,8 +576,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本20"
@@ -600,8 +600,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本21"
@@ -624,8 +624,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本22"
@@ -648,8 +648,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本23"
@@ -672,8 +672,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本24"
@@ -696,8 +696,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本25"
@@ -720,8 +720,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本26"
@@ -744,8 +744,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本27"
@@ -768,8 +768,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本28"
@@ -792,8 +792,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本29"
@@ -816,8 +816,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本30"
@@ -840,8 +840,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本31"
@@ -864,8 +864,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本32"
@@ -888,8 +888,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本33"
@@ -912,8 +912,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本34"
@@ -936,8 +936,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本35"
@@ -960,8 +960,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本36"
@@ -984,8 +984,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本37"
@@ -1008,8 +1008,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本38"
@@ -1032,8 +1032,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本39"
@@ -1056,8 +1056,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本40"
@@ -1080,8 +1080,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本41"
@@ -1104,8 +1104,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本42"
@@ -1128,8 +1128,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本43"
@@ -1152,8 +1152,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本44"
@@ -1176,8 +1176,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本45"
@@ -1200,8 +1200,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本46"
@@ -1224,8 +1224,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本47"
@@ -1248,8 +1248,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本48"
@@ -1272,8 +1272,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本49"
@@ -1296,8 +1296,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机_副本50"
@@ -1320,8 +1320,8 @@
       }
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "timeout": 200,
     "next": [
       "黑杰克_抬起"
@@ -1337,8 +1337,8 @@
       "param": {}
     },
     "rate_limit": 50,
-    "pre_delay": 10,
-    "post_delay": 10,
+    "pre_delay": 0,
+    "post_delay": 0,
     "next": [
       "黑杰克_传送炸机"
     ],

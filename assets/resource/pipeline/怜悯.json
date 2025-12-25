@@ -1197,7 +1197,7 @@
       "type": "TouchMove"
     },
     "next": [
-      "黑杰克_有人"
+      "黑杰克_抬起怜悯"
     ],
     "recognition": {
       "param": {},
@@ -1345,7 +1345,7 @@
       "黑杰克_庄园"
     ],
     "post_delay": 6000,
-    "pre_delay": 10,
+    "pre_delay": 0,
     "rate_limit": 50,
     "recognition": {
       "param": {
@@ -1356,6 +1356,26 @@
         ]
       },
       "type": "NeuralNetworkDetect"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_抬起怜悯": {
+    "action": {
+      "param": {},
+      "type": "TouchUp"
+    },
+    "next": [
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 6000,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"

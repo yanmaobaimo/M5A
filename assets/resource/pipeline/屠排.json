@@ -260,9 +260,6 @@
       "param": {}
     },
     "post_delay": 3000,
-    "next": [
-      "屠排_匹配"
-    ],
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     }

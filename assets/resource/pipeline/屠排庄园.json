@@ -8,8 +8,11 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
+      "屠排_二娃有火",
       "屠排_二娃上火",
-      "屠排_放二娃"
+      "屠排_得分已达最高",
+      "屠排_聆听",
+      "屠排_移动"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -19,9 +22,9 @@
         "green_mask": true,
         "roi": [
           1172,
-          407,
-          68,
-          73
+          406,
+          69,
+          69
         ],
         "template": [
           "二娃.png"
@@ -98,7 +101,7 @@
         ],
         "model": "傀儡侦察.onnx",
         "threshold": [
-          0.7
+          0.9
         ]
       },
       "type": "NeuralNetworkDetect"
@@ -114,7 +117,41 @@
     },
     "next": [
       "屠排_聆听",
-      "屠排_庄园"
+      "屠排_移动"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1194,
+          465,
+          27,
+          33
+        ],
+        "template": [
+          "有火.png"
+        ],
+        "threshold": [
+          0.6
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_二娃有火": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_聆听",
+      "屠排_移动"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -154,7 +191,7 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
-      "屠排_庄园"
+      "屠排_移动"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -180,7 +217,7 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
-      "屠排_庄园"
+      "屠排_移动"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -233,8 +270,12 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
+      "屠排_大娃有火",
       "屠排_大娃上火",
-      "屠排_放大娃"
+      "屠排_二娃",
+      "屠排_得分已达最高",
+      "屠排_聆听",
+      "屠排_移动"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -243,10 +284,10 @@
       "param": {
         "green_mask": true,
         "roi": [
-          1062,
-          427,
-          68,
-          74
+          1061,
+          426,
+          67,
+          70
         ],
         "template": [
           "大娃.png"
@@ -321,7 +362,7 @@
         "expected": 0,
         "model": "傀儡侦察.onnx",
         "threshold": [
-          0.7
+          0.9
         ]
       },
       "type": "NeuralNetworkDetect"
@@ -338,7 +379,7 @@
     "next": [
       "屠排_二娃有人",
       "屠排_聆听",
-      "屠排_庄园"
+      "屠排_移动"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -347,10 +388,45 @@
       "param": {
         "green_mask": true,
         "roi": [
-          1059,
-          436,
-          93,
-          103
+          1084,
+          486,
+          27,
+          33
+        ],
+        "template": [
+          "有火.png"
+        ],
+        "threshold": [
+          0.6
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_大娃有火": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_二娃",
+      "屠排_聆听",
+      "屠排_移动"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1084,
+          486,
+          27,
+          33
         ],
         "template": [
           "有火.png"
@@ -368,7 +444,6 @@
       "type": "DoNothing"
     },
     "next": [
-      "屠排_得分已达最高",
       "屠排_继续",
       {
         "jump_back": true,
@@ -378,12 +453,14 @@
         "jump_back": true,
         "name": "屠排_放二火娃"
       },
-      "屠排_大娃",
-      "屠排_二娃",
+      "屠排_有大娃",
+      "屠排_有二娃",
       "屠排_大娃有人",
       "屠排_二娃有人",
+      "屠排_大娃",
+      "屠排_二娃",
       "屠排_聆听",
-      "屠排_庄园"
+      "屠排_移动"
     ],
     "recognition": {
       "param": {},
@@ -406,6 +483,8 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
+      "屠排_大娃有火",
+      "屠排_二娃有火",
       "屠排_倒计时",
       "屠排_投降"
     ],
@@ -461,7 +540,7 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
-      "屠排_庄园"
+      "屠排_移动"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -476,7 +555,7 @@
           73
         ],
         "template": [
-          "二娃.png"
+          "放二娃.png"
         ]
       },
       "type": "TemplateMatch"
@@ -522,7 +601,7 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
-      "屠排_庄园"
+      "屠排_移动"
     ],
     "post_delay": 0,
     "pre_delay": 0,
@@ -537,7 +616,7 @@
           74
         ],
         "template": [
-          "大娃.png"
+          "放大娃.png"
         ]
       },
       "type": "TemplateMatch"
@@ -567,6 +646,68 @@
         ],
         "template": [
           "上火大娃.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_有二娃": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_二娃上火",
+      "屠排_放二娃"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1172,
+          407,
+          68,
+          73
+        ],
+        "template": [
+          "放二娃.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "屠排_有大娃": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠排_大娃上火",
+      "屠排_放大娃"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1062,
+          427,
+          68,
+          74
+        ],
+        "template": [
+          "放大娃.png"
         ]
       },
       "type": "TemplateMatch"
@@ -634,6 +775,9 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "next": [
+      "大厅归宿_开始"
+    ],
     "recognition": {
       "param": {
         "expected": [

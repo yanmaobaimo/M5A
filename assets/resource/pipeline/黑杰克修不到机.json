@@ -8,8 +8,26 @@
       }
     },
     "action": {
-      "type": "DoNothing",
-      "param": {}
+      "type": "Swipe",
+      "param": {
+        "begin": [
+          150,
+          600,
+          50,
+          50
+        ],
+        "end": [
+          [
+            200,
+            500,
+            50,
+            50
+          ]
+        ],
+        "end_hold": [
+          200
+        ]
+      }
     },
     "rate_limit": 50,
     "pre_delay": 0,
@@ -80,7 +98,7 @@
         "roi": [
           0,
           200,
-          450,
+          480,
           300
         ],
         "model": "修不到机.onnx",
@@ -123,9 +141,9 @@
       "type": "NeuralNetworkDetect",
       "param": {
         "roi": [
-          830,
+          800,
           200,
-          450,
+          480,
           300
         ],
         "model": "修不到机.onnx",
