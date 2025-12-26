@@ -5,8 +5,7 @@ from maa.toolkit import Toolkit
 
 import my_action
 import my_reco
-import center
-import custom_range_detection
+
 
 
 def main():

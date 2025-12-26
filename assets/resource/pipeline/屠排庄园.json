@@ -59,7 +59,6 @@
     "next": [
       "屠排_庄园"
     ],
-    "pre_delay": 0,
     "rate_limit": 50,
     "recognition": {
       "param": {
@@ -322,7 +321,6 @@
     "next": [
       "屠排_庄园"
     ],
-    "pre_delay": 0,
     "rate_limit": 50,
     "recognition": {
       "param": {

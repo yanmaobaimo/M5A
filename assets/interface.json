@@ -61,7 +61,8 @@
     "task": [
         {
             "name": "启动游戏",
-            "entry": "启动游戏_启动游戏"
+            "entry": "启动游戏_启动游戏",
+            "default_check": true
         },
         {
             "name": "黑杰克",
