@@ -1,0 +1,26 @@
+{
+  "截图": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "。"
+        ],
+        "roi": [
+          0,
+          719,
+          1,
+          1
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "rate_limit": 500,
+    "next": [
+      "截图"
+    ]
+  }
+}

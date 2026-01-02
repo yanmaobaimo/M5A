@@ -1,0 +1,356 @@
+{
+  "大厅归宿_开始": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_wait_freezes": 3000,
+    "next": [
+      "大厅归宿_领取奖励",
+      "大厅归宿_确认",
+      "大厅归宿_确认记录",
+      "大厅归宿_返回",
+      "大厅归宿_稍后聆听",
+      "大厅归宿_确定",
+      "大厅归宿_退出歌声",
+      "大厅归宿_退出空军",
+      "大厅归宿_退出活动",
+      "大厅归宿_老友回归",
+      "大厅归宿_大厅游戏模式",
+      "大厅归宿_归宿游戏模式"
+    ]
+  },
+  "大厅归宿_领取奖励": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "领取奖励"
+        ],
+        "roi": [
+          536,
+          527,
+          212,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_确认记录": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认记录"
+        ],
+        "roi": [
+          539,
+          575,
+          205,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_返回": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "返回"
+        ],
+        "roi": [
+          400,
+          522,
+          170,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_确认": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          394,
+          572,
+          175,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_确定": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          560,
+          346,
+          320,
+          250
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_稍后聆听": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "稍后聆听"
+        ],
+        "roi": [
+          341,
+          527,
+          221,
+          158
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "大厅归宿_确定",
+      "大厅归宿_开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_老友回归": {
+    "action": {
+      "param": {
+        "target": [
+          9,
+          16,
+          58,
+          55
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "老友回归"
+        ],
+        "roi": [
+          14,
+          0,
+          227,
+          145
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_退出活动": {
+    "action": {
+      "param": {
+        "target": [
+          28,
+          27,
+          52,
+          55
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "主打"
+        ],
+        "roi": [
+          17,
+          130,
+          157,
+          130
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_退出空军": {
+    "action": {
+      "param": {
+        "target": [
+          26,
+          16,
+          62,
+          66
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "空军"
+        ],
+        "roi": [
+          919,
+          133,
+          231,
+          178
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_退出歌声": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "稍后查看"
+        ],
+        "roi": [
+          366,
+          343,
+          231,
+          138
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_归宿游戏模式": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "辑大"
+        ],
+        "roi": [
+          1080,
+          364,
+          145,
+          127
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_大厅游戏模式": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "游戏.png"
+        ],
+        "roi": [
+          1146,
+          470,
+          118,
+          75
+        ],
+        "green_mask": true
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

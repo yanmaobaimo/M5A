@@ -1,0 +1,718 @@
+{
+  "任务奖励_任务": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "任务.png"
+        ],
+        "green_mask": true
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_登录分享"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_登录分享": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "登录分享"
+        ],
+        "roi": [
+          0,
+          520,
+          213,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_登录分享开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_点击领取": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "点击领取"
+        ],
+        "roi": [
+          216,
+          313,
+          600,
+          266
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_登录分享开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_点击分享": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "点击分享"
+        ],
+        "roi": [
+          894,
+          506,
+          258,
+          199
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_点击分享",
+      "任务奖励_每日首次分享"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_确认登录记录": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认记录"
+        ],
+        "roi": [
+          532,
+          568,
+          223,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_登录分享开始"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_每日首次分享": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "每日首次分享"
+        ],
+        "roi": [
+          44,
+          560,
+          209,
+          124
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          39,
+          632,
+          45,
+          27
+        ]
+      }
+    },
+    "next": [
+      "任务奖励_小红书"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_小红书": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "小红书"
+        ],
+        "roi": [
+          563,
+          633,
+          171,
+          87
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_关闭小红书"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_关闭小红书": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "StopApp",
+      "param": {
+        "package": "com.xingin.xhs"
+      }
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_启动游戏"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_完成分享": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "分享"
+        ],
+        "roi": [
+          0,
+          655,
+          200,
+          120
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          39,
+          27,
+          48,
+          54
+        ]
+      }
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_完成分享",
+      "任务奖励_前往领取",
+      "任务奖励_任务"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_前往领取": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "前往领取"
+        ],
+        "roi": [
+          894,
+          506,
+          258,
+          199
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_邮件一键领取"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_邮件一键领取": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "键领取"
+        ],
+        "roi": [
+          393,
+          516,
+          220,
+          141
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          226,
+          103,
+          345,
+          72
+        ]
+      }
+    },
+    "next": [
+      "任务奖励_待领取",
+      "任务奖励_已读"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_确认邮件记录": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认记录"
+        ],
+        "roi": [
+          532,
+          568,
+          223,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_确认邮件",
+      "任务奖励_已读"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_对战统计": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "对战统计"
+        ],
+        "roi": [
+          0,
+          439,
+          205,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_一键领取对战统计",
+      "任务奖励_周末任务",
+      "任务奖励_退出任务"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_一键领取对战统计": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "键领取"
+        ],
+        "roi": [
+          580,
+          534,
+          244,
+          172
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_确认对战记录"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_确认对战记录": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认记录"
+        ],
+        "roi": [
+          532,
+          568,
+          223,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_周末任务",
+      "任务奖励_退出任务"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_退出任务": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          36,
+          22,
+          34,
+          45
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_周末任务": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "周末任务"
+        ],
+        "roi": [
+          0,
+          205,
+          200,
+          130
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_一键领取周末任务"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_确认周末任务": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          401,
+          574,
+          158,
+          134
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_周末任务确认"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_确认周末任务记录": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认记录"
+        ],
+        "roi": [
+          532,
+          568,
+          223,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_周末任务确认"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_周末任务确认": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_确认周末任务",
+      "任务奖励_确认周末任务记录",
+      "任务奖励_退出任务"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_一键领取周末任务": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "键领取"
+        ],
+        "roi": [
+          791,
+          591,
+          197,
+          129
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_周末任务确认"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_登录分享开始": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_点击领取",
+      "任务奖励_确认登录记录",
+      "任务奖励_点击分享",
+      "任务奖励_前往领取"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_启动游戏": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "StartApp",
+      "param": {
+        "package": "com.netease.dwrg"
+      }
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_完成分享"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_待领取": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "待领取"
+        ],
+        "roi": [
+          431,
+          73,
+          193,
+          158
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          431,
+          559,
+          144,
+          52
+        ]
+      }
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_确认邮件记录",
+      "任务奖励_确认邮件"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_已读": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "已"
+        ],
+        "roi": [
+          449,
+          87,
+          145,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          26,
+          13,
+          45,
+          61
+        ]
+      }
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_对战统计",
+      "任务奖励_任务",
+      "任务奖励_返回任务"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_返回任务": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "任务.png"
+        ],
+        "green_mask": true
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "next": [
+      "任务奖励_对战统计"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "任务奖励_确认邮件": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          404,
+          574,
+          155,
+          135
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "任务奖励_确认邮件记录",
+      "任务奖励_已读"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

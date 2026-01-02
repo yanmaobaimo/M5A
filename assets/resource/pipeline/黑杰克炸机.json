@@ -1,0 +1,2559 @@
+{
+  "黑杰克_炸机": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "炸机.png",
+          "小手.png"
+        ],
+        "green_mask": true,
+        "roi": [
+          10,
+          35,
+          180,
+          180
+        ]
+      }
+    },
+    "action": {
+      "type": "TouchDown",
+      "param": {
+        "target": [
+          1100,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_抬起炸机": {
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_炸机中",
+          "roi": [
+            580,
+            0,
+            120,
+            500
+          ]
+        }
+      }
+    },
+    "action": {
+      "type": "TouchUp",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_传送炸机"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_炸机中": {
+    "recognition": {
+      "type": "NeuralNetworkDetect",
+      "param": {
+        "model": "炸机.onnx",
+        "expected": [
+          0
+        ],
+        "threshold": [
+          0.7
+        ]
+      }
+    }
+  },
+  "黑杰克_传送炸机": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "传送.png"
+        ],
+        "threshold": [
+          0.6
+        ],
+        "green_mask": true,
+        "roi": [
+          1175,
+          299,
+          61,
+          61
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "post_delay": 2000,
+    "next": [
+      "黑杰克_耳鸣",
+      "黑杰克_庄园"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_旋转炸机": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          1080,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本1"
+    ]
+  },
+  "黑杰克_旋转炸机_副本1": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          1070,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本2"
+    ]
+  },
+  "黑杰克_旋转炸机_副本2": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          1060,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本3"
+    ]
+  },
+  "黑杰克_旋转炸机_副本3": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          1050,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本4"
+    ]
+  },
+  "黑杰克_旋转炸机_副本4": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          1040,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本5"
+    ]
+  },
+  "黑杰克_旋转炸机_副本5": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          1030,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本6"
+    ]
+  },
+  "黑杰克_旋转炸机_副本6": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          1020,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本7"
+    ]
+  },
+  "黑杰克_旋转炸机_副本7": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          1010,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本8"
+    ]
+  },
+  "黑杰克_旋转炸机_副本8": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          1000,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本9"
+    ]
+  },
+  "黑杰克_旋转炸机_副本9": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          990,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本10"
+    ]
+  },
+  "黑杰克_旋转炸机_副本10": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          980,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本11"
+    ]
+  },
+  "黑杰克_旋转炸机_副本11": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          970,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本12"
+    ]
+  },
+  "黑杰克_旋转炸机_副本12": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          960,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本13"
+    ]
+  },
+  "黑杰克_旋转炸机_副本13": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          950,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本14"
+    ]
+  },
+  "黑杰克_旋转炸机_副本14": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          940,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本15"
+    ]
+  },
+  "黑杰克_旋转炸机_副本15": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          930,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本16"
+    ]
+  },
+  "黑杰克_旋转炸机_副本16": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          920,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本17"
+    ]
+  },
+  "黑杰克_旋转炸机_副本17": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          910,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本18"
+    ]
+  },
+  "黑杰克_旋转炸机_副本18": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          900,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本19"
+    ]
+  },
+  "黑杰克_旋转炸机_副本19": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          890,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本20"
+    ]
+  },
+  "黑杰克_旋转炸机_副本20": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          880,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本21"
+    ]
+  },
+  "黑杰克_旋转炸机_副本21": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          870,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本22"
+    ]
+  },
+  "黑杰克_旋转炸机_副本22": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          860,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本23"
+    ]
+  },
+  "黑杰克_旋转炸机_副本23": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          850,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本24"
+    ]
+  },
+  "黑杰克_旋转炸机_副本24": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          840,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本25"
+    ]
+  },
+  "黑杰克_旋转炸机_副本25": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          830,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本26"
+    ]
+  },
+  "黑杰克_旋转炸机_副本26": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          820,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本27"
+    ]
+  },
+  "黑杰克_旋转炸机_副本27": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          810,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本28"
+    ]
+  },
+  "黑杰克_旋转炸机_副本28": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          800,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本29"
+    ]
+  },
+  "黑杰克_旋转炸机_副本29": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          790,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本30"
+    ]
+  },
+  "黑杰克_旋转炸机_副本30": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          780,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本31"
+    ]
+  },
+  "黑杰克_旋转炸机_副本31": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          770,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本32"
+    ]
+  },
+  "黑杰克_旋转炸机_副本32": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          760,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本33"
+    ]
+  },
+  "黑杰克_旋转炸机_副本33": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          750,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本34"
+    ]
+  },
+  "黑杰克_旋转炸机_副本34": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          740,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本35"
+    ]
+  },
+  "黑杰克_旋转炸机_副本35": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          730,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本36"
+    ]
+  },
+  "黑杰克_旋转炸机_副本36": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          720,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本37"
+    ]
+  },
+  "黑杰克_旋转炸机_副本37": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          710,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本38"
+    ]
+  },
+  "黑杰克_旋转炸机_副本38": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          700,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本39"
+    ]
+  },
+  "黑杰克_旋转炸机_副本39": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          690,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本40"
+    ]
+  },
+  "黑杰克_旋转炸机_副本40": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          680,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本41"
+    ]
+  },
+  "黑杰克_旋转炸机_副本41": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          670,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本42"
+    ]
+  },
+  "黑杰克_旋转炸机_副本42": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          660,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本43"
+    ]
+  },
+  "黑杰克_旋转炸机_副本43": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          650,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本44"
+    ]
+  },
+  "黑杰克_旋转炸机_副本44": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          640,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本45"
+    ]
+  },
+  "黑杰克_旋转炸机_副本45": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          630,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本46"
+    ]
+  },
+  "黑杰克_旋转炸机_副本46": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          620,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本47"
+    ]
+  },
+  "黑杰克_旋转炸机_副本47": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          610,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本48"
+    ]
+  },
+  "黑杰克_旋转炸机_副本48": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          600,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本49"
+    ]
+  },
+  "黑杰克_旋转炸机_副本49": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          590,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本50"
+    ]
+  },
+  "黑杰克_旋转炸机_副本50": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          580,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本51"
+    ]
+  },
+  "黑杰克_旋转炸机_副本51": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          570,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本52"
+    ]
+  },
+  "黑杰克_旋转炸机_副本52": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          560,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本53"
+    ]
+  },
+  "黑杰克_旋转炸机_副本53": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          550,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本54"
+    ]
+  },
+  "黑杰克_旋转炸机_副本54": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          540,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本55"
+    ]
+  },
+  "黑杰克_旋转炸机_副本55": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          530,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本56"
+    ]
+  },
+  "黑杰克_旋转炸机_副本56": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          520,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本57"
+    ]
+  },
+  "黑杰克_旋转炸机_副本57": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          510,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本58"
+    ]
+  },
+  "黑杰克_旋转炸机_副本58": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          500,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本59"
+    ]
+  },
+  "黑杰克_旋转炸机_副本59": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          490,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本60"
+    ]
+  },
+  "黑杰克_旋转炸机_副本60": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          480,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本61"
+    ]
+  },
+  "黑杰克_旋转炸机_副本61": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          470,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本62"
+    ]
+  },
+  "黑杰克_旋转炸机_副本62": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          460,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本63"
+    ]
+  },
+  "黑杰克_旋转炸机_副本63": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          450,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本64"
+    ]
+  },
+  "黑杰克_旋转炸机_副本64": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          440,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本65"
+    ]
+  },
+  "黑杰克_旋转炸机_副本65": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          430,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本66"
+    ]
+  },
+  "黑杰克_旋转炸机_副本66": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          420,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本67"
+    ]
+  },
+  "黑杰克_旋转炸机_副本67": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          410,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本68"
+    ]
+  },
+  "黑杰克_旋转炸机_副本68": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          400,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本69"
+    ]
+  },
+  "黑杰克_旋转炸机_副本69": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          390,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本70"
+    ]
+  },
+  "黑杰克_旋转炸机_副本70": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          380,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本71"
+    ]
+  },
+  "黑杰克_旋转炸机_副本71": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          370,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本72"
+    ]
+  },
+  "黑杰克_旋转炸机_副本72": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          360,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本73"
+    ]
+  },
+  "黑杰克_旋转炸机_副本73": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          350,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本74"
+    ]
+  },
+  "黑杰克_旋转炸机_副本74": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          340,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本75"
+    ]
+  },
+  "黑杰克_旋转炸机_副本75": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          330,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本76"
+    ]
+  },
+  "黑杰克_旋转炸机_副本76": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          320,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本77"
+    ]
+  },
+  "黑杰克_旋转炸机_副本77": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          310,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本78"
+    ]
+  },
+  "黑杰克_旋转炸机_副本78": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          300,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本79"
+    ]
+  },
+  "黑杰克_旋转炸机_副本79": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          290,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本80"
+    ]
+  },
+  "黑杰克_旋转炸机_副本80": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          280,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本81"
+    ]
+  },
+  "黑杰克_旋转炸机_副本81": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          270,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本82"
+    ]
+  },
+  "黑杰克_旋转炸机_副本82": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          260,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本83"
+    ]
+  },
+  "黑杰克_旋转炸机_副本83": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          250,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本84"
+    ]
+  },
+  "黑杰克_旋转炸机_副本84": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          240,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本85"
+    ]
+  },
+  "黑杰克_旋转炸机_副本85": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          230,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本86"
+    ]
+  },
+  "黑杰克_旋转炸机_副本86": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          220,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本87"
+    ]
+  },
+  "黑杰克_旋转炸机_副本87": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          210,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本88"
+    ]
+  },
+  "黑杰克_旋转炸机_副本88": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          200,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本89"
+    ]
+  },
+  "黑杰克_旋转炸机_副本89": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          190,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本90"
+    ]
+  },
+  "黑杰克_旋转炸机_副本90": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          180,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本91"
+    ]
+  },
+  "黑杰克_旋转炸机_副本91": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          170,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本92"
+    ]
+  },
+  "黑杰克_旋转炸机_副本92": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          160,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本93"
+    ]
+  },
+  "黑杰克_旋转炸机_副本93": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          150,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本94"
+    ]
+  },
+  "黑杰克_旋转炸机_副本94": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          140,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本95"
+    ]
+  },
+  "黑杰克_旋转炸机_副本95": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          130,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本96"
+    ]
+  },
+  "黑杰克_旋转炸机_副本96": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          120,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本97"
+    ]
+  },
+  "黑杰克_旋转炸机_副本97": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          110,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本98"
+    ]
+  },
+  "黑杰克_旋转炸机_副本98": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          100,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本99"
+    ]
+  },
+  "黑杰克_旋转炸机_副本99": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          90,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_抬起炸机",
+      "黑杰克_旋转炸机_副本100"
+    ]
+  },
+  "黑杰克_旋转炸机_副本100": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchMove",
+      "param": {
+        "target": [
+          80,
+          300,
+          10,
+          5
+        ]
+      }
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "timeout": 200,
+    "next": [
+      "黑杰克_抬起"
+    ]
+  },
+  "黑杰克_抬起": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "TouchUp",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 10,
+    "post_delay": 10,
+    "next": [
+      "黑杰克_庄园"
+    ]
+  }
+}

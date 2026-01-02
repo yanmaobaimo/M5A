@@ -1,0 +1,173 @@
+{
+  "黑杰克_修不到机": {
+    "next": [
+      "黑杰克_修不到机中",
+      "黑杰克_修不到机左",
+      "黑杰克_修不到机右",
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "NeuralNetworkDetect",
+      "param": {
+        "model": "修不到机.onnx",
+        "expected": [
+          0
+        ],
+        "threshold": [
+          0.7
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_修不到机中": {
+    "action": {
+      "type": "Swipe",
+      "param": {
+        "begin": [
+          150,
+          600,
+          50,
+          50
+        ],
+        "end": [
+          [
+            100,
+            500,
+            150,
+            50
+          ]
+        ],
+        "end_hold": [
+          200
+        ]
+      }
+    },
+    "next": [
+      "黑杰克_修不到机",
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_修不到机",
+          "roi": [
+            400,
+            200,
+            480,
+            300
+          ]
+        }
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_修不到机左": {
+    "action": {
+      "type": "Swipe",
+      "param": {
+        "begin": [
+          800,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            700,
+            300,
+            50,
+            50
+          ]
+        ]
+      }
+    },
+    "next": [
+      "黑杰克_修不到机",
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_修不到机",
+          "roi": [
+            0,
+            200,
+            480,
+            300
+          ]
+        }
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_修不到机右": {
+    "action": {
+      "type": "Swipe",
+      "param": {
+        "begin": [
+          700,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            800,
+            300,
+            50,
+            50
+          ]
+        ]
+      }
+    },
+    "next": [
+      "黑杰克_修不到机",
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_修不到机",
+          "roi": [
+            800,
+            200,
+            480,
+            300
+          ]
+        }
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

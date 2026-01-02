@@ -1,0 +1,86 @@
+{
+  "协会签到_协会": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "协会.png"
+        ],
+        "green_mask": true,
+        "roi": [
+          907,
+          22,
+          54,
+          53
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "协会签到_签到"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "协会签到_签到": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "签到"
+        ],
+        "roi": [
+          556,
+          160,
+          171,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "协会签到_已签到"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "协会签到_已签到": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "已签到"
+        ],
+        "roi": [
+          556,
+          160,
+          171,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          30,
+          20,
+          40,
+          55
+        ]
+      }
+    },
+    "pre_wait_freezes": 1000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

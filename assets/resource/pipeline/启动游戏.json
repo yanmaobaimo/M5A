@@ -1,0 +1,310 @@
+{
+  "启动游戏_加载": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "启动游戏_加载",
+      "启动游戏_进入大厅归宿"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "游戏版本"
+        ],
+        "roi": [
+          0,
+          606,
+          176,
+          114
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_启动游戏": {
+    "action": {
+      "param": {
+        "package": "com.netease.dwrg"
+      },
+      "type": "StartApp"
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ],
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_大厅": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1146,
+          470,
+          118,
+          75
+        ],
+        "template": [
+          "游戏.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_归宿": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "大厅归宿_开始"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "辑大"
+        ],
+        "roi": [
+          1126,
+          364,
+          148,
+          127
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_点击屏幕进入游戏": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "点击屏幕进入游戏"
+        ],
+        "roi": [
+          500,
+          525,
+          280,
+          130
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_老友回归": {
+    "action": {
+      "param": {
+        "target": [
+          9,
+          16,
+          58,
+          55
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "老友回归"
+        ],
+        "roi": [
+          14,
+          0,
+          227,
+          145
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_进入大厅归宿": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "启动游戏_加载",
+      "启动游戏_退出系统公告",
+      "启动游戏_点击屏幕进入游戏",
+      "启动游戏_退出歌声",
+      "启动游戏_退出空军",
+      "启动游戏_退出活动",
+      "启动游戏_老友回归",
+      "启动游戏_大厅",
+      "启动游戏_归宿"
+    ],
+    "post_wait_freezes": 2000,
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    },
+    "timeout": 300000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_退出歌声": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "稍后查看"
+        ],
+        "roi": [
+          366,
+          343,
+          231,
+          138
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_退出活动": {
+    "action": {
+      "param": {
+        "target": [
+          28,
+          27,
+          52,
+          55
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "主打"
+        ],
+        "roi": [
+          17,
+          130,
+          157,
+          130
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_退出空军": {
+    "action": {
+      "param": {
+        "target": [
+          26,
+          16,
+          62,
+          66
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "空军"
+        ],
+        "roi": [
+          919,
+          133,
+          231,
+          178
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "启动游戏_退出系统公告": {
+    "action": {
+      "param": {
+        "target": [
+          15,
+          13,
+          69,
+          71
+        ]
+      },
+      "type": "Click"
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "系统公告"
+        ],
+        "roi": [
+          137,
+          55,
+          203,
+          134
+        ]
+      },
+      "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

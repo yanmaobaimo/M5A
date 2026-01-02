@@ -5,7 +5,7 @@ from maa.toolkit import Toolkit
 
 import my_action
 import my_reco
-
+import roibox
 
 def main():
     Toolkit.init_option("./")

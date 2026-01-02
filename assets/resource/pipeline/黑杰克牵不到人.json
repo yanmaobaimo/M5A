@@ -1,0 +1,172 @@
+{
+  "黑杰克_牵不到人": {
+    "next": [
+      "黑杰克_牵不到人中",
+      "黑杰克_牵不到人左",
+      "黑杰克_牵不到人右",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "NeuralNetworkDetect",
+      "param": {
+        "model": "牵不到人.onnx",
+        "expected": [
+          0
+        ],
+        "threshold": [
+          0.7
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_牵不到人中": {
+    "action": {
+      "param": {
+        "begin": [
+          150,
+          600,
+          50,
+          50
+        ],
+        "end": [
+          [
+            100,
+            500,
+            150,
+            50
+          ]
+        ],
+        "end_hold": [
+          200
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "黑杰克_牵人",
+      "黑杰克_牵不到人",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_牵不到人",
+          "roi": [
+            400,
+            200,
+            480,
+            300
+          ]
+        }
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_牵不到人右": {
+    "action": {
+      "param": {
+        "begin": [
+          700,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            800,
+            300,
+            50,
+            50
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "黑杰克_牵人",
+      "黑杰克_牵不到人",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_牵不到人",
+          "roi": [
+            830,
+            200,
+            450,
+            300
+          ]
+        }
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_牵不到人左": {
+    "action": {
+      "param": {
+        "begin": [
+          800,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            700,
+            300,
+            50,
+            50
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "黑杰克_牵人",
+      "黑杰克_牵不到人",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_牵不到人",
+          "roi": [
+            0,
+            200,
+            450,
+            300
+          ]
+        }
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

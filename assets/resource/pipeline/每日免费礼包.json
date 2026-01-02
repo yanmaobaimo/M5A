@@ -1,0 +1,218 @@
+{
+  "每日免费礼包_商城": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "商城.png"
+        ],
+        "green_mask": true,
+        "roi": [
+          823,
+          22,
+          50,
+          51
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "每日免费礼包_推荐"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "每日免费礼包_推荐": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "推荐"
+        ],
+        "roi": [
+          85,
+          120,
+          80,
+          150
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "每日免费礼包_特惠"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "每日免费礼包_特惠": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "特惠"
+        ],
+        "roi": [
+          403,
+          112,
+          57,
+          37
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "每日免费礼包_免费",
+      "每日免费礼包_已购买"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "每日免费礼包_免费": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "免费"
+        ],
+        "roi": [
+          449,
+          285,
+          175,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "每日免费礼包_领取"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "每日免费礼包_领取": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "领取"
+        ],
+        "roi": [
+          708,
+          491,
+          159,
+          133
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "每日免费礼包_确认记录",
+      "每日免费礼包_确认"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "每日免费礼包_确认记录": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认记录"
+        ],
+        "roi": [
+          532,
+          568,
+          223,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "每日免费礼包_已购买"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "每日免费礼包_已购买": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "已购买"
+        ],
+        "roi": [
+          500,
+          320,
+          80,
+          30
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          32,
+          27,
+          59,
+          61
+        ]
+      }
+    },
+    "pre_wait_freezes": 1000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "每日免费礼包_确认": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          388,
+          572,
+          182,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "next": [
+      "每日免费礼包_已购买"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

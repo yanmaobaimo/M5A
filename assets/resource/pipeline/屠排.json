@@ -1,0 +1,512 @@
+{
+  "屠排_开始": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "next": [
+      {
+        "name": "屠排_准备案件还原",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_匹配",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_开始案件还原",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_监管者",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_传统排位",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_排位",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_排位模式选择",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_退出歌声",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_领取奖励",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_确认",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_确认记录",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_返回",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_大厅游戏模式",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_稍后聆听",
+        "jump_back": true
+      },
+      {
+        "name": "屠排_确定",
+        "jump_back": true
+      },
+      "屠排_准备开始"
+    ]
+  },
+  "屠排_退出歌声": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "稍后查看"
+        ],
+        "roi": [
+          366,
+          343,
+          231,
+          138
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_排位模式选择": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "辑大"
+        ],
+        "roi": [
+          1080,
+          364,
+          145,
+          127
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          1107,
+          483,
+          99,
+          54
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_排位": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "传统排位赛开启中"
+        ],
+        "roi": [
+          386,
+          163,
+          280,
+          134
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_监管者": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "监管者"
+        ],
+        "roi": [
+          860,
+          74,
+          186,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_传统排位": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "传统排位"
+        ],
+        "roi": [
+          290,
+          272,
+          171,
+          48
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_开始案件还原": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "开始案件还原"
+        ],
+        "roi": [
+          511,
+          589,
+          272,
+          131
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_准备案件还原": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "准备案件还原"
+        ],
+        "roi": [
+          514,
+          523,
+          248,
+          141
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_匹配": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "取消匹配"
+        ],
+        "roi": [
+          73,
+          302,
+          193,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_delay": 3000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_准备开始": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "准备开始"
+        ],
+        "roi": [
+          953,
+          580,
+          224,
+          138
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "timeout": 90000,
+    "next": [
+      "屠排_取消准备",
+      "屠排_存在感"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_领取奖励": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "领取奖励"
+        ],
+        "roi": [
+          536,
+          527,
+          212,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_确认记录": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认记录"
+        ],
+        "roi": [
+          539,
+          575,
+          205,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_返回": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "返回"
+        ],
+        "roi": [
+          400,
+          522,
+          170,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_确认": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          394,
+          572,
+          175,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_取消准备": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "取消准备"
+        ],
+        "roi": [
+          953,
+          580,
+          224,
+          138
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_delay": 5000,
+    "timeout": 90000,
+    "next": [
+      "屠排_取消准备",
+      "屠排_存在感"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_确定": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          701,
+          346,
+          182,
+          134
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_稍后聆听": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "稍后聆听"
+        ],
+        "roi": [
+          341,
+          527,
+          221,
+          158
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_存在感": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "存在感"
+        ],
+        "roi": [
+          777,
+          98,
+          161,
+          130
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "next": [
+      "屠排_庄园"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "屠排_大厅游戏模式": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "游戏.png"
+        ],
+        "roi": [
+          1146,
+          470,
+          118,
+          75
+        ],
+        "green_mask": true
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

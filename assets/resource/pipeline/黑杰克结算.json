@@ -1,0 +1,250 @@
+{
+  "黑杰克_结算": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "继续"
+        ],
+        "roi": [
+          563,
+          595,
+          161,
+          125
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_点赞"
+    ]
+  },
+  "黑杰克_点赞": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "post_delay": 0,
+    "next": [
+      "黑杰克_点赞1",
+      "黑杰克_点赞2",
+      "黑杰克_点赞3",
+      "黑杰克_点赞4",
+      "黑杰克_点赞5",
+      "黑杰克_继续"
+    ]
+  },
+  "黑杰克_点赞1": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "点赞1.png"
+        ],
+        "green_mask": true,
+        "roi": [
+          142,
+          469,
+          1054,
+          140
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_点赞"
+    ]
+  },
+  "黑杰克_点赞2": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "点赞2.png"
+        ],
+        "green_mask": true,
+        "roi": [
+          142,
+          469,
+          1054,
+          140
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_点赞"
+    ]
+  },
+  "黑杰克_点赞3": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "点赞3.png"
+        ],
+        "green_mask": true,
+        "roi": [
+          142,
+          469,
+          1054,
+          140
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_点赞"
+    ]
+  },
+  "黑杰克_点赞4": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "点赞4.png"
+        ],
+        "green_mask": true,
+        "roi": [
+          142,
+          469,
+          1054,
+          140
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_点赞"
+    ]
+  },
+  "黑杰克_点赞5": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "点赞5.png"
+        ],
+        "green_mask": true,
+        "roi": [
+          142,
+          469,
+          1054,
+          140
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "rate_limit": 50,
+    "pre_delay": 0,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_点赞"
+    ]
+  },
+  "黑杰克_继续": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "继续"
+        ],
+        "roi": [
+          563,
+          595,
+          161,
+          125
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_返回大厅"
+    ]
+  },
+  "黑杰克_返回大厅": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "返回大厅"
+        ],
+        "roi": [
+          539,
+          595,
+          213,
+          125
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      {
+        "name": "home",
+        "anchor": true
+      },
+      "大厅归宿_开始"
+    ]
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "黑杰克_点击牵人": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "next": [
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          400,
+          300,
+          480,
+          420
+        ],
+        "template": [
+          "牵人.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_牵人": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      "黑杰克_点击牵人",
+      "黑杰克_牵人左",
+      "黑杰克_牵人右",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          0,
+          300,
+          1280,
+          420
+        ],
+        "template": [
+          "牵人.png"
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_牵人右": {
+    "action": {
+      "param": {
+        "begin": [
+          700,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            800,
+            300,
+            50,
+            50
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "黑杰克_点击牵人",
+      "黑杰克_牵人",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "roi": [
+          830,
+          300,
+          450,
+          420
+        ],
+        "template": [
+          "牵人.png"
+        ],
+        "threshold": [
+          0.6
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_牵人左": {
+    "action": {
+      "param": {
+        "begin": [
+          800,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            700,
+            300,
+            50,
+            50
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "黑杰克_点击牵人",
+      "黑杰克_牵人",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "param": {
+        "roi": [
+          0,
+          300,
+          450,
+          420
+        ],
+        "template": [
+          "牵人.png"
+        ],
+        "threshold": [
+          0.6
+        ]
+      },
+      "type": "TemplateMatch"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

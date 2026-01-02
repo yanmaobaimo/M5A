@@ -1,0 +1,399 @@
+{
+  "3胜_开始": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_wait_freezes": 3000,
+    "anchor": [
+      "home"
+    ],
+    "next": [
+      "3胜_大厅归宿_领取奖励",
+      "3胜_大厅归宿_确认",
+      "3胜_大厅归宿_确认记录",
+      "3胜_大厅归宿_返回",
+      "3胜_大厅归宿_稍后聆听",
+      "3胜_大厅归宿_确定",
+      "3胜_大厅归宿_退出歌声",
+      "3胜_大厅归宿_大厅游戏模式",
+      "3胜_大厅归宿_归宿游戏模式"
+    ]
+  },
+  "3胜_大厅归宿_领取奖励": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "领取奖励"
+        ],
+        "roi": [
+          536,
+          527,
+          212,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_开始"
+    ]
+  },
+  "3胜_大厅归宿_确认记录": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认记录"
+        ],
+        "roi": [
+          539,
+          575,
+          205,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_开始"
+    ]
+  },
+  "3胜_大厅归宿_返回": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "返回"
+        ],
+        "roi": [
+          400,
+          522,
+          170,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_开始"
+    ]
+  },
+  "3胜_大厅归宿_确认": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          394,
+          572,
+          175,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_开始"
+    ]
+  },
+  "3胜_大厅归宿_确定": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          560,
+          346,
+          320,
+          250
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_开始"
+    ]
+  },
+  "3胜_大厅归宿_稍后聆听": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "稍后聆听"
+        ],
+        "roi": [
+          341,
+          527,
+          221,
+          158
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_大厅归宿_确定",
+      "3胜_开始"
+    ]
+  },
+  "3胜_大厅归宿_退出歌声": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "稍后查看"
+        ],
+        "roi": [
+          366,
+          343,
+          231,
+          138
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_开始"
+    ]
+  },
+  "3胜_大厅归宿_归宿游戏模式": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "辑大"
+        ],
+        "roi": [
+          1080,
+          364,
+          145,
+          127
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "next": [
+      "3胜_任务"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "3胜_大厅归宿_大厅游戏模式": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "游戏.png"
+        ],
+        "roi": [
+          1146,
+          470,
+          118,
+          75
+        ],
+        "green_mask": true
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "next": [
+      "3胜_任务"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "3胜_任务": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "任务.png"
+        ],
+        "green_mask": true
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_对战统计"
+    ]
+  },
+  "3胜_对战统计": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "对战统计"
+        ],
+        "roi": [
+          0,
+          439,
+          205,
+          145
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_3胜",
+      "3胜_未3胜"
+    ]
+  },
+  "3胜_3胜": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "3"
+        ],
+        "roi": [
+          723,
+          390,
+          13,
+          23
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "3胜_退出任务"
+    ]
+  },
+  "3胜_退出任务": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          36,
+          22,
+          34,
+          45
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "3胜_未3胜": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 1000,
+    "next": [
+      "3胜_退出任务_副本1"
+    ]
+  },
+  "3胜_退出任务_副本1": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          36,
+          22,
+          34,
+          45
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_开始"
+    ]
+  }
+}

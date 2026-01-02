@@ -1,0 +1,585 @@
+{
+  "黑杰克_交互": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1124,
+          541,
+          65,
+          89
+        ],
+        "template": [
+          "交互.png"
+        ],
+        "threshold": [
+          0.9
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_传送": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1175,
+          299,
+          61,
+          61
+        ],
+        "template": [
+          "传送.png"
+        ],
+        "threshold": [
+          0.6
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 2000,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_炸机",
+      "黑杰克_耳鸣",
+      "黑杰克_攻击",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_有人倒地": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          840,
+          20,
+          420,
+          60
+        ],
+        "template": [
+          "有人倒地.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_倒地",
+      "黑杰克_定时",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_倒地": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          615,
+          506,
+          53,
+          65
+        ],
+        "template": [
+          "倒地.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 1000,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_自愈",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_回忆碎片": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "roi": [
+          1200,
+          322,
+          25,
+          35
+        ],
+        "template": [
+          "回忆碎片.png"
+        ],
+        "threshold": [
+          0.9
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_怜悯",
+      "黑杰克_交互",
+      "黑杰克_旋转视角",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_定时炸弹": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1056,
+          428,
+          80,
+          79
+        ],
+        "template": [
+          "定时炸弹.png"
+        ],
+        "threshold": [
+          0.85
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 600,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "repeat": 2,
+    "repeat_delay": 2000,
+    "next": [
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_庄园": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_静步",
+      "黑杰克_有人倒地",
+      "黑杰克_传送",
+      "黑杰克_耳鸣",
+      "黑杰克_确定",
+      "黑杰克_结算",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_引爆": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1179,
+          413,
+          63,
+          68
+        ],
+        "template": [
+          "引爆.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_耳鸣",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_攻击": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1080,
+          519,
+          146,
+          137
+        ],
+        "template": [
+          "26号攻击.png"
+        ],
+        "threshold": [
+          0.9
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 3000,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_炸机",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_旋转视角": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Swipe",
+      "param": {
+        "begin": [
+          800,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            700,
+            300,
+            50,
+            50
+          ]
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_校准提示": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "校准提示.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 2000,
+    "next": [
+      "黑杰克_校准提示",
+      "黑杰克_修机",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_破译密码": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "破译密码"
+        ],
+        "roi": [
+          500,
+          400,
+          260,
+          150
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_破译密码",
+      "黑杰克_校准提示",
+      "黑杰克_修机",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_确定": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          606,
+          612,
+          300,
+          35
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_耳鸣": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          200,
+          15,
+          250,
+          45
+        ],
+        "template": [
+          "耳鸣.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_遥控炸弹",
+      "黑杰克_引爆",
+      "黑杰克_定时炸弹",
+      "黑杰克_攻击",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_自愈": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1101,
+          518,
+          120,
+          168
+        ],
+        "template": [
+          "交互.png"
+        ],
+        "threshold": [
+          0.85
+        ]
+      }
+    },
+    "action": {
+      "type": "LongPress",
+      "param": {
+        "duration": 22250,
+        "target": [
+          1101,
+          518,
+          120,
+          168
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_遥控炸弹": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1176,
+          404,
+          69,
+          79
+        ],
+        "template": [
+          "遥控炸弹.png"
+        ],
+        "threshold": [
+          0.9
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_旋转视角"
+    ]
+  },
+  "黑杰克_静步": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          994,
+          521,
+          39,
+          62
+        ],
+        "template": [
+          "静步.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_修机",
+      "黑杰克_修不到机",
+      "黑杰克_破译密码",
+      "黑杰克_有密码机",
+      "黑杰克_回忆碎片",
+      "黑杰克_旋转视角",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_定时": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          853,
+          505,
+          81,
+          89
+        ],
+        "template": [
+          "定时.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "黑杰克_牵人",
+      "黑杰克_牵不到人",
+      "黑杰克_倒地求生",
+      "黑杰克_旋转视角",
+      "黑杰克_庄园"
+    ]
+  }
+}

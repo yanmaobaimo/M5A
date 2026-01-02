@@ -1,0 +1,396 @@
+{
+  "黑杰克_准备开始": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_取消准备",
+      "黑杰克_总点数"
+    ],
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "准备开始"
+        ],
+        "roi": [
+          953,
+          580,
+          224,
+          138
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 90000
+  },
+  "黑杰克_准备案件还原": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "准备案件还原"
+        ],
+        "roi": [
+          514,
+          523,
+          248,
+          141
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑杰克_匹配": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 3000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "取消匹配"
+        ],
+        "roi": [
+          73,
+          302,
+          193,
+          137
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑杰克_取消准备": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_取消准备",
+      "黑杰克_总点数"
+    ],
+    "post_delay": 5000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "取消准备"
+        ],
+        "roi": [
+          953,
+          580,
+          224,
+          138
+        ]
+      },
+      "type": "OCR"
+    },
+    "timeout": 90000
+  },
+  "黑杰克_大厅游戏模式": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "recognition": {
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1146,
+          470,
+          118,
+          75
+        ],
+        "template": [
+          "游戏.png"
+        ],
+        "threshold": [
+          0.9
+        ]
+      },
+      "type": "TemplateMatch"
+    }
+  },
+  "黑杰克_开始": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "next": [
+      {
+        "jump_back": true,
+        "name": "黑杰克_准备案件还原"
+      },
+      {
+        "jump_back": true,
+        "name": "黑杰克_匹配"
+      },
+      {
+        "jump_back": true,
+        "name": "黑杰克_开始案件还原"
+      },
+      {
+        "jump_back": true,
+        "name": "黑杰克_进入黑杰克"
+      },
+      {
+        "jump_back": true,
+        "name": "黑杰克_混沌纷争"
+      },
+      {
+        "jump_back": true,
+        "name": "黑杰克_大厅游戏模式"
+      },
+      {
+        "jump_back": true,
+        "name": "黑杰克_归宿游戏模式"
+      },
+      {
+        "jump_back": true,
+        "name": "黑杰克_退出歌声"
+      },
+      "黑杰克_准备开始",
+      "黑杰克_未开启"
+    ],
+    "post_wait_freezes": 1000,
+    "recognition": {
+      "param": {},
+      "type": "DirectHit"
+    }
+  },
+  "黑杰克_开始案件还原": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "开始案件还原"
+        ],
+        "roi": [
+          515,
+          593,
+          259,
+          127
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑杰克_归宿游戏模式": {
+    "action": {
+      "param": {
+        "target": [
+          1107,
+          483,
+          99,
+          54
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "辑大"
+        ],
+        "roi": [
+          1080,
+          364,
+          145,
+          127
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑杰克_总点数": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_庄园"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "总点数"
+        ],
+        "roi": [
+          55,
+          235,
+          72,
+          30
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑杰克_未开启": {
+    "action": {
+      "param": {
+        "target": [
+          35,
+          30,
+          50,
+          55
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_结束"
+    ],
+    "post_wait_freezes": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "开启"
+        ],
+        "roi": [
+          321,
+          173,
+          140,
+          126
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑杰克_混沌纷争": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 1000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "混沌纷争"
+        ],
+        "roi": [
+          627,
+          241,
+          243,
+          140
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑杰克_结束": {
+    "action": {
+      "param": {
+        "target": [
+          35,
+          30,
+          50,
+          55
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_wait_freezes": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "混沌纷争"
+        ],
+        "roi": [
+          627,
+          241,
+          243,
+          140
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑杰克_进入黑杰克": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "结束"
+        ],
+        "roi": [
+          328,
+          223,
+          80,
+          22
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "黑杰克_退出歌声": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "稍后查看"
+        ],
+        "roi": [
+          366,
+          343,
+          231,
+          138
+        ]
+      },
+      "type": "OCR"
+    }
+  }
+}

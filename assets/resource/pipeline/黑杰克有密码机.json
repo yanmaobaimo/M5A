@@ -1,0 +1,173 @@
+{
+  "黑杰克_有密码机": {
+    "next": [
+      "黑杰克_有密码机左",
+      "黑杰克_有密码机右",
+      "黑杰克_有密码机中",
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "NeuralNetworkDetect",
+      "param": {
+        "model": "密码机.onnx",
+        "expected": [
+          0
+        ],
+        "threshold": [
+          0.7
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_有密码机中": {
+    "action": {
+      "param": {
+        "begin": [
+          150,
+          600,
+          50,
+          50
+        ],
+        "end": [
+          [
+            150,
+            500,
+            50,
+            50
+          ]
+        ],
+        "end_hold": [
+          2000
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "黑杰克_有密码机",
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_有密码机",
+          "roi": [
+            448,
+            0,
+            384,
+            720
+          ]
+        }
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_有密码机右": {
+    "action": {
+      "param": {
+        "begin": [
+          750,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            800,
+            300,
+            50,
+            50
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "黑杰克_有密码机",
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_有密码机",
+          "roi": [
+            736,
+            0,
+            544,
+            720
+          ]
+        }
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "黑杰克_有密码机左": {
+    "action": {
+      "param": {
+        "begin": [
+          800,
+          300,
+          50,
+          50
+        ],
+        "end": [
+          [
+            750,
+            300,
+            50,
+            50
+          ]
+        ]
+      },
+      "type": "Swipe"
+    },
+    "next": [
+      "黑杰克_有密码机",
+      "黑杰克_静步",
+      "黑杰克_庄园"
+    ],
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "recognition": {
+      "type": "Custom",
+      "param": {
+        "custom_recognition": "RoiBox",
+        "custom_recognition_param": {
+          "node": "黑杰克_有密码机",
+          "roi": [
+            0,
+            0,
+            544,
+            720
+          ]
+        }
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}
