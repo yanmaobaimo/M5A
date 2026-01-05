@@ -215,12 +215,39 @@
     "pre_delay": 0,
     "rate_limit": 50,
     "next": [
+      "黑杰克_取消帧率",
       "黑杰克_静步",
       "黑杰克_有人倒地",
       "黑杰克_传送",
       "黑杰克_耳鸣",
       "黑杰克_确定",
       "黑杰克_结算",
+      "黑杰克_庄园"
+    ]
+  },
+  "黑杰克_取消帧率": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "取消"
+        ],
+        "roi": [
+          0,
+          273,
+          188,
+          147
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
       "黑杰克_庄园"
     ]
   },

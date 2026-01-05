@@ -8,9 +8,9 @@ RoiBox Custom Recognition
 {
     "node": "NodeName",   // 要执行的识别节点名称
     "roi": [x, y, w, h],  // 目标区域，box 必须在此范围内才算成功
-    "mode": "full"        // 可选: "full"(默认) | "center" | "any"
-                          // full: box 完全在 roi 内
+    "mode": "center"      // 可选: "center"(默认) | "full" | "any"
                           // center: box 中心点在 roi 内
+                          // full: box 完全在 roi 内
                           // any: box 与 roi 有任意交集
 }
 
@@ -76,7 +76,7 @@ class RoiBox(CustomRecognition):
                 roi = [0, 0, width, height]
 
             # 获取判断模式
-            mode = params.get("mode", "full")
+            mode = params.get("mode", "center")
 
             # 执行识别节点
             try:
@@ -140,21 +140,21 @@ class RoiBox(CustomRecognition):
         roi_right = roi_x + roi_w
         roi_bottom = roi_y + roi_h
 
-        if mode == "full":
+        if mode == "center":
+            # box 中心点在 roi 内
+            center_x = box_x + box_w / 2
+            center_y = box_y + box_h / 2
+            return (
+                roi_left <= center_x <= roi_right and roi_top <= center_y <= roi_bottom
+            )
+
+        elif mode == "full":
             # box 完全在 roi 内
             return (
                 box_left >= roi_left
                 and box_top >= roi_top
                 and box_right <= roi_right
                 and box_bottom <= roi_bottom
-            )
-
-        elif mode == "center":
-            # box 中心点在 roi 内
-            center_x = box_x + box_w / 2
-            center_y = box_y + box_h / 2
-            return (
-                roi_left <= center_x <= roi_right and roi_top <= center_y <= roi_bottom
             )
 
         elif mode == "any":
@@ -168,8 +168,5 @@ class RoiBox(CustomRecognition):
 
         else:
             return (
-                box_left >= roi_left
-                and box_top >= roi_top
-                and box_right <= roi_right
-                and box_bottom <= roi_bottom
+                roi_left <= center_x <= roi_right and roi_top <= center_y <= roi_bottom
             )

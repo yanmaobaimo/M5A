@@ -8,7 +8,7 @@
       "type": "DoNothing",
       "param": {}
     },
-    "post_wait_freezes": 3000,
+    "post_wait_freezes": 1000,
     "anchor": [
       "home"
     ],

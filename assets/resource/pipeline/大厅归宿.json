@@ -8,7 +8,7 @@
       "type": "DoNothing",
       "param": {}
     },
-    "post_wait_freezes": 3000,
+    "post_wait_freezes": 1000,
     "next": [
       "大厅归宿_领取奖励",
       "大厅归宿_确认",

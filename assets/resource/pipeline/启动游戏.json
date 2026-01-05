@@ -172,7 +172,7 @@
       "启动游戏_大厅",
       "启动游戏_归宿"
     ],
-    "post_wait_freezes": 2000,
+    "post_wait_freezes": 1000,
     "recognition": {
       "param": {},
       "type": "DirectHit"
