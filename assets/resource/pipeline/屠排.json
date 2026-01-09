@@ -18,6 +18,10 @@
         "jump_back": true
       },
       {
+        "name": "屠排_确定",
+        "jump_back": true
+      },
+      {
         "name": "屠排_开始案件还原",
         "jump_back": true
       },
