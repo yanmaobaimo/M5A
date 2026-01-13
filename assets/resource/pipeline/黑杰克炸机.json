@@ -33,7 +33,6 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
-    "inverse": true,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机"
