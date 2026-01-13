@@ -42,82 +42,12 @@
 				"expected": [
 					0
 				],
-				"model": "修不到机.onnx",
-				"roi": [
-					400,
-					200,
-					300,
-					300
-				]
+				"model": "密码机.onnx"
 			}
 		},
 		"action": {
 			"type": "DoNothing",
 			"param": {}
-		}
-	},
-	"0": {
-		"recognition": {
-			"type": "Custom",
-			"param": {
-				"custom_recognition": "MultiRecognition",
-				"custom_recognition_param": {
-					"nodes": [
-						"定时",
-						"定时炸弹"
-					],
-					"logic": {
-						"type": "CUSTOM",
-						"expression": "$0 OR $1"
-					},
-					"return": "$0"
-				}
-			}
-		}
-	},
-	"定时": {
-		"recognition": {
-			"type": "TemplateMatch",
-			"param": {
-				"green_mask": true,
-				"roi": [
-					853,
-					505,
-					81,
-					89
-				],
-				"template": [
-					"定时.png"
-				]
-			}
-		}
-	},
-	"定时炸弹": {
-		"recognition": {
-			"type": "TemplateMatch",
-			"param": {
-				"green_mask": true,
-				"roi": [
-					1056,
-					428,
-					80,
-					79
-				],
-				"template": [
-					"定时炸弹.png"
-				]
-			}
-		}
-	},
-	"4": {
-		"recognition": {
-			"type": "Custom",
-			"param": {
-				"custom_recognition": "Count",
-				"custom_recognition_param": {
-					"target": 2
-				}
-			}
 		}
 	},
 	"总点数": {

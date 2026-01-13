@@ -193,11 +193,11 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
-    "post_delay": 600,
+    "post_delay": 2250,
     "pre_delay": 0,
     "rate_limit": 50,
     "repeat": 2,
-    "repeat_delay": 2000,
+    "repeat_delay": 2250,
     "next": [
       "黑杰克_庄园"
     ]
@@ -392,9 +392,9 @@
       "type": "DoNothing",
       "param": {}
     },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
     "next": [
       "黑杰克_破译密码",
       "黑杰克_校准提示",

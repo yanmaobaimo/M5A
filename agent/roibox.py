@@ -91,21 +91,6 @@ class RoiBox(CustomRecognition):
                 # 获取检测到的 box
                 box = list(reco_detail.box)
 
-                # 获取屏幕尺寸
-                height, width = argv.image.shape[:2]
-
-                # 修正 box 边界：负数项转为 0
-                box[0] = max(0, box[0])  # x
-                box[1] = max(0, box[1])  # y
-                box[2] = max(0, box[2])  # w
-                box[3] = max(0, box[3])  # h
-
-                # 修正 box 边界：确保不超出屏幕范围
-                if box[0] + box[2] > width:
-                    box[2] = width - box[0]
-                if box[1] + box[3] > height:
-                    box[3] = height - box[1]
-
                 # 判断 box 是否在 roi 范围内
                 if self._is_box_in_roi(box, roi, mode):
                     return CustomRecognition.AnalyzeResult(

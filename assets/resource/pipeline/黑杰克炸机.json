@@ -30,13 +30,14 @@
     "rate_limit": 50,
     "pre_delay": 10,
     "post_delay": 10,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "inverse": true,
     "next": [
       "黑杰克_抬起炸机",
       "黑杰克_旋转炸机"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_抬起炸机": {
     "recognition": {
@@ -62,12 +63,12 @@
     "rate_limit": 50,
     "pre_delay": 10,
     "post_delay": 10,
-    "next": [
-      "黑杰克_传送炸机"
-    ],
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
+    },
+    "next": [
+      "黑杰克_传送炸机"
+    ]
   },
   "黑杰克_炸机中": {
     "recognition": {
@@ -81,6 +82,10 @@
           0.7
         ]
       }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
     }
   },
   "黑杰克_传送炸机": {
@@ -109,13 +114,13 @@
     "rate_limit": 50,
     "pre_delay": 0,
     "post_delay": 2000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
     "next": [
       "黑杰克_耳鸣",
       "黑杰克_庄园"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "黑杰克_旋转炸机": {
     "recognition": {
