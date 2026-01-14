@@ -241,7 +241,7 @@
       }
     },
     "action": {
-      "type": "DoNothing",
+      "type": "Click",
       "param": {}
     },
     "focus": {
