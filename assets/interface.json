@@ -79,6 +79,14 @@
             "repeat_count": 3
         },
         {
+            "name": "屠匹",
+            "entry": "屠匹_开始",
+            "default_check": true,
+            "description": "聆听张狂厂长",
+            "repeatable": true,
+            "repeat_count": 6
+        },
+        {
             "name": "每日免费礼包",
             "entry": "每日免费礼包_商城",
             "default_check": true
@@ -107,7 +115,7 @@
         },
         {
             "name": "测试",
-            "entry": "黑杰克_修不到机"
+            "entry": "屠匹_开始"
         }
     ]
 }

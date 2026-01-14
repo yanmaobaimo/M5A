@@ -104,7 +104,7 @@
     },
     "timeout": 90000
   },
-  "黑杰克_大厅游戏模式": {
+  "黑杰克_大厅游戏": {
     "action": {
       "param": {},
       "type": "Click"
@@ -159,11 +159,11 @@
       },
       {
         "jump_back": true,
-        "name": "黑杰克_大厅游戏模式"
+        "name": "黑杰克_大厅游戏"
       },
       {
         "jump_back": true,
-        "name": "黑杰克_归宿游戏模式"
+        "name": "黑杰克_归宿游戏"
       },
       {
         "jump_back": true,
@@ -202,7 +202,7 @@
       "type": "OCR"
     }
   },
-  "黑杰克_归宿游戏模式": {
+  "黑杰克_归宿游戏": {
     "action": {
       "param": {
         "target": [

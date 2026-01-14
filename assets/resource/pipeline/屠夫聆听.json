@@ -1,5 +1,5 @@
 {
-  "屠排_旋转聆听": {
+  "屠夫_旋转聆听": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -36,10 +36,10 @@
     "pre_delay": 0,
     "rate_limit": 50,
     "next": [
-      "屠排_旋转聆听_副本1"
+      "屠夫_旋转聆听_副本1"
     ]
   },
-  "屠排_旋转聆听_副本1": {
+  "屠夫_旋转聆听_副本1": {
     "recognition": {
       "type": "DirectHit",
       "param": {}
@@ -76,10 +76,10 @@
     "pre_delay": 0,
     "rate_limit": 50,
     "next": [
-      "屠排_庄园"
+      "屠夫_庄园"
     ]
   },
-  "屠排_聆听": {
+  "屠夫_聆听": {
     "recognition": {
       "type": "TemplateMatch",
       "param": {
@@ -116,7 +116,7 @@
     "pre_delay": 0,
     "rate_limit": 50,
     "next": [
-      "屠排_旋转聆听"
+      "屠夫_旋转聆听"
     ]
   }
 }

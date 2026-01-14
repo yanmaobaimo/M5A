@@ -1,5 +1,5 @@
 {
-    "屠排_移动": {
+    "屠夫_移动": {
         "action": {
             "param": {
                 "begin": [
@@ -23,7 +23,7 @@
             "type": "Swipe"
         },
         "next": [
-            "屠排_旋转视角"
+            "屠夫_旋转视角"
         ],
         "rate_limit": 50,
         "recognition": {
@@ -34,7 +34,7 @@
             "Node.Recognition.Succeeded": "{name}"
         }
     },
-    "屠排_旋转视角": {
+    "屠夫_旋转视角": {
         "action": {
             "param": {
                 "begin": [
@@ -55,7 +55,7 @@
             "type": "Swipe"
         },
         "next": [
-            "屠排_庄园"
+            "屠夫_庄园"
         ],
         "rate_limit": 50,
         "recognition": {
