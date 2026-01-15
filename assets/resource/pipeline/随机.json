@@ -1,0 +1,587 @@
+{
+  "随机_开始": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "next": [
+      {
+        "name": "随机_准备案件还原",
+        "jump_back": true
+      },
+      {
+        "name": "随机_匹配",
+        "jump_back": true
+      },
+      {
+        "name": "随机_否",
+        "jump_back": true
+      },
+      {
+        "name": "随机_开始案件还原",
+        "jump_back": true
+      },
+      {
+        "name": "随机_监管者",
+        "jump_back": true
+      },
+      {
+        "name": "随机_混沌纷争未开启",
+        "jump_back": true
+      },
+      {
+        "name": "随机_随机",
+        "jump_back": true
+      },
+      {
+        "name": "随机_归宿游戏",
+        "jump_back": true
+      },
+      {
+        "name": "随机_大厅游戏",
+        "jump_back": true
+      },
+      {
+        "name": "随机_退出歌声",
+        "jump_back": true
+      },
+      {
+        "name": "随机_领取奖励",
+        "jump_back": true
+      },
+      {
+        "name": "随机_确认",
+        "jump_back": true
+      },
+      {
+        "name": "随机_确认记录",
+        "jump_back": true
+      },
+      {
+        "name": "随机_返回",
+        "jump_back": true
+      },
+      {
+        "name": "随机_稍后聆听",
+        "jump_back": true
+      },
+      {
+        "name": "随机_确定",
+        "jump_back": true
+      },
+      "随机_准备开始"
+    ]
+  },
+  "随机_退出歌声": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "稍后查看"
+        ],
+        "roi": [
+          366,
+          343,
+          231,
+          138
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_归宿游戏": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "辑大"
+        ],
+        "roi": [
+          1080,
+          364,
+          145,
+          127
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          1107,
+          483,
+          99,
+          54
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_随机": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "自由匹配",
+          "混沌纷争"
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_混沌纷争未开启": {
+    "action": {
+      "param": {
+        "target": [
+          35,
+          30,
+          50,
+          55
+        ]
+      },
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_wait_freezes": 2000,
+    "recognition": {
+      "param": {
+        "expected": [
+          "开启"
+        ],
+        "roi": [
+          321,
+          173,
+          140,
+          126
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "随机_混沌纷争": {
+    "action": {
+      "param": {},
+      "type": "Click"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "recognition": {
+      "param": {
+        "expected": [
+          "黑杰克"
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "随机_总点数": {
+    "action": {
+      "param": {},
+      "type": "DoNothing"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_庄园"
+    ],
+    "recognition": {
+      "param": {
+        "expected": [
+          "总点数"
+        ],
+        "roi": [
+          55,
+          235,
+          72,
+          30
+        ]
+      },
+      "type": "OCR"
+    }
+  },
+  "随机_监管者": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "监管者"
+        ],
+        "roi": [
+          860,
+          74,
+          186,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_开始案件还原": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "开始案件还原"
+        ],
+        "roi": [
+          511,
+          589,
+          272,
+          131
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_否": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "否"
+        ],
+        "roi": [
+          701,
+          346,
+          182,
+          134
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_准备案件还原": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "准备案件还原"
+        ],
+        "roi": [
+          514,
+          523,
+          248,
+          141
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_匹配": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "取消匹配"
+        ],
+        "roi": [
+          73,
+          302,
+          193,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_delay": 3000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_准备开始": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "准备开始"
+        ],
+        "roi": [
+          953,
+          580,
+          224,
+          138
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "timeout": 90000,
+    "next": [
+      "随机_取消准备",
+      "随机_存在感",
+      "随机_总点数"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_领取奖励": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "领取奖励"
+        ],
+        "roi": [
+          536,
+          527,
+          212,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_确认记录": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认记录"
+        ],
+        "roi": [
+          539,
+          575,
+          205,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_返回": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "返回"
+        ],
+        "roi": [
+          400,
+          522,
+          170,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_确认": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确认"
+        ],
+        "roi": [
+          394,
+          572,
+          175,
+          137
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_取消准备": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "取消准备"
+        ],
+        "roi": [
+          953,
+          580,
+          224,
+          138
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_delay": 5000,
+    "timeout": 90000,
+    "next": [
+      "随机_取消准备",
+      "随机_存在感",
+      "随机_总点数"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_确定": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "确定"
+        ],
+        "roi": [
+          701,
+          346,
+          182,
+          134
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_稍后聆听": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "稍后聆听"
+        ],
+        "roi": [
+          341,
+          527,
+          221,
+          158
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_存在感": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "存在感"
+        ],
+        "roi": [
+          777,
+          98,
+          161,
+          130
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "next": [
+      "屠夫_庄园"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_大厅游戏": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "游戏.png"
+        ],
+        "roi": [
+          1146,
+          470,
+          118,
+          75
+        ],
+        "green_mask": true
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  }
+}

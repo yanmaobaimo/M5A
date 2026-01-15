@@ -777,6 +777,10 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
+      {
+        "name": "home",
+        "anchor": true
+      },
       "大厅归宿_开始"
     ],
     "recognition": {

@@ -68,7 +68,7 @@
             "name": "3胜",
             "entry": "3胜_开始",
             "default_check": true,
-            "description": "小女孩邦邦"
+            "description": "随机屠匹黑杰克"
         },
         {
             "name": "屠排",
@@ -115,7 +115,7 @@
         },
         {
             "name": "测试",
-            "entry": "屠匹_开始"
+            "entry": "3胜_开始"
         }
     ]
 }
