@@ -1,14 +1,7 @@
 {
   "启动游戏_加载": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "next": [
-      "启动游戏_加载",
-      "启动游戏_进入大厅归宿"
-    ],
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "游戏版本"
@@ -19,40 +12,41 @@
           176,
           114
         ]
-      },
-      "type": "OCR"
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
+    },
+    "next": [
+      "启动游戏_加载",
+      "启动游戏_进入大厅归宿"
+    ]
   },
   "启动游戏_启动游戏": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
     "action": {
+      "type": "StartApp",
       "param": {
         "package": "com.netease.dwrg"
-      },
-      "type": "StartApp"
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "启动游戏_进入大厅归宿"
-    ],
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "启动游戏_大厅": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "next": [
-      "大厅归宿_开始"
-    ],
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "green_mask": true,
         "roi": [
@@ -64,22 +58,22 @@
         "template": [
           "游戏.png"
         ]
-      },
-      "type": "TemplateMatch"
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "启动游戏_归宿": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
     },
     "next": [
       "大厅归宿_开始"
-    ],
+    ]
+  },
+  "启动游戏_归宿": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "辑大"
@@ -90,22 +84,22 @@
           148,
           127
         ]
-      },
-      "type": "OCR"
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "启动游戏_点击屏幕进入游戏": {
-    "action": {
-      "param": {},
-      "type": "Click"
     },
     "next": [
-      "启动游戏_进入大厅归宿"
-    ],
+      "大厅归宿_开始"
+    ]
+  },
+  "启动游戏_点击屏幕进入游戏": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "点击屏幕进入游戏"
@@ -116,29 +110,22 @@
           280,
           130
         ]
-      },
-      "type": "OCR"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "启动游戏_老友回归": {
-    "action": {
-      "param": {
-        "target": [
-          9,
-          16,
-          58,
-          55
-        ]
-      },
-      "type": "Click"
     },
     "next": [
       "启动游戏_进入大厅归宿"
-    ],
+    ]
+  },
+  "启动游戏_老友回归": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "老友回归"
@@ -149,17 +136,39 @@
           227,
           145
         ]
-      },
-      "type": "OCR"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          9,
+          16,
+          58,
+          55
+        ]
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ]
   },
   "启动游戏_进入大厅归宿": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
     "action": {
-      "param": {},
-      "type": "DoNothing"
+      "type": "DoNothing",
+      "param": {}
+    },
+    "post_wait_freezes": 1000,
+    "timeout": 300000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
       "启动游戏_加载",
@@ -171,26 +180,11 @@
       "启动游戏_老友回归",
       "启动游戏_大厅",
       "启动游戏_归宿"
-    ],
-    "post_wait_freezes": 1000,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    },
-    "timeout": 300000,
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+    ]
   },
   "启动游戏_退出歌声": {
-    "action": {
-      "param": {},
-      "type": "Click"
-    },
-    "next": [
-      "启动游戏_进入大厅归宿"
-    ],
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "稍后查看"
@@ -201,29 +195,22 @@
           231,
           138
         ]
-      },
-      "type": "OCR"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "启动游戏_退出活动": {
-    "action": {
-      "param": {
-        "target": [
-          28,
-          27,
-          52,
-          55
-        ]
-      },
-      "type": "Click"
     },
     "next": [
       "启动游戏_进入大厅归宿"
-    ],
+    ]
+  },
+  "启动游戏_退出活动": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "主打"
@@ -234,29 +221,29 @@
           157,
           130
         ]
-      },
-      "type": "OCR"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          28,
+          27,
+          52,
+          55
+        ]
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "启动游戏_退出空军": {
-    "action": {
-      "param": {
-        "target": [
-          26,
-          16,
-          62,
-          66
-        ]
-      },
-      "type": "Click"
     },
     "next": [
       "启动游戏_进入大厅归宿"
-    ],
+    ]
+  },
+  "启动游戏_退出空军": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "空军"
@@ -267,29 +254,29 @@
           231,
           178
         ]
-      },
-      "type": "OCR"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          26,
+          16,
+          62,
+          66
+        ]
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
-  },
-  "启动游戏_退出系统公告": {
-    "action": {
-      "param": {
-        "target": [
-          15,
-          13,
-          69,
-          71
-        ]
-      },
-      "type": "Click"
     },
     "next": [
       "启动游戏_进入大厅归宿"
-    ],
+    ]
+  },
+  "启动游戏_退出系统公告": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "系统公告"
@@ -300,11 +287,24 @@
           203,
           134
         ]
-      },
-      "type": "OCR"
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          15,
+          13,
+          69,
+          71
+        ]
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ]
   }
 }

@@ -47,7 +47,7 @@
     "agent": {
         "child_exec": "python",
         "child_args": [
-            "./agent/main.py"
+            "./../agent/main.py"
         ]
     },
     "task": [
@@ -115,7 +115,7 @@
         },
         {
             "name": "测试",
-            "entry": "3胜_开始"
+            "entry": "坎贝尔的棋局_退出游戏"
         }
     ]
 }

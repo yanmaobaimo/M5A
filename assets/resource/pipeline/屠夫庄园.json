@@ -1,23 +1,7 @@
 {
   "屠夫_二娃": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_二娃有火",
-      "屠夫_二娃上火",
-      "屠夫_得分已达最高",
-      "屠夫_聆听",
-      "屠夫_移动"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "green_mask": true,
         "roi": [
@@ -29,12 +13,45 @@
         "template": [
           "二娃.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "屠夫_二娃有火",
+      "屠夫_二娃上火",
+      "屠夫_得分已达最高",
+      "屠夫_聆听",
+      "屠夫_移动"
+    ]
   },
   "屠夫_二娃上火": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "1",
+          "2",
+          "3"
+        ],
+        "roi": [
+          909,
+          561,
+          12,
+          23
+        ]
+      }
+    },
     "action": {
+      "type": "Swipe",
       "param": {
         "begin": [
           875,
@@ -50,17 +67,237 @@
             60
           ]
         ]
-      },
-      "type": "Swipe"
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "rate_limit": 50,
     "next": [
       "屠夫_庄园"
-    ],
-    "rate_limit": 50,
+    ]
+  },
+  "屠夫_二娃有人": {
     "recognition": {
+      "type": "NeuralNetworkDetect",
+      "param": {
+        "expected": [
+          1
+        ],
+        "model": "傀儡侦察.onnx",
+        "threshold": [
+          0.9
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "屠夫_二娃有人有火",
+      "屠夫_二娃上火",
+      "屠夫_传送二娃"
+    ]
+  },
+  "屠夫_二娃有人有火": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1194,
+          465,
+          27,
+          33
+        ],
+        "template": [
+          "有火.png"
+        ],
+        "threshold": [
+          0.6
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "屠夫_聆听",
+      "屠夫_移动"
+    ]
+  },
+  "屠夫_二娃有火": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1194,
+          465,
+          27,
+          33
+        ],
+        "template": [
+          "有火.png"
+        ],
+        "threshold": [
+          0.6
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "屠夫_聆听",
+      "屠夫_移动"
+    ]
+  },
+  "屠夫_传送二娃": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          1164,
+          401,
+          84,
+          73
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 1000,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "屠夫_移动"
+    ]
+  },
+  "屠夫_传送大娃": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          1056,
+          423,
+          86,
+          73
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 1000,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "屠夫_移动"
+    ]
+  },
+  "屠夫_倒计时": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "秒"
+        ],
+        "roi": [
+          1019,
+          519,
+          182,
+          141
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          15,
+          13,
+          69,
+          71
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 5000,
+    "next": [
+      "屠夫_庄园"
+    ]
+  },
+  "屠夫_大娃": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1061,
+          426,
+          67,
+          70
+        ],
+        "template": [
+          "大娃.png"
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "屠夫_大娃有火",
+      "屠夫_大娃上火",
+      "屠夫_二娃",
+      "屠夫_得分已达最高",
+      "屠夫_聆听",
+      "屠夫_移动"
+    ]
+  },
+  "屠夫_大娃上火": {
+    "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "1",
@@ -73,230 +310,10 @@
           12,
           23
         ]
-      },
-      "type": "OCR"
-    }
-  },
-  "屠夫_二娃有人": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_二娃有人有火",
-      "屠夫_二娃上火",
-      "屠夫_传送二娃"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {
-        "expected": [
-          1
-        ],
-        "model": "傀儡侦察.onnx",
-        "threshold": [
-          0.9
-        ]
-      },
-      "type": "NeuralNetworkDetect"
-    }
-  },
-  "屠夫_二娃有人有火": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_聆听",
-      "屠夫_移动"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {
-        "green_mask": true,
-        "roi": [
-          1194,
-          465,
-          27,
-          33
-        ],
-        "template": [
-          "有火.png"
-        ],
-        "threshold": [
-          0.6
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_二娃有火": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_聆听",
-      "屠夫_移动"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {
-        "green_mask": true,
-        "roi": [
-          1194,
-          465,
-          27,
-          33
-        ],
-        "template": [
-          "有火.png"
-        ],
-        "threshold": [
-          0.6
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_传送二娃": {
-    "action": {
-      "param": {
-        "target": [
-          1164,
-          401,
-          84,
-          73
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_移动"
-    ],
-    "post_delay": 1000,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "屠夫_传送大娃": {
-    "action": {
-      "param": {
-        "target": [
-          1056,
-          423,
-          86,
-          73
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_移动"
-    ],
-    "post_delay": 1000,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
-  },
-  "屠夫_倒计时": {
-    "action": {
-      "param": {
-        "target": [
-          15,
-          13,
-          69,
-          71
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_庄园"
-    ],
-    "post_delay": 5000,
-    "recognition": {
-      "param": {
-        "expected": [
-          "秒"
-        ],
-        "roi": [
-          1019,
-          519,
-          182,
-          141
-        ]
-      },
-      "type": "OCR"
-    }
-  },
-  "屠夫_大娃": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_大娃有火",
-      "屠夫_大娃上火",
-      "屠夫_二娃",
-      "屠夫_得分已达最高",
-      "屠夫_聆听",
-      "屠夫_移动"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {
-        "green_mask": true,
-        "roi": [
-          1061,
-          426,
-          67,
-          70
-        ],
-        "template": [
-          "大娃.png"
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_大娃上火": {
-    "action": {
+      "type": "Swipe",
       "param": {
         "begin": [
           875,
@@ -312,77 +329,81 @@
             60
           ]
         ]
-      },
-      "type": "Swipe"
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "rate_limit": 50,
     "next": [
       "屠夫_庄园"
-    ],
-    "rate_limit": 50,
-    "recognition": {
-      "param": {
-        "expected": [
-          "1",
-          "2",
-          "3"
-        ],
-        "roi": [
-          909,
-          561,
-          12,
-          23
-        ]
-      },
-      "type": "OCR"
-    }
+    ]
   },
   "屠夫_大娃有人": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_大娃有人有火",
-      "屠夫_大娃上火",
-      "屠夫_传送大娃"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
     "recognition": {
+      "type": "NeuralNetworkDetect",
       "param": {
         "expected": 0,
         "model": "傀儡侦察.onnx",
         "threshold": [
           0.9
         ]
-      },
-      "type": "NeuralNetworkDetect"
-    }
-  },
-  "屠夫_大娃有人有火": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "DoNothing"
+      "type": "DoNothing",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
+    "next": [
+      "屠夫_大娃有人有火",
+      "屠夫_大娃上火",
+      "屠夫_传送大娃"
+    ]
+  },
+  "屠夫_大娃有人有火": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "green_mask": true,
+        "roi": [
+          1084,
+          486,
+          27,
+          33
+        ],
+        "template": [
+          "有火.png"
+        ],
+        "threshold": [
+          0.6
+        ]
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
     "next": [
       "屠夫_二娃有人",
       "屠夫_聆听",
       "屠夫_移动"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
+    ]
+  },
+  "屠夫_大娃有火": {
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "green_mask": true,
         "roi": [
@@ -397,60 +418,40 @@
         "threshold": [
           0.6
         ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_大娃有火": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "DoNothing"
+      "type": "DoNothing",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
     "next": [
       "屠夫_二娃",
       "屠夫_聆听",
       "屠夫_移动"
-    ],
+    ]
+  },
+  "屠夫_庄园": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
     "post_delay": 0,
     "pre_delay": 0,
     "rate_limit": 50,
-    "recognition": {
-      "param": {
-        "green_mask": true,
-        "roi": [
-          1084,
-          486,
-          27,
-          33
-        ],
-        "template": [
-          "有火.png"
-        ],
-        "threshold": [
-          0.6
-        ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_庄园": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
     "next": [
       "屠夫_继续",
-      {
-        "jump_back": true,
-        "name": "屠夫_放大火娃"
-      },
-      {
-        "jump_back": true,
-        "name": "屠夫_放二火娃"
-      },
+      "[JumpBack]屠夫_放大火娃",
+      "[JumpBack]屠夫_放二火娃",
       "屠夫_有大娃",
       "屠夫_有二娃",
       "屠夫_大娃有人",
@@ -459,37 +460,11 @@
       "屠夫_二娃",
       "屠夫_聆听",
       "屠夫_移动"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
-    "recognition": {
-      "param": {},
-      "type": "DirectHit"
-    }
+    ]
   },
   "屠夫_得分已达最高": {
-    "action": {
-      "param": {
-        "target": [
-          10,
-          10,
-          28,
-          28
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "屠夫_大娃有火",
-      "屠夫_二娃有火",
-      "屠夫_倒计时",
-      "屠夫_投降"
-    ],
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "得分已达最高"
@@ -500,22 +475,24 @@
           250,
           137
         ]
-      },
-      "type": "OCR"
-    }
-  },
-  "屠夫_投降": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "Click"
+      "type": "DoNothing",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
-      "屠夫_确定投降"
-    ],
+      "屠夫_大娃有火",
+      "屠夫_二娃有火",
+      "屠夫_没火"
+    ]
+  },
+  "屠夫_投降": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "投降"
@@ -526,27 +503,22 @@
           182,
           141
         ]
-      },
-      "type": "OCR"
-    }
-  },
-  "屠夫_放二娃": {
+      }
+    },
     "action": {
-      "param": {
-        "duration": 300
-      },
-      "type": "LongPress"
+      "type": "Click",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
-      "屠夫_移动"
-    ],
-    "post_delay": 0,
-    "pre_delay": 0,
-    "rate_limit": 50,
+      "屠夫_确定投降"
+    ]
+  },
+  "屠夫_放二娃": {
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "green_mask": true,
         "roi": [
@@ -558,16 +530,13 @@
         "template": [
           "放二娃.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_放二火娃": {
+      }
+    },
     "action": {
+      "type": "LongPress",
       "param": {
         "duration": 300
-      },
-      "type": "LongPress"
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
@@ -575,7 +544,13 @@
     "post_delay": 0,
     "pre_delay": 0,
     "rate_limit": 50,
+    "next": [
+      "屠夫_移动"
+    ]
+  },
+  "屠夫_放二火娃": {
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "green_mask": true,
         "roi": [
@@ -587,27 +562,24 @@
         "template": [
           "上火二娃.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_放大娃": {
+      }
+    },
     "action": {
+      "type": "LongPress",
       "param": {
         "duration": 300
-      },
-      "type": "LongPress"
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
-    "next": [
-      "屠夫_移动"
-    ],
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 50
+  },
+  "屠夫_放大娃": {
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "green_mask": true,
         "roi": [
@@ -619,16 +591,13 @@
         "template": [
           "放大娃.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_放大火娃": {
+      }
+    },
     "action": {
+      "type": "LongPress",
       "param": {
         "duration": 300
-      },
-      "type": "LongPress"
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
@@ -636,7 +605,13 @@
     "post_delay": 0,
     "pre_delay": 0,
     "rate_limit": 50,
+    "next": [
+      "屠夫_移动"
+    ]
+  },
+  "屠夫_放大火娃": {
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "green_mask": true,
         "roi": [
@@ -648,26 +623,24 @@
         "template": [
           "上火大娃.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_有二娃": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "DoNothing"
+      "type": "LongPress",
+      "param": {
+        "duration": 300
+      }
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
-    "next": [
-      "屠夫_二娃上火",
-      "屠夫_放二娃"
-    ],
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 50
+  },
+  "屠夫_有二娃": {
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "green_mask": true,
         "roi": [
@@ -679,26 +652,26 @@
         "template": [
           "放二娃.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_有大娃": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "DoNothing"
+      "type": "DoNothing",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
-    "next": [
-      "屠夫_大娃上火",
-      "屠夫_放大娃"
-    ],
     "post_delay": 0,
     "pre_delay": 0,
     "rate_limit": 50,
+    "next": [
+      "屠夫_二娃上火",
+      "屠夫_放二娃"
+    ]
+  },
+  "屠夫_有大娃": {
     "recognition": {
+      "type": "TemplateMatch",
       "param": {
         "green_mask": true,
         "roi": [
@@ -710,22 +683,26 @@
         "template": [
           "放大娃.png"
         ]
-      },
-      "type": "TemplateMatch"
-    }
-  },
-  "屠夫_确定投降": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "Click"
+      "type": "DoNothing",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "post_delay": 0,
+    "pre_delay": 0,
+    "rate_limit": 50,
     "next": [
-      "屠夫_继续"
-    ],
+      "屠夫_大娃上火",
+      "屠夫_放大娃"
+    ]
+  },
+  "屠夫_确定投降": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "确定"
@@ -736,24 +713,22 @@
           182,
           134
         ]
-      },
-      "type": "OCR"
-    }
-  },
-  "屠夫_继续": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "Click"
+      "type": "Click",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
     "next": [
-      "屠夫_返回大厅",
       "屠夫_继续"
-    ],
-    "rate_limit": 50,
+    ]
+  },
+  "屠夫_继续": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "继续"
@@ -764,26 +739,24 @@
           175,
           125
         ]
-      },
-      "type": "OCR"
-    }
-  },
-  "屠夫_返回大厅": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "Click"
+      "type": "Click",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
+    "rate_limit": 50,
     "next": [
-      {
-        "name": "home",
-        "anchor": true
-      },
-      "大厅归宿_开始"
-    ],
+      "屠夫_返回大厅",
+      "屠夫_继续"
+    ]
+  },
+  "屠夫_返回大厅": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "返回大厅"
@@ -794,8 +767,43 @@
           224,
           125
         ]
-      },
-      "type": "OCR"
-    }
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 5000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "[Anchor]home",
+      "大厅归宿_开始"
+    ]
+  },
+  "屠夫_没火": {
+    "recognition": {
+      "type": "DirectHit",
+      "param": {}
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          10,
+          10,
+          28,
+          28
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "屠夫_倒计时",
+      "屠夫_投降"
+    ]
   }
 }

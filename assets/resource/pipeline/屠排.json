@@ -7,72 +7,23 @@
     "action": {
       "type": "DoNothing",
       "param": {}
-    },
+    },"post_wait_freezes": 1000,
     "next": [
-      {
-        "name": "屠排_准备案件还原",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_匹配",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_确定",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_开始案件还原",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_监管者",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_传统排位",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_排位",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_归宿游戏",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_大厅游戏",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_退出歌声",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_领取奖励",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_确认",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_确认记录",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_返回",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_稍后聆听",
-        "jump_back": true
-      },
-      {
-        "name": "屠排_确定",
-        "jump_back": true
-      },
+      "[JumpBack]屠排_准备案件还原",
+      "[JumpBack]屠排_匹配",
+      "[JumpBack]屠排_确定",
+      "[JumpBack]屠排_开始案件还原",
+      "[JumpBack]屠排_监管者",
+      "[JumpBack]屠排_传统排位",
+      "[JumpBack]屠排_排位",
+      "[JumpBack]屠排_归宿游戏",
+      "[JumpBack]屠排_大厅游戏",
+      "[JumpBack]屠排_退出歌声",
+      "[JumpBack]屠排_领取奖励",
+      "[JumpBack]屠排_确认",
+      "[JumpBack]屠排_确认记录",
+      "[JumpBack]屠排_返回",
+      "[JumpBack]屠排_稍后聆听",
       "屠排_准备开始"
     ]
   },
@@ -216,7 +167,7 @@
     "action": {
       "type": "Click",
       "param": {}
-    },
+    },"post_delay": 3000,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     }

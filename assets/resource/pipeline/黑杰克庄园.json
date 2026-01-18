@@ -392,8 +392,6 @@
       "type": "DoNothing",
       "param": {}
     },
-    "post_delay": 0,
-    "pre_delay": 0,
     "rate_limit": 50,
     "next": [
       "黑杰克_破译密码",

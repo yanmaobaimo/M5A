@@ -235,7 +235,7 @@
     "action": {
       "type": "Click",
       "param": {}
-    },
+    }, "post_delay": 5000,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },

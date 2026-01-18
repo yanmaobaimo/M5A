@@ -1,0 +1,430 @@
+{
+    "坎贝尔的棋局_开始": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "timeout": 100000,
+        "next": [
+            "[JumpBack]坎贝尔的棋局_选择中",
+            "[JumpBack]坎贝尔的棋局_对战勘探员",
+            "[JumpBack]坎贝尔的棋局_开始游戏",
+            "[JumpBack]坎贝尔的棋局_开始推演",
+            "[JumpBack]坎贝尔的棋局_坎贝尔",
+            "[JumpBack]坎贝尔的棋局_地图",
+            "[JumpBack]坎贝尔的棋局_抽取",
+            "[JumpBack]坎贝尔的棋局_点击屏幕继续",
+            "坎贝尔的棋局_3000",
+            "[JumpBack]坎贝尔的棋局_再来一局"
+        ]
+    },
+    "坎贝尔的棋局_地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "地图.png"
+                ],
+                "roi": [
+                    17,
+                    13,
+                    79,
+                    53
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 1000,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_坎贝尔": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "坎贝尔.png"
+                ],
+                "roi": [
+                    568,
+                    346,
+                    61,
+                    64
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_开始推演": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始推演"
+                ],
+                "roi": [
+                    966,
+                    575,
+                    251,
+                    114
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_对战勘探员": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "对战勘探员"
+                ],
+                "roi": [
+                    369,
+                    452,
+                    133,
+                    68
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_开始游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始游戏"
+                ],
+                "roi": [
+                    556,
+                    561,
+                    171,
+                    61
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_选择中": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "选择中"
+                ],
+                "roi": [
+                    1046,
+                    624,
+                    159,
+                    89
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "坎贝尔的棋局_原石",
+            "坎贝尔的棋局_初始原石"
+        ]
+    },
+    "坎贝尔的棋局_原石": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "原石.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_初始原石": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "初始原石.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_抽取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "抽取"
+                ],
+                "roi": [
+                    560,
+                    16,
+                    146,
+                    102
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    583,
+                    222,
+                    146,
+                    233
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_3000": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "3000/3000"
+                ],
+                "roi": [
+                    1078,
+                    439,
+                    138,
+                    57
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "坎贝尔的棋局_确认"
+        ]
+    },
+    "坎贝尔的棋局_再来一局": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "再来一局"
+                ],
+                "roi": [
+                    429,
+                    570,
+                    140,
+                    60
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确认"
+                ],
+                "roi": [
+                    732,
+                    570,
+                    88,
+                    60
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "坎贝尔的棋局_退出游戏"
+        ]
+    },
+    "坎贝尔的棋局_点击屏幕继续": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点击屏幕继续"
+                ],
+                "roi": [
+                    550,
+                    645,
+                    183,
+                    75
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_退出游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始游戏"
+                ],
+                "roi": [
+                    556,
+                    561,
+                    171,
+                    61
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    34,
+                    24,
+                    44,
+                    52
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "坎贝尔的棋局_退出推演"
+        ]
+    },
+    "坎贝尔的棋局_退出推演": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始推演"
+                ],
+                "roi": [
+                    966,
+                    575,
+                    251,
+                    114
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    33,
+                    26,
+                    46,
+                    55
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "坎贝尔的棋局_退出地图"
+        ]
+    },
+    "坎贝尔的棋局_退出地图": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "坎贝尔.png"
+                ],
+                "roi": [
+                    568,
+                    346,
+                    61,
+                    64
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    35,
+                    31,
+                    45,
+                    54
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    }
+}

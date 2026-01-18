@@ -1,0 +1,498 @@
+{
+    "捉迷藏_庄园": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 0,
+        "pre_delay": 0,
+        "rate_limit": 50,
+        "next": [
+            "[JumpBack]捉迷藏_取消帧率",
+            "[JumpBack]捉迷藏_买魔术棒",
+            "[JumpBack]捉迷藏_解除",
+            "[JumpBack]捉迷藏_魔术棒",
+            "[JumpBack]捉迷藏_变",
+            "捉迷藏_退出",
+            "捉迷藏_继续",
+            "捉迷藏_庄园"
+        ]
+    },
+    "捉迷藏_取消帧率": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消"
+                ],
+                "roi": [
+                    0,
+                    273,
+                    188,
+                    147
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_魔术棒": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": "TemplateMatch",
+                        "template": "魔术棒.png",
+                        "roi": [
+                            1089,
+                            198,
+                            48,
+                            68
+                        ],
+                        "green_mask": true
+                    },
+                    {
+                        "recognition": "TemplateMatch",
+                        "template": "变.png",
+                        "roi": [
+                            1176,
+                            310,
+                            64,
+                            68
+                        ],
+                        "green_mask": true
+                    }
+                ],
+                "box_index": 0
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_买魔术棒": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "买魔术棒.png"
+                ],
+                "roi": [
+                    125,
+                    285,
+                    42,
+                    59
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_变": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "变.png"
+                ],
+                "roi": [
+                    1176,
+                    310,
+                    64,
+                    68
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    1176,
+                    310,
+                    64,
+                    68
+                ],
+                "end": [
+                    [
+                        776,
+                        310,
+                        64,
+                        68
+                    ]
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_解除": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "解除.png"
+                ],
+                "roi": [
+                    1092,
+                    314,
+                    53,
+                    60
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "timeout": 200,
+        "next": [
+            "捉迷藏_走",
+            "捉迷藏_起"
+        ]
+    },
+    "捉迷藏_走": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "定.png"
+                ],
+                "roi": [
+                    1056,
+                    441,
+                    79,
+                    64
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    150,
+                    600,
+                    100,
+                    50
+                ],
+                "end": [
+                    [
+                        150,
+                        500,
+                        100,
+                        50
+                    ]
+                ],
+                "duration": [
+                    1000
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "捉迷藏_替身",
+            "捉迷藏_前进中"
+        ]
+    },
+    "捉迷藏_替身": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "1/2",
+                    "2/2",
+                    "112",
+                    "212"
+                ],
+                "roi": [
+                    1207,
+                    234,
+                    55,
+                    41
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "捉迷藏_走",
+            "捉迷藏_前进"
+        ]
+    },
+    "捉迷藏_前进中": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    150,
+                    500,
+                    100,
+                    50
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "捉迷藏_卡点"
+        ]
+    },
+    "捉迷藏_定": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "定.png"
+                ],
+                "roi": [
+                    1056,
+                    441,
+                    79,
+                    64
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_起": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "起.png"
+                ],
+                "roi": [
+                    1052,
+                    430,
+                    76,
+                    78
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [
+                    800,
+                    300,
+                    50,
+                    50
+                ],
+                "end": [
+                    [
+                        750,
+                        300,
+                        50,
+                        50
+                    ]
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "post_delay": 1000
+    },
+    "捉迷藏_退出": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "退出"
+                ],
+                "roi": [
+                    5,
+                    311,
+                    84,
+                    61
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "捉迷藏_继续"
+        ]
+    },
+    "捉迷藏_继续": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "继续"
+                ],
+                "roi": [
+                    553,
+                    595,
+                    175,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "捉迷藏_返回大厅",
+            "捉迷藏_继续"
+        ]
+    },
+    "捉迷藏_返回大厅": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "返回大厅"
+                ],
+                "roi": [
+                    531,
+                    595,
+                    224,
+                    125
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 5000,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "[Anchor]home",
+            "大厅归宿_开始"
+        ]
+    },
+    "捉迷藏_停": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchUp",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "timeout": 200,
+        "next": [
+            "捉迷藏_定"
+        ]
+    },
+    "捉迷藏_卡点": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "TouchMove",
+            "param": {
+                "target": [
+                    150,
+                    500,
+                    100,
+                    50
+                ]
+            }
+        },
+        "post_wait_freezes": 500,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "捉迷藏_停"
+        ]
+    },
+    "捉迷藏_前进": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "定.png"
+                ],
+                "roi": [
+                    1056,
+                    441,
+                    79,
+                    64
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "TouchDown",
+            "param": {
+                "target": [
+                    100,
+                    600,
+                    150,
+                    50
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "捉迷藏_前进中"
+        ]
+    }
+}

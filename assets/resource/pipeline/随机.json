@@ -8,71 +8,26 @@
       "type": "DoNothing",
       "param": {}
     },
+    "post_wait_freezes": 1000,
     "next": [
-      {
-        "name": "随机_准备案件还原",
-        "jump_back": true
-      },
-      {
-        "name": "随机_匹配",
-        "jump_back": true
-      },
-      {
-        "name": "随机_否",
-        "jump_back": true
-      },
-      {
-        "name": "随机_开始案件还原",
-        "jump_back": true
-      },
-      {
-        "name": "随机_监管者",
-        "jump_back": true
-      },
-      {
-        "name": "随机_混沌纷争未开启",
-        "jump_back": true
-      },
-      {
-        "name": "随机_随机",
-        "jump_back": true
-      },
-      {
-        "name": "随机_归宿游戏",
-        "jump_back": true
-      },
-      {
-        "name": "随机_大厅游戏",
-        "jump_back": true
-      },
-      {
-        "name": "随机_退出歌声",
-        "jump_back": true
-      },
-      {
-        "name": "随机_领取奖励",
-        "jump_back": true
-      },
-      {
-        "name": "随机_确认",
-        "jump_back": true
-      },
-      {
-        "name": "随机_确认记录",
-        "jump_back": true
-      },
-      {
-        "name": "随机_返回",
-        "jump_back": true
-      },
-      {
-        "name": "随机_稍后聆听",
-        "jump_back": true
-      },
-      {
-        "name": "随机_确定",
-        "jump_back": true
-      },
+      "[JumpBack]随机_准备案件还原",
+      "[JumpBack]随机_匹配",
+      "[JumpBack]随机_否",
+      "[JumpBack]随机_开始案件还原",
+      "[JumpBack]随机_监管者",
+      "[JumpBack]随机_开始游戏",
+      "[JumpBack]随机_混沌纷争",
+      "[JumpBack]随机_混沌纷争未开启",
+      "[JumpBack]随机_随机",
+      "[JumpBack]随机_归宿游戏",
+      "[JumpBack]随机_大厅游戏",
+      "[JumpBack]随机_退出歌声",
+      "[JumpBack]随机_领取奖励",
+      "[JumpBack]随机_确认",
+      "[JumpBack]随机_确认记录",
+      "[JumpBack]随机_返回",
+      "[JumpBack]随机_稍后聆听",
+      "[JumpBack]随机_确定",
       "随机_准备开始"
     ]
   },
@@ -135,7 +90,74 @@
       "param": {
         "expected": [
           "自由匹配",
-          "混沌纷争"
+          "混沌纷争",
+          "混沌",
+          "纷争"
+        ],
+        "order_by": "Random",
+        "roi": [
+          441,
+          174,
+          385,
+          371
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "post_delay": 1000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "随机_混沌纷争未开启": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "开启"
+        ],
+        "roi": [
+          321,
+          173,
+          140,
+          126
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          35,
+          30,
+          50,
+          55
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "post_wait_freezes": 3000
+  },
+  "随机_混沌纷争": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "黑杰克",
+          "杰克",
+          "捉迷藏"
+        ],
+        "order_by": "Random",
+        "roi": [
+          164,
+          180,
+          263,
+          289
         ]
       }
     },
@@ -147,66 +169,32 @@
       "Node.Recognition.Succeeded": "{name}"
     }
   },
-  "随机_混沌纷争未开启": {
-    "action": {
-      "param": {
-        "target": [
-          35,
-          30,
-          50,
-          55
-        ]
-      },
-      "type": "Click"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "post_wait_freezes": 2000,
+  "随机_开始游戏": {
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
-          "开启"
+          "开始游戏"
         ],
         "roi": [
-          321,
-          173,
-          140,
-          126
+          560,
+          569,
+          166,
+          87
         ]
-      },
-      "type": "OCR"
-    }
-  },
-  "随机_混沌纷争": {
+      }
+    },
     "action": {
-      "param": {},
-      "type": "Click"
+      "type": "Click",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    },
-    "recognition": {
-      "param": {
-        "expected": [
-          "黑杰克"
-        ]
-      },
-      "type": "OCR"
     }
   },
   "随机_总点数": {
-    "action": {
-      "param": {},
-      "type": "DoNothing"
-    },
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    },
-    "next": [
-      "黑杰克_庄园"
-    ],
     "recognition": {
+      "type": "OCR",
       "param": {
         "expected": [
           "总点数"
@@ -217,8 +205,44 @@
           72,
           30
         ]
-      },
-      "type": "OCR"
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "黑杰克_庄园"
+    ]
+  },
+  "随机_秘宝": {
+    "recognition": {
+      "type": "TemplateMatch",
+      "param": {
+        "template": [
+          "秘宝.png"
+        ],
+        "roi": [
+          11,
+          321,
+          51,
+          51
+        ],
+        "green_mask": true
+      }
+    },
+    "action": {
+      "type": "DoNothing",
+      "param": {}
+    },
+    "next": [
+      "捉迷藏_庄园"
+    ],
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
     }
   },
   "随机_监管者": {
@@ -263,6 +287,7 @@
       "type": "Click",
       "param": {}
     },
+    "post_delay": 3000,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     }
@@ -286,6 +311,7 @@
       "type": "Click",
       "param": {}
     },
+    "post_delay": 3000,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     }
@@ -357,14 +383,15 @@
       "param": {}
     },
     "timeout": 90000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
     "next": [
       "随机_取消准备",
       "随机_存在感",
-      "随机_总点数"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+      "随机_总点数",
+      "随机_秘宝"
+    ]
   },
   "随机_领取奖励": {
     "recognition": {
@@ -479,14 +506,15 @@
     },
     "post_delay": 5000,
     "timeout": 90000,
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
     "next": [
       "随机_取消准备",
       "随机_存在感",
-      "随机_总点数"
-    ],
-    "focus": {
-      "Node.Recognition.Succeeded": "{name}"
-    }
+      "随机_总点数",
+      "随机_秘宝"
+    ]
   },
   "随机_确定": {
     "recognition": {
@@ -553,12 +581,12 @@
       "type": "DoNothing",
       "param": {}
     },
-    "next": [
-      "屠夫_庄园"
-    ],
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
-    }
+    },
+    "next": [
+      "屠夫_庄园"
+    ]
   },
   "随机_大厅游戏": {
     "recognition": {

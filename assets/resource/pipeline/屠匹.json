@@ -7,69 +7,23 @@
     "action": {
       "type": "DoNothing",
       "param": {}
-    },
+    },"post_wait_freezes": 1000,
     "next": [
-      {
-        "name": "屠匹_准备案件还原",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_匹配",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_否",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_开始案件还原",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_监管者",
-        "jump_back": true
-      },
-
-      {
-        "name": "屠匹_自由匹配",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_归宿游戏",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_大厅游戏",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_退出歌声",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_领取奖励",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_确认",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_确认记录",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_返回",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_稍后聆听",
-        "jump_back": true
-      },
-      {
-        "name": "屠匹_确定",
-        "jump_back": true
-      },
+      "[JumpBack]屠匹_准备案件还原",
+      "[JumpBack]屠匹_匹配",
+      "[JumpBack]屠匹_否",
+      "[JumpBack]屠匹_开始案件还原",
+      "[JumpBack]屠匹_监管者",
+      "[JumpBack]屠匹_自由匹配",
+      "[JumpBack]屠匹_归宿游戏",
+      "[JumpBack]屠匹_大厅游戏",
+      "[JumpBack]屠匹_退出歌声",
+      "[JumpBack]屠匹_领取奖励",
+      "[JumpBack]屠匹_确认",
+      "[JumpBack]屠匹_确认记录",
+      "[JumpBack]屠匹_返回",
+      "[JumpBack]屠匹_稍后聆听",
+      "[JumpBack]屠匹_确定",
       "屠匹_准备开始"
     ]
   },
@@ -126,9 +80,6 @@
       "Node.Recognition.Succeeded": "{name}"
     }
   },
-
-  
-
   "屠匹_自由匹配": {
     "recognition": {
       "type": "OCR",
@@ -136,7 +87,12 @@
         "expected": [
           "自由匹配"
         ],
-        "roi": [457, 494, 127, 72]
+        "roi": [
+          457,
+          494,
+          127,
+          72
+        ]
       }
     },
     "action": {
@@ -169,7 +125,8 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     }
-  },"屠匹_开始案件还原": {
+  },
+  "屠匹_开始案件还原": {
     "recognition": {
       "type": "OCR",
       "param": {
@@ -188,11 +145,11 @@
       "type": "Click",
       "param": {}
     },
+    "post_delay": 3000,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     }
   },
-
   "屠匹_否": {
     "recognition": {
       "type": "OCR",
@@ -212,6 +169,7 @@
       "type": "Click",
       "param": {}
     },
+    "post_delay": 3000,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     }
