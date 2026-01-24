@@ -156,6 +156,61 @@
             }
         },
         "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "坎贝尔的棋局_使用",
+            "坎贝尔的棋局_卡牌",
+            "坎贝尔的棋局_原石",
+            "坎贝尔的棋局_初始原石"
+        ]
+    },
+    "坎贝尔的棋局_使用": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "使用"
+                ],
+                "roi": [
+                    400,
+                    490,
+                    480,
+                    70
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "坎贝尔的棋局_卡牌": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "点石成金",
+                    "再来一次",
+                    "意外之喜"
+                ],
+                "order_by": "Random",
+                "roi": [
+                    400,
+                    595,
+                    480,
+                    110
+                ]
+            }
+        },
+        "action": {
             "type": "Click",
             "param": {}
         },
@@ -163,6 +218,7 @@
             "Node.Recognition.Succeeded": "{name}"
         },
         "next": [
+            "坎贝尔的棋局_使用",
             "坎贝尔的棋局_原石",
             "坎贝尔的棋局_初始原石"
         ]

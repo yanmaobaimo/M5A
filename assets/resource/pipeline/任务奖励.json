@@ -261,7 +261,8 @@
       "param": {}
     },
     "next": [
-      "任务奖励_邮件一键领取"
+      "任务奖励_邮件一键领取",
+      "任务奖励_前往领取"
     ],
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
