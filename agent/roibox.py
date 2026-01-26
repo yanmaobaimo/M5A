@@ -96,10 +96,8 @@ class RoiBox(CustomRecognition):
                     return CustomRecognition.AnalyzeResult(
                         box=tuple(box),
                         detail={
-                            "box": box,
                             "roi": roi,
                             "mode": mode,
-                            "in_roi": True,
                         },
                     )
                 else:

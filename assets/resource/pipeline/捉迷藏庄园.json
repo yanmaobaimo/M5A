@@ -63,12 +63,12 @@
                     },
                     {
                         "recognition": "TemplateMatch",
-                        "template": "变.png",
+                        "template": "静步.png",
                         "roi": [
-                            1176,
-                            310,
-                            64,
-                            68
+                            994,
+                            521,
+                            39,
+                            62
                         ],
                         "green_mask": true
                     }
