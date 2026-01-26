@@ -27,7 +27,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_静步",
       "黑杰克_庄园"
@@ -61,7 +61,7 @@
     },
     "post_delay": 2000,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_炸机",
       "黑杰克_耳鸣",
@@ -94,7 +94,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_倒地",
       "黑杰克_定时",
@@ -126,7 +126,7 @@
     },
     "post_delay": 1000,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_自愈",
       "黑杰克_庄园"
@@ -159,7 +159,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_怜悯",
       "黑杰克_交互",
@@ -195,7 +195,7 @@
     },
     "post_delay": 2250,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "repeat": 2,
     "repeat_delay": 2250,
     "next": [
@@ -213,7 +213,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_取消帧率",
       "黑杰克_静步",
@@ -276,7 +276,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_耳鸣",
       "黑杰克_庄园"
@@ -310,7 +310,7 @@
     },
     "post_delay": 3000,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_炸机",
       "黑杰克_庄园"
@@ -345,7 +345,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_庄园"
     ]
@@ -392,7 +392,7 @@
       "type": "DoNothing",
       "param": {}
     },
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_破译密码",
       "黑杰克_校准提示",
@@ -424,7 +424,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_庄园"
     ]
@@ -454,7 +454,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_遥控炸弹",
       "黑杰克_引爆",
@@ -499,7 +499,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_庄园"
     ]
@@ -532,7 +532,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_旋转视角"
     ]
@@ -562,7 +562,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_修机",
       "黑杰克_修不到机",
@@ -598,7 +598,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_牵人",
       "黑杰克_牵不到人",

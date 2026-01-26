@@ -10,7 +10,7 @@
         },
         "post_delay": 0,
         "pre_delay": 0,
-        "rate_limit": 50,
+        "rate_limit": 0,
         "next": [
             "[JumpBack]捉迷藏_取消帧率",
             "[JumpBack]捉迷藏_买魔术棒",

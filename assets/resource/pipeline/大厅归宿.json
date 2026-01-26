@@ -17,6 +17,7 @@
       "大厅归宿_稍后聆听",
       "大厅归宿_确定",
       "大厅归宿_退出歌声",
+      "大厅归宿_点击空白区域返回",
       "大厅归宿_退出空军",
       "大厅归宿_退出活动",
       "大厅归宿_老友回归",
@@ -242,6 +243,29 @@
         ]
       },
       "type": "OCR"
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    }
+  },
+  "大厅归宿_点击空白区域返回": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "点击空白区域返回"
+        ],
+        "roi": [
+          509,
+          620,
+          263,
+          94
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
     },
     "focus": {
       "Node.Recognition.Succeeded": "{name}"

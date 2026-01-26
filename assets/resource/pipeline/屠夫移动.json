@@ -25,7 +25,7 @@
         "next": [
             "屠夫_旋转视角"
         ],
-        "rate_limit": 50,
+        "rate_limit": 0,
         "recognition": {
             "param": {},
             "type": "DirectHit"
@@ -57,7 +57,7 @@
         "next": [
             "屠夫_庄园"
         ],
-        "rate_limit": 50,
+        "rate_limit": 0,
         "recognition": {
             "param": {},
             "type": "DirectHit"

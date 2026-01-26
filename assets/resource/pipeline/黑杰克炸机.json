@@ -46,18 +46,16 @@
       "Node.Recognition.Succeeded": "{name}"
     },
     "recognition": {
-      "type": "Custom",
+      "type": "NeuralNetworkDetect",
       "param": {
-        "custom_recognition": "RoiBox",
-        "custom_recognition_param": {
-          "node": "黑杰克_炸机中",
-          "roi": [
-            580,
-            0,
-            120,
-            500
-          ]
-        }
+        "model": "炸机.onnx",
+        "expected": 0,
+        "roi": [
+          532,
+          100,
+          216,
+          216
+        ]
       }
     },
     "action": {
@@ -67,18 +65,6 @@
     "next": [
       "黑杰克_传送炸机"
     ]
-  },
-  "黑杰克_炸机中": {
-    "recognition": {
-      "type": "NeuralNetworkDetect",
-      "param": {
-        "model": "炸机.onnx",
-        "expected": [
-          0
-        ],
-        "threshold": 0.7
-      }
-    }
   },
   "黑杰克_传送炸机": {
     "rate_limit": 0,

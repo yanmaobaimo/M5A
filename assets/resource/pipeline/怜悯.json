@@ -24,7 +24,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
@@ -52,7 +52,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -77,7 +77,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -102,7 +102,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -127,7 +127,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -152,7 +152,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -177,7 +177,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -202,7 +202,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -227,7 +227,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -252,7 +252,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -277,7 +277,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -302,7 +302,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -327,7 +327,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -352,7 +352,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -377,7 +377,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -402,7 +402,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -427,7 +427,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -452,7 +452,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -477,7 +477,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -502,7 +502,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -527,7 +527,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -552,7 +552,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -577,7 +577,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -602,7 +602,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -627,7 +627,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -652,7 +652,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -677,7 +677,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -702,7 +702,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -727,7 +727,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -752,7 +752,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -777,7 +777,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -802,7 +802,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -827,7 +827,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -852,7 +852,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -877,7 +877,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -902,7 +902,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -927,7 +927,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -952,7 +952,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -977,7 +977,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1002,7 +1002,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1027,7 +1027,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1052,7 +1052,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1077,7 +1077,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1102,7 +1102,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1127,7 +1127,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1152,7 +1152,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1177,7 +1177,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1222,7 +1222,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1247,7 +1247,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1272,7 +1272,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1297,7 +1297,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "黑杰克_有人",
       "黑杰克_无法传送",
@@ -1325,7 +1325,7 @@
       "param": {}
     },
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
@@ -1351,7 +1351,7 @@
     },
     "post_delay": 6000,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
@@ -1371,7 +1371,7 @@
     },
     "post_delay": 6000,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
@@ -1390,7 +1390,7 @@
       "param": {}
     },
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },

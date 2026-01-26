@@ -24,7 +24,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_二娃有火",
       "屠夫_二娃上火",
@@ -72,7 +72,7 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_庄园"
     ]
@@ -99,7 +99,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_二娃有人有火",
       "屠夫_二娃上火",
@@ -134,7 +134,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_聆听",
       "屠夫_移动"
@@ -168,7 +168,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_聆听",
       "屠夫_移动"
@@ -195,7 +195,7 @@
     },
     "post_delay": 1000,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_移动"
     ]
@@ -221,7 +221,7 @@
     },
     "post_delay": 1000,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_移动"
     ]
@@ -285,7 +285,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_大娃有火",
       "屠夫_大娃上火",
@@ -334,7 +334,7 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_庄园"
     ]
@@ -359,7 +359,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_大娃有人有火",
       "屠夫_大娃上火",
@@ -394,7 +394,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_二娃有人",
       "屠夫_聆听",
@@ -429,7 +429,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_二娃",
       "屠夫_聆听",
@@ -447,7 +447,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_继续",
       "[JumpBack]屠夫_放大火娃",
@@ -543,7 +543,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_移动"
     ]
@@ -604,7 +604,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_移动"
     ]
@@ -663,7 +663,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_二娃上火",
       "屠夫_放二娃"
@@ -694,7 +694,7 @@
     },
     "post_delay": 0,
     "pre_delay": 0,
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_大娃上火",
       "屠夫_放大娃"
@@ -748,7 +748,7 @@
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     },
-    "rate_limit": 50,
+    "rate_limit": 0,
     "next": [
       "屠夫_返回大厅",
       "屠夫_继续"

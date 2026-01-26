@@ -87,12 +87,18 @@
 		"recognition": {
 			"type": "NeuralNetworkDetect",
 			"param": {
-				"model": "修不到机.onnx",
+				"model": "炸机.onnx",
 				"expected": [
 					0
 				],
 				"threshold": [
 					0.3
+				],
+				"roi": [
+					532,
+					200,
+					216,
+					216
 				]
 			}
 		}
