@@ -30,8 +30,7 @@ description: 基于 MaaFramework 任务流水线协议，对 Pipeline 节点进�
    - 存在 `detector` / `ratio` / `count`：`FeatureMatch`
    - 其余默认：`TemplateMatch`
    - 默认添加："green_mask": true
-7. 只有字符串/字符串数组，或存在 `replace` / `only_rec`：`OCR`
-8. 以上都不满足：`DirectHit`
+7. 以上都不满足：`OCR`
 
 在节点未显式给出识别算法类型时，默认为`Click`
 
