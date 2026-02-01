@@ -77,6 +77,58 @@
       "Node.Recognition.Succeeded": "{name}"
     }
   },
+  "大厅归宿_继续": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "继续"
+        ],
+        "roi": [
+          563,
+          595,
+          161,
+          125
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "大厅归宿_开始"
+    ]
+  },
+  "大厅归宿_领取": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "领取"
+        ],
+        "roi": [
+          563,
+          595,
+          161,
+          125
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {}
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "大厅归宿_开始"
+    ]
+  },
   "大厅归宿_返回": {
     "recognition": {
       "type": "OCR",

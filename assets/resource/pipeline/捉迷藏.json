@@ -1,0 +1,438 @@
+{
+    "捉迷藏_开始": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_wait_freezes": 1000,
+        "next": [
+            "[JumpBack]捉迷藏_准备案件还原",
+            "[JumpBack]捉迷藏_匹配",
+            "[JumpBack]捉迷藏_开始案件还原",
+            "[JumpBack]捉迷藏_开始游戏",
+            "[JumpBack]捉迷藏_混沌纷争",
+            "[JumpBack]捉迷藏_未开启",
+            "[JumpBack]捉迷藏_捉迷藏",
+            "[JumpBack]捉迷藏_归宿游戏",
+            "[JumpBack]捉迷藏_大厅游戏",
+            "[JumpBack]捉迷藏_退出歌声",
+            "捉迷藏_准备开始"
+        ]
+    },
+    "捉迷藏_退出歌声": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "稍后查看"
+                ],
+                "roi": [
+                    366,
+                    343,
+                    231,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_归宿游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "辑大"
+                ],
+                "roi": [
+                    1080,
+                    364,
+                    145,
+                    127
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1107,
+                    483,
+                    99,
+                    54
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_混沌纷争": {
+        "action": {
+            "param": {},
+            "type": "Click"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "post_delay": 1000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "混沌纷争"
+                ],
+                "roi": [
+                    627,
+                    241,
+                    243,
+                    140
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "捉迷藏_未开启": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开启"
+                ],
+                "roi": [
+                    321,
+                    173,
+                    140,
+                    126
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    35,
+                    30,
+                    50,
+                    55
+                ]
+            }
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "post_wait_freezes": 3000
+    },
+    "捉迷藏_结束": {
+        "action": {
+            "param": {
+                "target": [
+                    35,
+                    30,
+                    50,
+                    55
+                ]
+            },
+            "type": "Click"
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "post_wait_freezes": 2000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "混沌纷争"
+                ],
+                "roi": [
+                    627,
+                    241,
+                    243,
+                    140
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "捉迷藏_捉迷藏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "捉迷藏"
+                ],
+                "order_by": "Random",
+                "roi": [
+                    123,
+                    373,
+                    206,
+                    140
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_开始游戏": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始游戏"
+                ],
+                "roi": [
+                    560,
+                    569,
+                    166,
+                    87
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_秘宝": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "秘宝.png"
+                ],
+                "roi": [
+                    11,
+                    321,
+                    51,
+                    51
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "next": [
+            "捉迷藏_庄园"
+        ],
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_监管者": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "监管者"
+                ],
+                "roi": [
+                    860,
+                    74,
+                    186,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_开始案件还原": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始案件还原"
+                ],
+                "roi": [
+                    511,
+                    589,
+                    272,
+                    131
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 3000,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_否": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "否"
+                ],
+                "roi": [
+                    701,
+                    346,
+                    182,
+                    134
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 3000,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_准备案件还原": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "准备案件还原"
+                ],
+                "roi": [
+                    514,
+                    523,
+                    248,
+                    141
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_匹配": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消匹配"
+                ],
+                "roi": [
+                    73,
+                    302,
+                    193,
+                    137
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 3000,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    },
+    "捉迷藏_准备开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "准备开始"
+                ],
+                "roi": [
+                    953,
+                    580,
+                    224,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "timeout": 90000,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "捉迷藏_取消准备",
+            "捉迷藏_秘宝"
+        ]
+    },
+    "捉迷藏_取消准备": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消准备"
+                ],
+                "roi": [
+                    953,
+                    580,
+                    224,
+                    138
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 5000,
+        "timeout": 90000,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "捉迷藏_取消准备",
+            "捉迷藏_秘宝"
+        ]
+    },
+    "捉迷藏_大厅游戏": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "游戏.png"
+                ],
+                "roi": [
+                    1146,
+                    470,
+                    118,
+                    75
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        }
+    }
+}

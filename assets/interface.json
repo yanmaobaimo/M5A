@@ -47,7 +47,7 @@
     "agent": {
         "child_exec": "python",
         "child_args": [
-            "./../agent/main.py"
+            "./agent/main.py"
         ]
     },
     "task": [
@@ -57,18 +57,33 @@
             "default_check": true
         },
         {
+            "name": "屠匹",
+            "entry": "屠匹_开始",
+            "default_check": true,
+            "description": "聆听张狂厂长",
+            "repeatable": true,
+            "repeat_count": 1
+        },
+        {
             "name": "黑杰克",
             "entry": "黑杰克_开始",
             "default_check": true,
             "description": "小女孩邦邦",
             "repeatable": true,
-            "repeat_count": 3
+            "repeat_count": 1
+        },
+        {
+            "name": "捉迷藏",
+            "entry": "捉迷藏_开始",
+            "default_check": true,
+            "repeatable": true,
+            "repeat_count": 1
         },
         {
             "name": "3胜",
             "entry": "3胜_开始",
             "default_check": true,
-            "description": "随机屠匹黑杰克"
+            "description": "随机屠匹黑杰克捉迷藏"
         },
         {
             "name": "屠排",
@@ -76,15 +91,7 @@
             "default_check": true,
             "description": "聆听张狂厂长",
             "repeatable": true,
-            "repeat_count": 3
-        },
-        {
-            "name": "屠匹",
-            "entry": "屠匹_开始",
-            "default_check": true,
-            "description": "聆听张狂厂长",
-            "repeatable": true,
-            "repeat_count": 6
+            "repeat_count": 1
         },
         {
             "name": "每日免费礼包",
@@ -115,7 +122,7 @@
         },
         {
             "name": "测试",
-            "entry": "黑杰克_修不到机"
+            "entry": "捉迷藏_开始"
         }
     ]
 }
