@@ -1,13 +1,5 @@
 {
     "捉迷藏_庄园": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
         "post_delay": 0,
         "pre_delay": 0,
         "rate_limit": 0,
@@ -23,6 +15,9 @@
         ]
     },
     "捉迷藏_取消帧率": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
             "type": "OCR",
             "param": {
@@ -40,12 +35,12 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
         }
     },
     "捉迷藏_魔术棒": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
             "type": "And",
             "param": {
@@ -79,36 +74,52 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
         }
     },
     "捉迷藏_买魔术棒": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "And",
             "param": {
-                "template": [
-                    "买魔术棒.png"
+                "all_of": [
+                    {
+                        "recognition": "TemplateMatch",
+                        "template": "买魔术棒.png",
+                        "roi": [
+                            125,
+                            285,
+                            42,
+                            59
+                        ],
+                        "green_mask": true
+                    },
+                    {
+                        "recognition": "TemplateMatch",
+                        "template": "魔术棒.png",
+                        "roi": [
+                            1089,
+                            198,
+                            48,
+                            68
+                        ],
+                        "green_mask": true,
+                        "inverse": true
+                    }
                 ],
-                "roi": [
-                    125,
-                    285,
-                    42,
-                    59
-                ],
-                "green_mask": true
+                "box_index": 0
             }
         },
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
         }
     },
     "捉迷藏_变": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -142,12 +153,13 @@
                     ]
                 ]
             }
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
         }
     },
     "捉迷藏_解除": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "timeout": 200,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -163,20 +175,15 @@
                 "green_mask": true
             }
         },
-        "action": {
-            "type": "DoNothing",
-            "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
-        },
-        "timeout": 200,
         "next": [
             "捉迷藏_走",
             "捉迷藏_起"
         ]
     },
     "捉迷藏_走": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -214,15 +221,15 @@
                 ]
             }
         },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
-        },
         "next": [
             "捉迷藏_替身",
             "捉迷藏_前进中"
         ]
     },
     "捉迷藏_替身": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
             "type": "OCR",
             "param": {
@@ -244,18 +251,14 @@
             "type": "Click",
             "param": {}
         },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
-        },
         "next": [
             "捉迷藏_走",
             "捉迷藏_前进"
         ]
     },
     "捉迷藏_前进中": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
         },
         "action": {
             "type": "TouchMove",
@@ -268,14 +271,14 @@
                 ]
             }
         },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
-        },
         "next": [
             "捉迷藏_卡点"
         ]
     },
     "捉迷藏_定": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -294,12 +297,13 @@
         "action": {
             "type": "Click",
             "param": {}
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
         }
     },
     "捉迷藏_起": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "post_delay": 1000,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -333,13 +337,12 @@
                     ]
                 ]
             }
-        },
+        }
+    },
+    "捉迷藏_退出": {
         "focus": {
             "Node.Recognition.Succeeded": "{name}"
         },
-        "post_delay": 1000
-    },
-    "捉迷藏_退出": {
         "recognition": {
             "type": "OCR",
             "param": {
@@ -358,14 +361,14 @@
             "type": "Click",
             "param": {}
         },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
-        },
         "next": [
             "捉迷藏_继续"
         ]
     },
     "捉迷藏_继续": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
             "type": "OCR",
             "param": {
@@ -384,15 +387,16 @@
             "type": "Click",
             "param": {}
         },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
-        },
         "next": [
             "捉迷藏_返回大厅",
             "捉迷藏_继续"
         ]
     },
     "捉迷藏_返回大厅": {
+        "post_delay": 5000,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
             "type": "OCR",
             "param": {
@@ -411,36 +415,28 @@
             "type": "Click",
             "param": {}
         },
-        "post_delay": 5000,
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
-        },
         "next": [
             "[Anchor]home",
             "大厅归宿_开始"
         ]
     },
     "捉迷藏_停": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
-        },
-        "action": {
-            "type": "TouchUp",
-            "param": {}
-        },
         "focus": {
             "Node.Recognition.Succeeded": "{name}"
         },
         "timeout": 200,
+        "action": {
+            "type": "TouchUp",
+            "param": {}
+        },
         "next": [
             "捉迷藏_定"
         ]
     },
     "捉迷藏_卡点": {
-        "recognition": {
-            "type": "DirectHit",
-            "param": {}
+        "post_wait_freezes": 500,
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
         },
         "action": {
             "type": "TouchMove",
@@ -453,15 +449,14 @@
                 ]
             }
         },
-        "post_wait_freezes": 500,
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
-        },
         "next": [
             "捉迷藏_停"
         ]
     },
     "捉迷藏_前进": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -487,9 +482,6 @@
                     50
                 ]
             }
-        },
-        "focus": {
-            "Node.Recognition.Succeeded": "{name}"
         },
         "next": [
             "捉迷藏_前进中"
