@@ -86,6 +86,12 @@
             "description": "随机屠匹黑杰克捉迷藏"
         },
         {
+            "name": "坎贝尔的棋局",
+            "entry": "坎贝尔的棋局_开始",
+            "default_check": true,
+            "description": "愚人金好感度"
+        },
+        {
             "name": "屠排",
             "entry": "屠排_开始",
             "default_check": true,

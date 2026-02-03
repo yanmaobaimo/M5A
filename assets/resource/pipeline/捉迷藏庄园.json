@@ -5,7 +5,7 @@
         "rate_limit": 0,
         "next": [
             "[JumpBack]捉迷藏_取消帧率",
-            "[JumpBack]捉迷藏_买魔术棒",
+            "[JumpBack]捉迷藏_卖魔术棒",
             "[JumpBack]捉迷藏_解除",
             "[JumpBack]捉迷藏_魔术棒",
             "[JumpBack]捉迷藏_变",
@@ -76,44 +76,56 @@
             "param": {}
         }
     },
+    "捉迷藏_卖魔术棒": {
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "买魔术棒.png"
+                ],
+                "roi": [
+                    125,
+                    285,
+                    42,
+                    59
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "捉迷藏_买魔术棒"
+        ]
+    },
     "捉迷藏_买魔术棒": {
         "focus": {
             "Node.Recognition.Succeeded": "{name}"
         },
         "recognition": {
-            "type": "And",
+            "type": "TemplateMatch",
             "param": {
-                "all_of": [
-                    {
-                        "recognition": "TemplateMatch",
-                        "template": "买魔术棒.png",
-                        "roi": [
-                            125,
-                            285,
-                            42,
-                            59
-                        ],
-                        "green_mask": true
-                    },
-                    {
-                        "recognition": "TemplateMatch",
-                        "template": "魔术棒.png",
-                        "roi": [
-                            1089,
-                            198,
-                            48,
-                            68
-                        ],
-                        "green_mask": true,
-                        "inverse": true
-                    }
+                "template": [
+                    "买魔术棒.png"
                 ],
-                "box_index": 0
+                "roi": [
+                    1089,
+                    198,
+                    48,
+                    68
+                ],
+                "green_mask": true,
+                "inverse": true
             }
         },
         "action": {
             "type": "Click",
-            "param": {}
+            "param": {
+                "target": [
+                    "卖魔术棒"
+                ]
+            }
         }
     },
     "捉迷藏_变": {
@@ -159,7 +171,6 @@
         "focus": {
             "Node.Recognition.Succeeded": "{name}"
         },
-        "timeout": 200,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -173,6 +184,12 @@
                     60
                 ],
                 "green_mask": true
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {
+                "timeout": 200
             }
         },
         "next": [
