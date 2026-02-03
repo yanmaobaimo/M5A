@@ -130,5 +130,28 @@
             "name": "测试",
             "entry": "捉迷藏_开始"
         }
-    ]
+    ],
+    "option": {
+        "任务选项1": {
+            "type": "select",
+            "cases": [
+                {
+                    "name": "文本1",
+                    "pipeline_override": {
+                        "OcrTask": {
+                            "text": "文本1"
+                        }
+                    }
+                },
+                {
+                    "name": "文本2",
+                    "pipeline_override": {
+                        "OcrTask": {
+                            "text": "文本2"
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }
