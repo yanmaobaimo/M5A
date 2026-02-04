@@ -107,7 +107,7 @@
             "type": "TemplateMatch",
             "param": {
                 "template": [
-                    "买魔术棒.png"
+                    "魔术棒.png"
                 ],
                 "roi": [
                     1089,
