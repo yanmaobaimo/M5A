@@ -15,7 +15,7 @@
             "[JumpBack]捉迷藏_开始案件还原",
             "[JumpBack]捉迷藏_开始游戏",
             "[JumpBack]捉迷藏_混沌纷争",
-            "[JumpBack]捉迷藏_未开启",
+            "捉迷藏_未开启",
             "[JumpBack]捉迷藏_捉迷藏",
             "[JumpBack]捉迷藏_归宿游戏",
             "[JumpBack]捉迷藏_大厅游戏",
@@ -126,6 +126,9 @@
                 ]
             }
         },
+        "next": [
+            "黑杰克_结束"
+        ],
         "focus": {
             "Node.Recognition.Succeeded": "{name}"
         },
