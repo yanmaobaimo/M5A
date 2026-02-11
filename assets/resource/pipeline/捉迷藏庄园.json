@@ -96,13 +96,14 @@
             }
         },
         "next": [
-            "捉迷藏_买魔术棒"
+            "捉迷藏_没魔术棒"
         ]
     },
-    "捉迷藏_买魔术棒": {
+    "捉迷藏_没魔术棒": {
         "focus": {
             "Node.Recognition.Succeeded": "{name}"
         },
+        "inverse": true,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -115,21 +116,12 @@
                     48,
                     68
                 ],
-                "green_mask": true,
-                "inverse": true
+                "green_mask": true
             }
         },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    125,
-                    285,
-                    42,
-                    59
-                ]
-            }
-        }
+        "next": [
+            "捉迷藏_买魔术棒"
+        ]
     },
     "捉迷藏_变": {
         "focus": {
@@ -174,6 +166,7 @@
         "focus": {
             "Node.Recognition.Succeeded": "{name}"
         },
+        "timeout": 200,
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -187,12 +180,6 @@
                     60
                 ],
                 "green_mask": true
-            }
-        },
-        "action": {
-            "type": "DoNothing",
-            "param": {
-                "timeout": 200
             }
         },
         "next": [
@@ -506,5 +493,18 @@
         "next": [
             "捉迷藏_前进中"
         ]
+    },
+    "捉迷藏_买魔术棒": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    125,
+                    285,
+                    42,
+                    59
+                ]
+            }
+        }
     }
 }

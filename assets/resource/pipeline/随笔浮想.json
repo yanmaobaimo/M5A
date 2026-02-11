@@ -1073,8 +1073,7 @@
           350,
           11,
           11
-        ],
-        "inverse": true
+        ]
       }
     },
     "action": {
@@ -1084,6 +1083,7 @@
     "next": [
       "随笔浮想_确认记录"
     ],
+    "inverse": true,
     "focus": {
       "Node.Recognition.Succeeded": "{name}"
     }
