@@ -233,7 +233,7 @@
         ],
         "green_mask": true,
         "threshold": [
-          0.85
+          0.9
         ]
       }
     },
