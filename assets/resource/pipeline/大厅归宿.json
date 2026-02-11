@@ -323,6 +323,39 @@
       "Node.Recognition.Succeeded": "{name}"
     }
   },
+  "大厅归宿_退出春节": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "春节导览"
+        ],
+        "roi": [
+          64,
+          0,
+          176,
+          88
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          24,
+          20,
+          46,
+          51
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "大厅归宿_开始"
+    ]
+  },
   "大厅归宿_退出空军": {
     "action": {
       "param": {
