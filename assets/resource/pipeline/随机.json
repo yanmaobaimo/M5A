@@ -231,7 +231,8 @@
           51,
           51
         ],
-        "green_mask": true
+        "green_mask": true,
+        "threshold": 0.9
       }
     },
     "action": {

@@ -209,6 +209,39 @@
       "启动游戏_进入大厅归宿"
     ]
   },
+  "启动游戏_退出春节": {
+    "recognition": {
+      "type": "OCR",
+      "param": {
+        "expected": [
+          "春节导览"
+        ],
+        "roi": [
+          64,
+          0,
+          176,
+          88
+        ]
+      }
+    },
+    "action": {
+      "type": "Click",
+      "param": {
+        "target": [
+          24,
+          20,
+          46,
+          51
+        ]
+      }
+    },
+    "focus": {
+      "Node.Recognition.Succeeded": "{name}"
+    },
+    "next": [
+      "启动游戏_进入大厅归宿"
+    ]
+  },
   "启动游戏_退出活动": {
     "recognition": {
       "type": "OCR",
