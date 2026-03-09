@@ -476,6 +476,7 @@
                                 "SendMessage",
                                 "PostMessage",
                                 "LegacyEvent",
+                                "PostThreadMessage",
                                 "SendMessageWithCursorPos",
                                 "PostMessageWithCursorPos",
                                 "SendMessageWithWindowPos",
@@ -491,6 +492,7 @@
                                 "SendMessage",
                                 "PostMessage",
                                 "LegacyEvent",
+                                "PostThreadMessage",
                                 "SendMessageWithCursorPos",
                                 "PostMessageWithCursorPos",
                                 "SendMessageWithWindowPos",
@@ -507,9 +509,7 @@
                                 "DXGI_DesktopDup",
                                 "DXGI_DesktopDup_Window",
                                 "PrintWindow",
-                                "ScreenDC",
-                                "Foreground",
-                                "Background"
+                                "ScreenDC"
                             ]
                         }
                     },
