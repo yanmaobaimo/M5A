@@ -164,6 +164,7 @@
         },
         "next": [
             "坎贝尔的棋局_使用",
+            "坎贝尔的棋局_未满足",
             "坎贝尔的棋局_卡牌",
             "坎贝尔的棋局_原石",
             "坎贝尔的棋局_初始原石"
@@ -191,6 +192,34 @@
         "focus": {
             "Node.Recognition.Succeeded": "{name}"
         }
+    },
+    "坎贝尔的棋局_未满足": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "未满足"
+                ],
+                "order_by": "Random",
+                "roi": [
+                    400,
+                    600,
+                    345,
+                    123
+                ]
+            }
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "focus": {
+            "Node.Recognition.Succeeded": "{name}"
+        },
+        "next": [
+            "坎贝尔的棋局_原石",
+            "坎贝尔的棋局_初始原石"
+        ]
     },
     "坎贝尔的棋局_卡牌": {
         "recognition": {
